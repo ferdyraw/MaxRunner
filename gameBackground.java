@@ -71,8 +71,10 @@ public class gameBackground extends World
             addObject(new Coin(), 600, 340);
             addObject(new Coin(), 600, 167);
         }
+        if(timer % 7 == 0){
+            scrollPosition = (scrollPosition - scrollSpeed) % getWidth();
+            paint(scrollPosition);
+        }
         
-        scrollPosition = (scrollPosition - scrollSpeed) % getWidth();
-        paint(scrollPosition);
     }
 }
