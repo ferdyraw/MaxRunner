@@ -38,6 +38,7 @@ public class dino extends Actor
         if(Greenfoot.isKeyDown("up") && isOnGround() && getY() == 332){
             kecepatan = -20;
         }else if(Greenfoot.isKeyDown("down") && isOnGround() && getY() == 158){
+            falling = true;
             kecepatan = 20;
         }
         
@@ -80,9 +81,14 @@ public class dino extends Actor
     }
     public void fall(){
         setLocation(getX(), getY() + kecepatan);
-        if(isOnGround()){
+        if (isOnGround()) {
             kecepatan = 0;
-        }else kecepatan += gravitasi;
+            if (falling == true) falling = false;
+        } else {
+            if (falling == true) kecepatan -= gravitasi;
+            else kecepatan += gravitasi;
+        }
+        
     }
     public void Jumping(){
         setImage(imagesJump[countJump++ %12]);

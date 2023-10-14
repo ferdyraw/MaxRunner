@@ -18,7 +18,7 @@ public class Highscore extends Actor
     public void act()
     {
         // Add your action code here.
-        setImage(new GreenfootImage("Highscore : " + maxScore, 30, greenfoot.Color.GREEN, greenfoot.Color.BLACK));
+        setImage(new GreenfootImage("Highscore : " + maxScore, 30, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
     }
     
     public void putScore(int score){
