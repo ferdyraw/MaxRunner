@@ -16,8 +16,9 @@ public class Credit extends Button
         creditButton.drawString("Credit", 0, 50);
         setImage(creditButton);
     }
+    
     public void act()
     {
-        checkMouse();
+        checkMouse();   
     }
 }
