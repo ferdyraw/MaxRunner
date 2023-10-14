@@ -17,7 +17,7 @@ public class dino extends Actor
     private final int gravitasi = 1;
     private int kecepatan;
     private boolean falling = false;
-
+    private GreenfootSound backSoundCoin;
     /*
      * Act - do whatever the dino wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -108,6 +108,9 @@ public class dino extends Actor
             gameBackground bg = (gameBackground)myWorld;
             Counter counter = bg.getCounter();
             counter.addScore();
+            
+            backSoundCoin = new GreenfootSound("koin.mp3");
+            backSoundCoin.play();
         }
     }
 }

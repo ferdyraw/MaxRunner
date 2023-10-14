@@ -58,17 +58,10 @@ dependency8.type=UsesDependency
 dependency9.from=gameMenu
 dependency9.to=Credit
 dependency9.type=UsesDependency
-<<<<<<< HEAD
-editor.fx.0.height=737
-editor.fx.0.width=814
-editor.fx.0.x=232
-editor.fx.0.y=52
-=======
 editor.fx.0.height=678
 editor.fx.0.width=652
 editor.fx.0.x=634
 editor.fx.0.y=0
->>>>>>> 40cca5a5b3ad1ecf21a5c71ff83aa985ef097421
 height=686
 package.numDependencies=17
 package.numTargets=13
