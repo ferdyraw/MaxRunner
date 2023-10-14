@@ -26,11 +26,11 @@ public class gameMenu extends World
      */
     private void prepare()
     {
+
         Play play = new Play();
-        addObject(play,287,135);
+        addObject(play,295,147);
         Credit credit = new Credit();
-        addObject(credit,286,292);
-        credit.setLocation(235,275);
-        credit.setLocation(262,266);
+        addObject(credit,292,246);
+        
     }
 }
