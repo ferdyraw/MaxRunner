@@ -17,6 +17,7 @@ public class dino extends Actor
     private final int gravitasi = 1;
     private int kecepatan;
     private boolean falling = false;
+
     /*
      * Act - do whatever the dino wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
