@@ -53,7 +53,6 @@ public class gameBackground extends World
         Block block2 = new Block();
         addObject(block2, 300, 376);
 
-
         dino dino = new dino();
         addObject(dino,111,332);
     }

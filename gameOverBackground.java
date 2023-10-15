@@ -25,5 +25,8 @@ public class gameOverBackground extends World
             Greenfoot.setWorld(new gameBackground());
             
         }
+        if(Greenfoot.isKeyDown("E")){
+            Greenfoot.setWorld(new gameMenu());
+        }
     }
 }

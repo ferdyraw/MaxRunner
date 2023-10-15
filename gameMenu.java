@@ -8,11 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class gameMenu extends World
 {
-
-    /**
-     * Constructor for objects of class gameMenu.
-     * 
-     */
+    Highscore highscore = new Highscore();
+    
     public gameMenu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -26,6 +23,7 @@ public class gameMenu extends World
      */
     private void prepare()
     {
+        highscore.putScore(0);
 
         Play play = new Play();
         addObject(play,295,147);
@@ -33,4 +31,6 @@ public class gameMenu extends World
         addObject(credit,292,246);
         
     }
+    
+
 }
