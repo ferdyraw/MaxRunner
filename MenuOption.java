@@ -1,13 +1,14 @@
 import greenfoot.*;  // atau package yang sesuai
 
 public class MenuOption extends Actor {
-    private String optionText;
+    private GreenfootImage optionImage;
     private boolean isSelected;
-   
-    public MenuOption(String text) {
-        optionText = text;
+
+    public MenuOption(GreenfootImage image, int x, int y) {
+        optionImage = image;
         isSelected = false;
-        updateImage();
+        setImage(optionImage);
+        setLocation(x, y);
     }
 
     public void act() {
@@ -20,16 +21,13 @@ public class MenuOption extends Actor {
     }
 
     private void updateImage() {
-        GreenfootImage img = new GreenfootImage(200, 50);
         if (isSelected) {
-            img.setColor(Color.RED);
+            // Misalnya, tambahkan efek visual tambahan untuk menandai opsi yang dipilih
+            GreenfootImage updatedImage = new GreenfootImage(optionImage);
+            updatedImage.scale((int) (optionImage.getWidth() * 1.2), (int) (optionImage.getHeight() * 1.2));
+            setImage(updatedImage);
         } else {
-            img.setColor(Color.WHITE);
+            setImage(optionImage);
         }
-        img.fill();
-        img.setColor(Color.BLACK);
-        img.drawString(optionText, 50, 30);
-        setImage(img);
     }
-    
 }
