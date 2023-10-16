@@ -1,36 +1,75 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // atau package yang sesuai
 
-/**
- * Write a description of class gameMenu here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class gameMenu extends World
-{
+public class GameMenu extends World {
+    private String[] menuOptions = {"Play", "How to Play", "Exit"};
+    private int currentSelection = 0;
+    private boolean keyDownPressed = false;
+    private boolean keyUpPressed = false;
+
+    
     Highscore highscore = new Highscore();
     
-    public gameMenu()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+    public GameMenu() {
+        super(600, 400, 1); // Atur ukuran dunia sesuai kebutuhan Anda
         prepare();
     }
-    
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
-    private void prepare()
-    {
+
+    private void prepare() {
         highscore.putScore(0);
-
-        Play play = new Play();
-        addObject(play,295,147);
-        Credit credit = new Credit();
-        addObject(credit,292,246);
-        
+        for (int i = 0; i < menuOptions.length; i++) {
+            addObject(new MenuOption(menuOptions[i]), getWidth() / 2, getHeight() / 2 + 50 * i);
+        }
     }
-    
 
+    public void act() {
+        checkKeyPress();
+    }
+
+    private void checkKeyPress() {
+        if (Greenfoot.isKeyDown("down")) {
+            if (!keyDownPressed) {
+                currentSelection = (currentSelection + 1) % menuOptions.length;
+                updateSelection();
+                keyDownPressed = true;
+            }
+        } else {
+            keyDownPressed = false;
+        }
+
+        if (Greenfoot.isKeyDown("up")) {
+            if (!keyUpPressed) {
+                currentSelection = (currentSelection - 1 + menuOptions.length) % menuOptions.length;
+                updateSelection();
+                keyUpPressed = true;
+            }
+        } else {
+            keyUpPressed = false;
+        }
+
+        if (Greenfoot.isKeyDown("space")) {
+            selectOption();
+        }
+    }
+
+    private void updateSelection() {
+        for (Object obj : getObjects(MenuOption.class)) {
+            MenuOption option = (MenuOption) obj;
+            option.setSelected(false);
+        }
+        MenuOption currentOption = (MenuOption) getObjects(MenuOption.class).get(currentSelection);
+        currentOption.setSelected(true);
+    }
+    private void selectOption() {
+        if (currentSelection == 0) {
+            // Pindah ke lapisan permainan
+            Greenfoot.setWorld(new gameBackground()); // Ganti dengan kelas dunia permainan Anda
+        } else if (currentSelection == 1) {
+            // Pindah ke tampilan cara bermain
+            // Lakukan apa pun yang diperlukan untuk menampilkan tampilan cara bermain
+        } else if (currentSelection == 2) {
+            // Keluar dari permainan
+            Greenfoot.stop();
+        }
+    }
 }
+

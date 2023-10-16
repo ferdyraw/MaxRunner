@@ -1,9 +1,15 @@
 #BlueJ class context
-comment0.target=gameMenu
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ gameMenu\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.target=GameMenu
 comment1.params=
-comment1.target=gameMenu()
+comment1.target=GameMenu()
 comment2.params=
 comment2.target=void\ prepare()
-comment2.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
-numComments=3
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ checkKeyPress()
+comment5.params=
+comment5.target=void\ updateSelection()
+comment6.params=
+comment6.target=void\ selectOption()
+numComments=7
