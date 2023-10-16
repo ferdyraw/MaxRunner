@@ -10,48 +10,42 @@ class.gameOverBackground.image=10.png
 dependency1.from=gameBackground
 dependency1.to=Counter
 dependency1.type=UsesDependency
-<<<<<<< HEAD
-dependency10.from=gameMenu
-dependency10.to=gameBackground
-dependency10.type=UsesDependency
-dependency11.from=gameOverBackground
-=======
 dependency10.from=GameMenu
 dependency10.to=Highscore
 dependency10.type=UsesDependency
 dependency11.from=GameMenu
->>>>>>> 93c8f2f4c04aedf94c53af44a503c27462240852
 dependency11.to=gameBackground
 dependency11.type=UsesDependency
-dependency12.from=dino
+dependency12.from=gameOverBackground
 dependency12.to=gameBackground
 dependency12.type=UsesDependency
-<<<<<<< HEAD
-dependency13.from=dino
-dependency13.to=Highscore
-=======
 dependency13.from=gameOverBackground
 dependency13.to=GameMenu
->>>>>>> 93c8f2f4c04aedf94c53af44a503c27462240852
 dependency13.type=UsesDependency
 dependency14.from=dino
-dependency14.to=gameOverBackground
+dependency14.to=gameBackground
 dependency14.type=UsesDependency
 dependency15.from=dino
-dependency15.to=Counter
+dependency15.to=Highscore
 dependency15.type=UsesDependency
 dependency16.from=dino
-dependency16.to=Dot
+dependency16.to=gameOverBackground
 dependency16.type=UsesDependency
 dependency17.from=dino
-dependency17.to=Coin
+dependency17.to=Counter
 dependency17.type=UsesDependency
-dependency18.from=Play
-dependency18.to=gameBackground
+dependency18.from=dino
+dependency18.to=Dot
 dependency18.type=UsesDependency
+dependency19.from=dino
+dependency19.to=Coin
+dependency19.type=UsesDependency
 dependency2.from=gameBackground
 dependency2.to=Highscore
 dependency2.type=UsesDependency
+dependency20.from=Play
+dependency20.to=gameBackground
+dependency20.type=UsesDependency
 dependency3.from=gameBackground
 dependency3.to=Block
 dependency3.type=UsesDependency
@@ -67,29 +61,18 @@ dependency6.type=UsesDependency
 dependency7.from=gameBackground
 dependency7.to=Coin
 dependency7.type=UsesDependency
-<<<<<<< HEAD
-dependency8.from=gameMenu
-dependency8.to=Highscore
-dependency8.type=UsesDependency
-dependency9.from=gameMenu
-=======
 dependency8.from=gameBackground
 dependency8.to=GameMenu
 dependency8.type=UsesDependency
 dependency9.from=GameMenu
->>>>>>> 93c8f2f4c04aedf94c53af44a503c27462240852
 dependency9.to=MenuOption
 dependency9.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.height=686
+editor.fx.0.width=1294
+editor.fx.0.x=-7
+editor.fx.0.y=-7
 height=686
-<<<<<<< HEAD
-package.numDependencies=18
-=======
 package.numDependencies=20
->>>>>>> 93c8f2f4c04aedf94c53af44a503c27462240852
 package.numTargets=14
 project.charset=UTF-8
 publish.hasSource=false
@@ -113,33 +96,21 @@ target1.width=120
 target1.x=0
 target1.y=0
 target10.height=70
-<<<<<<< HEAD
-target10.name=MenuOption
-=======
 target10.name=Credit
->>>>>>> 93c8f2f4c04aedf94c53af44a503c27462240852
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=120
 target10.x=0
 target10.y=0
 target11.height=70
-<<<<<<< HEAD
-target11.name=Button
-=======
 target11.name=MenuOption
->>>>>>> 93c8f2f4c04aedf94c53af44a503c27462240852
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=120
 target11.x=0
 target11.y=0
 target12.height=70
-<<<<<<< HEAD
-target12.name=gameMenu
-=======
 target12.name=Button
->>>>>>> 93c8f2f4c04aedf94c53af44a503c27462240852
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=120
