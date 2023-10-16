@@ -115,7 +115,7 @@ public class dino extends Actor
             Counter counter = bg.getCounter();
             counter.addScore();
             
-            backSoundCoin = new GreenfootSound("koin.mp3");
+            backSoundCoin = new GreenfootSound("koin.mp3"); //
             backSoundCoin.play();
         }
     }
