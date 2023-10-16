@@ -53,7 +53,6 @@ public class gameBackground extends World
         Block block2 = new Block();
         addObject(block2, 300, 376);
 
-
         dino dino = new dino();
         addObject(dino,111,332);
     }
@@ -74,6 +73,10 @@ public class gameBackground extends World
         if(timer % 7 == 0){
             scrollPosition = (scrollPosition - scrollSpeed) % getWidth();
             paint(scrollPosition);
+        }
+        
+        if(Greenfoot.isKeyDown("E")){
+            Greenfoot.setWorld(new gameMenu());
         }
         
     }
