@@ -76,7 +76,7 @@ public class gameBackground extends World
         }
         
         if(Greenfoot.isKeyDown("E")){
-            Greenfoot.setWorld(new gameMenu());
+            Greenfoot.setWorld(new GameMenu());
         }
         
     }

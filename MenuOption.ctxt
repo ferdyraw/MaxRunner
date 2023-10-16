@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=MenuOption
+comment1.params=text
+comment1.target=MenuOption(java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=selected
+comment3.target=void\ setSelected(boolean)
+comment4.params=
+comment4.target=void\ updateImage()
+numComments=5
