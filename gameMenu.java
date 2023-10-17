@@ -76,7 +76,7 @@ public class gameMenu extends World {
     private void selectOption() {
         if (currentSelection == 0) {
             // Pindah ke lapisan permainan
-            Greenfoot.setWorld(new gameBackground()); // Ganti dengan kelas dunia permainan Anda
+            Greenfoot.setWorld(new Factory()); // Ganti dengan kelas dunia permainan Anda
         } else if (currentSelection == 1) {
             // Pindah ke tampilan cara bermain
             // Lakukan apa pun yang diperlukan untuk menampilkan tampilan cara bermain

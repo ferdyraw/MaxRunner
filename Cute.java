@@ -7,7 +7,7 @@ import java.io.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class dino extends Actor
+public class Cute extends Actor
 {
     private GreenfootImage[] imagesRun= new GreenfootImage[8];
     private GreenfootImage[] imagesJump= new GreenfootImage[12];
@@ -19,11 +19,12 @@ public class dino extends Actor
     private boolean falling = false;
     private GreenfootSound backSoundCoin;
     private int score = 0;
+    private int energy = 0;
     /*
      * Act - do whatever the dino wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public dino(){
+    public Cute(){
         animJump();
         animRun();
         kecepatan = 0;
@@ -37,16 +38,16 @@ public class dino extends Actor
             jump();
         }
     
-        if(Greenfoot.isKeyDown("up") && isOnGround() && getY() == 332){
+        if(Greenfoot.isKeyDown("up") && isOnGround() && getY() == 295){
             kecepatan = -20;
-        }else if(Greenfoot.isKeyDown("down") && isOnGround() && getY() == 158){
+        }else if(Greenfoot.isKeyDown("down") && isOnGround() && getY() == 121){
             falling = true;
             kecepatan = 20;
         }
         
         if(getOneIntersectingObject(Dot.class) != null){
             World myWorld = getWorld();
-            gameBackground bg = (gameBackground)myWorld;
+            Factory bg = (Factory)myWorld;
             Highscore highscore = bg.getHighscore();
             highscore.putScore(bg.getCounter().score);
             
@@ -54,7 +55,7 @@ public class dino extends Actor
         }
         
         if(getOneIntersectingObject(PortalD.class) != null){
-            Greenfoot.setWorld(new gameLevel2());
+            Greenfoot.setWorld(new Cave());
         
         }
         
@@ -75,14 +76,14 @@ public class dino extends Actor
     public void animRun(){
        for(int i = 0; i < 8; i++){
             int a = i+1;
-            String filename = "Run"+ a + ".png";
+            String filename = "CuteRun_"+ a + ".png";
             imagesRun[i] = new GreenfootImage(filename);   
         } 
     }
     public void animJump(){
-        for(int i = 0; i < 12; i++){
+        for(int i = 0; i < 8; i++){
             int a = i+1;
-            String filename = "Jump"+ a + ".png";
+            String filename = "CuteJump_"+ a + ".png";
             imagesJump[i] = new GreenfootImage(filename);   
         } 
         
@@ -99,37 +100,49 @@ public class dino extends Actor
         
     }
     public void Jumping(){
-        setImage(imagesJump[countJump++ %12]);
+        setImage(imagesJump[countJump++ %8]);
         
     }
     public void jump(){
-        kecepatan = -13;
+        kecepatan = -11;
     }
     
     public boolean isOnGround(){
         boolean isOnGround = false;
-        if(getY() == 332 || 
-        getY() == 158) isOnGround = true;
+        if(getY() == 295 || 
+        getY() == 121) isOnGround = true;
         
         return isOnGround;
     }
     public void addScore(){
-        Actor coin = getOneIntersectingObject(Coin.class);
         World myWorld = getWorld();
         
-        if(coin != null){
-            myWorld.removeObject(coin);
-            World bg1 = getWorld();
-            bg1.addObject(new PortalD(),600,279);           
+        score++;
+        if (score % 5 == 0){
+            Factory bg = (Factory)myWorld;
+            Counter counter = bg.getCounter();
+            counter.addScore();
+        }
+    }
+    
+    public void addDrink(){
+        Actor drink = getOneIntersectingObject(Drink.class);
+        World myWorld = getWorld();
+        
+        if (drink != null){    
+            myWorld.removeObject(drink);
+            World bg1 = getWorld(); 
             
             backSoundCoin = new GreenfootSound("koin.mp3"); //
             backSoundCoin.play();
-        }
-        score++;
-        if(score % 5 == 0){
-            gameBackground bg = (gameBackground)myWorld;
-            Counter counter = bg.getCounter();
-            counter.addScore();
+            
+            energy++;
+            if (energy == 5) {
+                bg1.addObject(new PortalD(),600,279); 
+                energy = 0;
+            }
+            
+             
         }
     }
 }
