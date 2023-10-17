@@ -21,7 +21,8 @@ public class gameOverBackground extends World
     }
     
     public void act(){
-        if(Greenfoot.isKeyDown("R")){
+        if(Greenfoot.isKeyDown("R"))
+        {
             Greenfoot.setWorld(new gameBackground());
             
         }

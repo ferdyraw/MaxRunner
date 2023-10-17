@@ -1,8 +1,10 @@
 import greenfoot.*;  // atau package yang sesuai
 
 public class GameMenu extends World {
-    private String[] menuOptions = {"Play", "How to Play", "Exit"};
     private int currentSelection = 0;
+    private GreenfootImage[] menuImages = new GreenfootImage[3];
+    private MenuOption[] menuOptions = new MenuOption[3];
+    
     private boolean keyDownPressed = false;
     private boolean keyUpPressed = false;
 
@@ -16,9 +18,20 @@ public class GameMenu extends World {
 
     private void prepare() {
         highscore.putScore(0);
-        for (int i = 0; i < menuOptions.length; i++) {
-            addObject(new MenuOption(menuOptions[i]), getWidth() / 2, getHeight() / 2 + 50 * i);
+        int initialX = getWidth() / 2;
+        int initialY = getHeight() / 2;
+        int spacing = 100;
+
+        // Inisialisasi gambar-gambar menu
+        menuImages[0] = new GreenfootImage("Run1.png");
+        menuImages[1] = new GreenfootImage("Run2.png");
+        menuImages[2] = new GreenfootImage("Run3.png");
+
+        for (int i = 0; i < 3; i++) {
+            menuOptions[i] = new MenuOption(menuImages[i], initialX, initialY + spacing * i);
+            addObject(menuOptions[i], initialX, initialY + spacing * i);
         }
+        updateSelection();
     }
 
     public void act() {
@@ -52,12 +65,13 @@ public class GameMenu extends World {
     }
 
     private void updateSelection() {
-        for (Object obj : getObjects(MenuOption.class)) {
-            MenuOption option = (MenuOption) obj;
-            option.setSelected(false);
+        for (int i = 0; i < menuOptions.length; i++) {
+            if (i == currentSelection) {
+                menuOptions[i].setSelected(true);
+            } else {
+                menuOptions[i].setSelected(false);
+            }
         }
-        MenuOption currentOption = (MenuOption) getObjects(MenuOption.class).get(currentSelection);
-        currentOption.setSelected(true);
     }
     private void selectOption() {
         if (currentSelection == 0) {
@@ -72,4 +86,5 @@ public class GameMenu extends World {
         }
     }
 }
+
 
