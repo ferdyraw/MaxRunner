@@ -46,11 +46,6 @@ public class Cute extends Actor
         }
         
         if(getOneIntersectingObject(Dot.class) != null){
-            World myWorld = getWorld();
-            Factory bg = (Factory)myWorld;
-            Highscore highscore = bg.getHighscore();
-            highscore.putScore(bg.getCounter().score);
-            
             Greenfoot.setWorld(new gameOverBackground());
         }
         
@@ -60,6 +55,7 @@ public class Cute extends Actor
         }
         
         addScore();
+        addDrink();
         if(isOnGround()) Running();
         else Jumping(); 
     }
