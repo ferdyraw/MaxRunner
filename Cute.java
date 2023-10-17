@@ -19,7 +19,6 @@ public class Cute extends Actor
     private boolean falling = false;
     private GreenfootSound backSoundCoin;
     private int score = 0;
-    private int energy = 0;
     /*
      * Act - do whatever the dino wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -38,9 +37,9 @@ public class Cute extends Actor
             jump();
         }
     
-        if(Greenfoot.isKeyDown("up") && isOnGround() && getY() == 295){
+        if(Greenfoot.isKeyDown("up") && isOnGround() && getY() == 327){
             kecepatan = -20;
-        }else if(Greenfoot.isKeyDown("down") && isOnGround() && getY() == 121){
+        }else if(Greenfoot.isKeyDown("down") && isOnGround() && getY() == 153){
             falling = true;
             kecepatan = 20;
         }
@@ -100,15 +99,15 @@ public class Cute extends Actor
         
     }
     public void jump(){
-        kecepatan = -11;
+        kecepatan = -13;
     }
     
     public boolean isOnGround(){
         boolean isOnGround = false;
-        if(getY() == 295 || 
-        getY() == 121) isOnGround = true;
+        if(getY() == 327 || 
+        getY() == 153) isOnGround = true;
         
-        return isOnGround;
+        return isOnGround;            
     }
     public void addScore(){
         World myWorld = getWorld();
@@ -132,10 +131,13 @@ public class Cute extends Actor
             backSoundCoin = new GreenfootSound("koin.mp3"); //
             backSoundCoin.play();
             
-            energy++;
-            if (energy == 5) {
+            Factory bg = (Factory)myWorld;
+            Energy energy = bg.getEnergy();
+            energy.addEnergy();
+            
+            if (energy.energy == 1) {
                 bg1.addObject(new PortalD(),600,279); 
-                energy = 0;
+                energy.resetEnergy();
             }
             
              

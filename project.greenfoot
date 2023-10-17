@@ -2,7 +2,14 @@
 class.Block.image=besi10.png
 class.Dot.image=dot.png
 class.Obstacle.image=cone.png
+<<<<<<< HEAD
 class.gameOverBackground.image=10.png
+=======
+class.PortalB.image=portal1_b.png
+class.PortalD.image=portal1.png
+class.gameMenu.image=bluerock.jpg
+class.gameOverBackground.image=gameover.png
+>>>>>>> caa20be0d2c13bdb2814cc034c43c4a735c2235c
 dependency1.from=Factory
 dependency1.to=Counter
 dependency1.type=UsesDependency
@@ -43,13 +50,21 @@ dependency20.from=Cute
 dependency20.to=Highscore
 dependency20.type=UsesDependency
 dependency21.from=Cute
+<<<<<<< HEAD
 dependency21.to=gameOverBackground
+=======
+dependency21.to=Factory
+>>>>>>> caa20be0d2c13bdb2814cc034c43c4a735c2235c
 dependency21.type=UsesDependency
 dependency22.from=Cute
 dependency22.to=Cave
 dependency22.type=UsesDependency
 dependency23.from=Cute
+<<<<<<< HEAD
 dependency23.to=Counter
+=======
+dependency23.to=Energy
+>>>>>>> caa20be0d2c13bdb2814cc034c43c4a735c2235c
 dependency23.type=UsesDependency
 dependency24.from=Cute
 dependency24.to=PortalD
@@ -104,7 +119,11 @@ readme.name=@README
 readme.width=48
 readme.x=10
 readme.y=10
+<<<<<<< HEAD
 simulation.speed=49
+=======
+simulation.speed=55
+>>>>>>> caa20be0d2c13bdb2814cc034c43c4a735c2235c
 target1.height=70
 target1.name=PortalD
 target1.showInterface=false
@@ -148,7 +167,11 @@ target14.width=120
 target14.x=0
 target14.y=0
 target15.height=70
+<<<<<<< HEAD
 target15.name=MenuOption
+=======
+target15.name=Energy
+>>>>>>> caa20be0d2c13bdb2814cc034c43c4a735c2235c
 target15.showInterface=false
 target15.type=ClassTarget
 target15.width=120
