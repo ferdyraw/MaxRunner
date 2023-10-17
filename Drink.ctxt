@@ -1,12 +1,12 @@
 #BlueJ class context
-comment0.target=Coin
+comment0.target=Drink
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Coin\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
-comment1.target=Coin()
+comment1.target=Drink()
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ animCoin()
+comment3.target=void\ animDrink()
 comment4.params=
 comment4.target=void\ Anim()
 numComments=5
