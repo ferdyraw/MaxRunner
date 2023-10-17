@@ -18,6 +18,7 @@ public class dino extends Actor
     private int kecepatan;
     private boolean falling = false;
     private GreenfootSound backSoundCoin;
+    private int score = 0;
     /*
      * Act - do whatever the dino wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -51,6 +52,12 @@ public class dino extends Actor
             
             Greenfoot.setWorld(new gameOverBackground());
         }
+        
+        if(getOneIntersectingObject(PortalD.class) != null){
+            Greenfoot.setWorld(new gameLevel2());
+        
+        }
+        
         addScore();
         if(isOnGround()) Running();
         else Jumping(); 
@@ -108,15 +115,21 @@ public class dino extends Actor
     }
     public void addScore(){
         Actor coin = getOneIntersectingObject(Coin.class);
+        World myWorld = getWorld();
+        
         if(coin != null){
-            World myWorld = getWorld();
             myWorld.removeObject(coin);
-            gameBackground bg = (gameBackground)myWorld;
-            Counter counter = bg.getCounter();
-            counter.addScore();
+            World bg1 = getWorld();
+            bg1.addObject(new PortalD(),600,279);           
             
             backSoundCoin = new GreenfootSound("koin.mp3"); //
             backSoundCoin.play();
+        }
+        score++;
+        if(score % 5 == 0){
+            gameBackground bg = (gameBackground)myWorld;
+            Counter counter = bg.getCounter();
+            counter.addScore();
         }
     }
 }
