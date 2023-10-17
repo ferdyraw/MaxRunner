@@ -20,7 +20,7 @@ public class Coin extends Actor
     public void act()
     {
         Anim();
-        move(-5);
+        move(-6);
         // Add your action code here.
     }
     

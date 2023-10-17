@@ -14,6 +14,6 @@ public class Obstacle extends Actor
      */
     public void act()
     {
-        move(-5);
+        move(-6);
     }
 }
