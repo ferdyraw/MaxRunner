@@ -23,14 +23,11 @@ public class PortalD extends Actor
     {
         Anim();
         setLocation(getX() - num, getY());
-        if(getX() == 508){
-            if(Greenfoot.isKeyDown("p")){
+        if (getX() > 508){
             num = 1;
-            }else num  = 0;
-            
-        } else if(getX() > 508){
-            num = 1;
-        } else num = 5;
+        } else {
+            num = 5;
+        } 
         // Add your action code here.
     }
     
