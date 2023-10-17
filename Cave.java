@@ -1,7 +1,7 @@
 import greenfoot.*;  
 
 
-public class gameBackground extends World
+public class Cave extends World
 {
     private GreenfootImage backgroundImage;
     private int scrollSpeed = 1;
@@ -16,11 +16,11 @@ public class gameBackground extends World
         getBackground().drawImage(backgroundImage, position - backgroundImage.getWidth(), 0);
         getBackground().drawImage(backgroundImage, position, 0);
     }
-    public gameBackground()
+    public Cave()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false);
-        backgroundImage = new GreenfootImage("bege.png");
+        backgroundImage = new GreenfootImage("bege2.png");
         setBackground(backgroundImage);
         prepare();
     }
@@ -39,41 +39,23 @@ public class gameBackground extends World
      */
     private void prepare()
     {
-        addObject(counter, 75, 40);
-        highscore.getScore();
-        addObject(highscore, 500, 40);
 
-        Block block1 = new Block();
-        addObject(block1,300 , 203);
-        Block block2 = new Block();
-        addObject(block2, 300, 376);
-
-        dino dino = new dino();
-        addObject(dino,111,332);
-        
+        PortalB portalB = new PortalB();
+        addObject(portalB,55,229);
     }
     
     public void act(){
         timer++;
         
-        if(timer % 300 == 0 ){
-            addObject(new Dot(), 600, 330);
-            addObject(new Dot(), 600, 155);
-            addObject(new Obstacle(), 600, 340);
-            addObject(new Obstacle(), 600, 167);
-        }
-        if(timer % 400 == 0){
-            addObject(new Coin(), 600, 340);
-            
-        }
+        
         if(timer % 7 == 0){
             scrollPosition = (scrollPosition - scrollSpeed) % getWidth();
             paint(scrollPosition);
         }
         
-
-        if(Greenfoot.isKeyDown("escape")){
+        if(Greenfoot.isKeyDown("E")){
             Greenfoot.setWorld(new gameMenu());
         }
-    }   
+        
+    }
 }

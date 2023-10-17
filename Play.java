@@ -20,7 +20,7 @@ public class Play extends Button
     {
         checkMouse();
         if(Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(new gameBackground());
+            Greenfoot.setWorld(new Factory());
         }
     }
 }
