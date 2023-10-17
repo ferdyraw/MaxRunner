@@ -1,6 +1,6 @@
 import greenfoot.*;  // atau package yang sesuai
 
-public class GameMenu extends World {
+public class gameMenu extends World {
     private int currentSelection = 0;
     private GreenfootImage[] menuImages = new GreenfootImage[3];
     private MenuOption[] menuOptions = new MenuOption[3];
@@ -11,7 +11,7 @@ public class GameMenu extends World {
     
     Highscore highscore = new Highscore();
     
-    public GameMenu() {
+    public gameMenu() {
         super(600, 400, 1); // Atur ukuran dunia sesuai kebutuhan Anda
         prepare();
     }
@@ -20,7 +20,7 @@ public class GameMenu extends World {
         highscore.putScore(0);
         int initialX = getWidth() / 2;
         int initialY = getHeight() / 2;
-        int spacing = 100;
+        int spacing = 70;
 
         // Inisialisasi gambar-gambar menu
         menuImages[0] = new GreenfootImage("Run1.png");
