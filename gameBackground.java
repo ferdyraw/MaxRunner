@@ -71,14 +71,9 @@ public class gameBackground extends World
             paint(scrollPosition);
         }
         
-<<<<<<< HEAD
-        if(Greenfoot.isKeyDown("E")){
-            Greenfoot.setWorld(new gameMenu());
-=======
+
         if(Greenfoot.isKeyDown("escape")){
-            Greenfoot.setWorld(new GameMenu());
->>>>>>> f571a6f3b175dd79c137f2b9aff1d3a8392311b5
+            Greenfoot.setWorld(new gameMenu());
         }
-        
-    }
+    }   
 }
