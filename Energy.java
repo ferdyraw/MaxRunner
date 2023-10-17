@@ -18,4 +18,12 @@ public class Energy extends Actor
         // Add your action code here.
         setImage(new GreenfootImage("Energy : " + energy, 30, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
     }
+    
+    public void addEnergy(){
+        energy++;
+    }
+    
+    public void resetEnergy(){
+        energy = 0;
+    }
 }
