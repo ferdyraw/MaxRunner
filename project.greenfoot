@@ -85,10 +85,17 @@ dependency8.type=UsesDependency
 dependency9.from=gameBackground
 dependency9.to=Obstacle
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=737
 editor.fx.0.width=814
 editor.fx.0.x=232
 editor.fx.0.y=-22
+=======
+editor.fx.0.height=686
+editor.fx.0.width=1294
+editor.fx.0.x=-7
+editor.fx.0.y=-7
+>>>>>>> f571a6f3b175dd79c137f2b9aff1d3a8392311b5
 height=686
 package.numDependencies=25
 package.numTargets=17
