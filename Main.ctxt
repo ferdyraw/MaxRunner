@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Main
+comment1.params=position
+comment1.target=void\ paint(int)
+comment2.params=
+comment2.target=Main()
+comment3.params=
+comment3.target=Counter\ getCounter()
+comment4.params=
+comment4.target=Energy\ getEnergy()
+comment5.params=
+comment5.target=Highscore\ getHighscore()
+comment6.params=
+comment6.target=void\ prepare()
+comment7.params=
+comment7.target=void\ act()
+numComments=8
