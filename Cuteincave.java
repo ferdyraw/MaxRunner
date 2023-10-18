@@ -27,7 +27,7 @@ public class Cuteincave extends Cute
         }
         
         if(getOneIntersectingObject(Dot.class) != null){
-            Greenfoot.setWorld(new gameOverBackground());
+            Greenfoot.setWorld(new gameOver());
         }
         
         if(getOneIntersectingObject(PortalD.class) != null){
