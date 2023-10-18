@@ -23,6 +23,9 @@ public class Cute extends Actor
      * Act - do whatever the dino wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    
+    
     public Cute(){
         animJump();
         animRun();
@@ -112,7 +115,7 @@ public class Cute extends Actor
         
         score++;
         if (score % 5 == 0){
-            Factory bg = (Factory)myWorld;
+            Main bg = (Main)myWorld;
             Counter counter = bg.getCounter();
             counter.addScore();
         }
@@ -124,17 +127,16 @@ public class Cute extends Actor
         
         if (drink != null){    
             myWorld.removeObject(drink);
-            World bg1 = getWorld(); 
             
             backSoundCoin = new GreenfootSound("koin.mp3"); //
             backSoundCoin.play();
             
-            Factory bg = (Factory)myWorld;
+            Main bg = (Main)myWorld;
             Energy energy = bg.getEnergy();
             energy.addEnergy();
             
             if (energy.energy == 1) {
-                bg1.addObject(new PortalD(),600,279); 
+                myWorld.addObject(new PortalD(),600,279); 
                 energy.resetEnergy();
             }
             

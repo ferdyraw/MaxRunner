@@ -21,6 +21,11 @@ public class gameOverBackground extends World
     }
     
     public void act(){
+
+        if(Greenfoot.isKeyDown("R"))
+        {
+            Greenfoot.setWorld(new gameOverBackground());
+
         if(Greenfoot.isKeyDown("R")){
             Greenfoot.setWorld(new Factory());
             
@@ -29,4 +34,6 @@ public class gameOverBackground extends World
             Greenfoot.setWorld(new gameMenu());
         }
     }
+
+}
 }

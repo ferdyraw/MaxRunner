@@ -26,7 +26,7 @@ public class PortalD extends Actor
         if (getX() > 508){
             num = 1;
         } else {
-            num = 5;
+            num = 10;
         } 
         // Add your action code here.
     }

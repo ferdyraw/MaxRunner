@@ -1,5 +1,6 @@
 import greenfoot.*;  
 import java.awt.Color;
+import java.io.*;
 
 /**
  * Write a description of class Counter here.
@@ -19,7 +20,27 @@ public class Counter extends Actor
         // Add your action code here.
         setImage(new GreenfootImage("Score : " + score, 30, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
     }
+    
     public void addScore(){
         score++;
+        try {
+            FileOutputStream fos = new FileOutputStream("counter.dat");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(score);
+            oos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void getScore(){
+        try {
+            FileInputStream fis = new FileInputStream("counter.dat");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            score = (int) ois.readObject();
+            ois.close();
+        } catch(IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
