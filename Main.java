@@ -9,8 +9,7 @@ public class Main extends World
     
     Counter counter = new Counter();
     Energy energy = new Energy();
-    Highscore highscore = new Highscore();  
-    Cute cute = new Cute();
+    Highscore highscore = new Highscore();
     
     public int timer = 0;
     public void paint(int position)

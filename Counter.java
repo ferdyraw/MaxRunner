@@ -18,19 +18,13 @@ public class Counter extends Actor
     public void act()
     {
         // Add your action code here.
+        getScore();
         setImage(new GreenfootImage("Score : " + score, 30, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
     }
     
     public void addScore(){
         score++;
-        try {
-            FileOutputStream fos = new FileOutputStream("counter.dat");
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(score);
-            oos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        putScore(score);
     }
     
     public void getScore(){
@@ -40,6 +34,17 @@ public class Counter extends Actor
             score = (int) ois.readObject();
             ois.close();
         } catch(IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void putScore(int val){
+        try {
+            FileOutputStream fos = new FileOutputStream("counter.dat");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(val);
+            oos.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

@@ -9,57 +9,31 @@ import java.io.*;
  */
 public class Cute extends Actor
 {
-    private GreenfootImage[] imagesRun= new GreenfootImage[8];
-    private GreenfootImage[] imagesJump= new GreenfootImage[12];
-    private int countRun= 0;
-    private int countRun1 = 0;
-    private int countJump = 0;
-    private final int gravitasi = 1;
-    private int kecepatan;
-    private boolean falling = false;
-    private GreenfootSound backSoundCoin;
-    private int score = 0;
+    public GreenfootImage[] imagesRun= new GreenfootImage[8];
+    public GreenfootImage[] imagesJump= new GreenfootImage[12];
+    public int countRun= 0;
+    public int countRun1 = 0;
+    public int countJump = 0;
+    public final int gravitasi = 1;
+    public int kecepatan;
+    public boolean falling = false;
+    public GreenfootSound backSoundCoin;
+    public int score = 0;
     /*
      * Act - do whatever the dino wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    
-    
     public Cute(){
         animJump();
         animRun();
         kecepatan = 0;
+        
+        
     }
     public void act()
     {
         // Add your action code here.
-        fall();
-        
-        if(Greenfoot.isKeyDown("space") && isOnGround()) {
-            jump();
-        }
-    
-        if(Greenfoot.isKeyDown("up") && isOnGround() && getY() == 327){
-            kecepatan = -20;
-        }else if(Greenfoot.isKeyDown("down") && isOnGround() && getY() == 153){
-            falling = true;
-            kecepatan = 20;
-        }
-        
-        if(getOneIntersectingObject(Dot.class) != null){
-            Greenfoot.setWorld(new gameOverBackground());
-        }
-        
-        if(getOneIntersectingObject(PortalD.class) != null){
-            Greenfoot.setWorld(new Cave());
-        
-        }
-        
-        addScore();
-        addDrink();
-        if(isOnGround()) Running();
-        else Jumping(); 
     }
     public void Running(){
         if(countRun1 % 4 == 0 ){
@@ -86,32 +60,13 @@ public class Cute extends Actor
         } 
         
     }
-    public void fall(){
-        setLocation(getX(), getY() + kecepatan);
-        if (isOnGround()) {
-            kecepatan = 0;
-            if (falling == true) falling = false;
-        } else {
-            if (falling == true) kecepatan -= gravitasi;
-            else kecepatan += gravitasi;
-        }
-        
-    }
+    
     public void Jumping(){
         setImage(imagesJump[countJump++ %8]);
         
     }
-    public void jump(){
-        kecepatan = -13;
-    }
     
-    public boolean isOnGround(){
-        boolean isOnGround = false;
-        if(getY() == 327 || 
-        getY() == 153) isOnGround = true;
-        
-        return isOnGround;            
-    }
+    
     public void addScore(){
         World myWorld = getWorld();
         
