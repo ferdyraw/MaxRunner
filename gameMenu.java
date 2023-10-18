@@ -8,7 +8,7 @@ public class gameMenu extends World {
     private boolean keyDownPressed = false;
     private boolean keyUpPressed = false;
 
-    
+    Counter counter = new Counter();    
     Highscore highscore = new Highscore();
     
     public gameMenu() {
@@ -18,6 +18,8 @@ public class gameMenu extends World {
 
     private void prepare() {
         highscore.putScore(0);
+        counter.putScore(0);
+        
         int initialX = getWidth() / 2;
         int initialY = getHeight() / 2;
         int spacing = 70;

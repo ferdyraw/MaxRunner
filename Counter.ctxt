@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=void\ addScore()
 comment3.params=
 comment3.target=void\ getScore()
-numComments=4
+comment4.params=val
+comment4.target=void\ putScore(int)
+numComments=5

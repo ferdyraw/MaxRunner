@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=void\ animPortal()
 comment4.params=
 comment4.target=void\ Anim()
-numComments=5
+comment5.params=
+comment5.target=void\ walk()
+numComments=6

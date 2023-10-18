@@ -8,11 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class gameOverBackground extends World
 {
-
-    /**
-     * Constructor for objects of class gameOverBackground.
-     * 
-     */
+    Counter counter = new Counter();
+    
     public gameOverBackground()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -22,18 +19,14 @@ public class gameOverBackground extends World
     
     public void act(){
 
-        if(Greenfoot.isKeyDown("R"))
-        {
-            Greenfoot.setWorld(new gameOverBackground());
-
         if(Greenfoot.isKeyDown("R")){
             Greenfoot.setWorld(new Factory());
-            
+            counter.putScore(0);
         }
+        
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
         }
     }
 
-}
 }

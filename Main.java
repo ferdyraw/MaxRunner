@@ -9,8 +9,7 @@ public class Main extends World
     
     Counter counter = new Counter();
     Energy energy = new Energy();
-    Highscore highscore = new Highscore();  
-    Cute cute = new Cute();
+    Highscore highscore = new Highscore();
     
     public int timer = 0;
     public void paint(int position)
@@ -21,7 +20,7 @@ public class Main extends World
     public Main()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 400, 1, false); 
         prepare();
     }
     

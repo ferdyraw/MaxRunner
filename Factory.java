@@ -4,6 +4,7 @@ public class Factory extends Main
 {
     public Factory()
     {
+        super();
         backgroundImage = new GreenfootImage("bege.png");
         setBackground(backgroundImage);
         prepare();
@@ -15,11 +16,12 @@ public class Factory extends Main
         Block block2 = new Block();
         addObject(block2, 300, 376);
         
+        Cuteinfactory cute = new Cuteinfactory();
         addObject(cute, 111, 327);
     }
     
     public void act(){
-        timer++;
+        super.act();
         if(timer % 300 == 0 ){
             addObject(new Dot(), 600, 330);
             addObject(new Dot(), 600, 155);
