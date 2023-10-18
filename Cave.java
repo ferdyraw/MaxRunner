@@ -12,8 +12,8 @@ public class Cave extends Main
     
     private void prepare()
     {   
-        Block block1 = new Block();
-        addObject(block1, 300, 280);
+        Lava lava = new Lava();
+        addObject(lava, 300, 280);
         
         PortalB portalb = new PortalB();
         addObject(portalb, -35, 229);
