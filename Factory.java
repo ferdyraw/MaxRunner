@@ -36,5 +36,9 @@ public class Factory extends Main
             scrollPosition = (scrollPosition - scrollSpeed) % getWidth();
             paint(scrollPosition);
         }
+        
+        if(Greenfoot.isKeyDown("escape")){
+            Greenfoot.setWorld(new gameMenu());
+        }
     }
 }

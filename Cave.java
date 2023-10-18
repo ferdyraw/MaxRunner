@@ -2,7 +2,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Cave extends Main
 {
-    int time = 0;
     public Cave()
     {
         super();
@@ -21,9 +20,17 @@ public class Cave extends Main
         
     }
     public void act(){
-        time++;
-        if(time == 85){
+        super.act();
+        if(timer == 85){
             addObject(new Cuteincave(), 55, 229);
+        }
+        if(timer % 300 == 0 ){
+            addObject(new Dot(), 600, 235);
+            addObject(new Obstacle(), 600, 245);
+        }
+        
+        if(Greenfoot.isKeyDown("escape")){
+            Greenfoot.setWorld(new gameMenu());
         }
     }
 }
