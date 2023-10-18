@@ -93,9 +93,8 @@ public class Cute extends Actor
             Energy energy = bg.getEnergy();
             energy.addEnergy();
             
-            if (energy.energy == 1) {
+            if (energy.energy == 5) {
                 myWorld.addObject(new PortalD(),600,279); 
-                energy.resetEnergy();
             }
             
              

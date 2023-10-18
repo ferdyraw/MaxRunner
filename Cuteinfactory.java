@@ -33,7 +33,7 @@ public class Cuteinfactory extends Cute
         }
         
         if(getOneIntersectingObject(Dot.class) != null){
-            Greenfoot.setWorld(new gameOverBackground());
+            Greenfoot.setWorld(new gameWin());
         }
         
         if(getOneIntersectingObject(PortalD.class) != null){

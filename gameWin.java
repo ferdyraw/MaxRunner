@@ -6,18 +6,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class gameOverBackground extends World
+public class gameWin extends World
 {
+    Highscore highscore = new Highscore();
     Counter counter = new Counter();
     
-    public gameOverBackground()
+    public gameWin()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        
+        prepare();
+    }
+    
+    public void prepare(){
+        highscore.putScore(counter.score);
+        addObject(highscore, 300, 280);
     }
     
     public void act(){
+        
 
         if(Greenfoot.isKeyDown("R")){
             Greenfoot.setWorld(new Factory());

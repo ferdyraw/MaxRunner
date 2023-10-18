@@ -17,7 +17,7 @@ public class gameMenu extends World {
     }
 
     private void prepare() {
-        highscore.putScore(0);
+        highscore.putScore(Integer.MAX_VALUE);
         counter.putScore(0);
         
         int initialX = getWidth() / 2;
