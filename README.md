@@ -1,7 +1,7 @@
-Dino Run
+Max Runner
 =======
 
 Ini adalah game paling seru se-dunia.
 
-Ayoo mainkan dinomu !!!
+Ayoo mainkan Max mu !!!
 >>>>>>> 
