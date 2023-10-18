@@ -20,13 +20,14 @@ public class Cuteincave extends Cute
     {
         // Add your action code here.
         fall();
+        out();
         
         if(Greenfoot.isKeyDown("space") && isOnGround()) {
             jump();
         }
         
         if(getOneIntersectingObject(Dot.class) != null){
-            Greenfoot.setWorld(new gameOverBackground());
+            Greenfoot.setWorld(new gameOver());
         }
         
         if(getOneIntersectingObject(PortalD.class) != null){
@@ -61,6 +62,12 @@ public class Cuteincave extends Cute
         if(getY() == 229) isOnGround = true;
         
         return isOnGround;            
+    }
+    public void out(){
+        setLocation(getX() + num, getY());
+        if(getX() == 111){
+            num = 0;
+        }
     }
     
 }

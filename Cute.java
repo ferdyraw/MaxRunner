@@ -19,6 +19,7 @@ public class Cute extends Actor
     public boolean falling = false;
     public GreenfootSound backSoundCoin;
     public int score = 0;
+    public int num = 1;
     /*
      * Act - do whatever the dino wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -33,7 +34,7 @@ public class Cute extends Actor
     }
     public void act()
     {
-        // Add your action code here.
+        
     }
     public void Running(){
         if(countRun1 % 4 == 0 ){
@@ -92,9 +93,8 @@ public class Cute extends Actor
             Energy energy = bg.getEnergy();
             energy.addEnergy();
             
-            if (energy.energy == 1) {
+            if (energy.energy == 5) {
                 myWorld.addObject(new PortalD(),600,279); 
-                energy.resetEnergy();
             }
             
              

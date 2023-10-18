@@ -11,6 +11,8 @@ public class PortalB extends Actor
     
     private GreenfootImage[] imagesPortal= new GreenfootImage[8];
     private int countPortal = 0;
+    private int num = 1;
+    private int timer = 0;
     private int countPortal1 = 0;
     public PortalB(){
         animPortal();
@@ -18,6 +20,8 @@ public class PortalB extends Actor
     public void act()
     {
         Anim();
+        walk();
+        
     }
     public void animPortal(){
         for(int i = 0; i < 8; i++){
@@ -36,5 +40,16 @@ public class PortalB extends Actor
             countPortal1 = 0;
         }
         countPortal1 ++;
+    }
+    public void walk(){
+        timer++;
+        setLocation(getX() + num, getY());
+        if(getX() == 55){
+            num = 0;
+            
+        }
+        if(timer == 180){
+            num = -1;
+        }
     }
 }

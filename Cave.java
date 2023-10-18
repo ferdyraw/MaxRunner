@@ -16,9 +16,21 @@ public class Cave extends Main
         addObject(block1, 300, 280);
         
         PortalB portalb = new PortalB();
-        addObject(portalb, 55, 229);
+        addObject(portalb, -35, 229);
         
-        Cuteincave cute = new Cuteincave();
-        addObject(cute, 111, 229);
+    }
+    public void act(){
+        super.act();
+        if(timer == 85){
+            addObject(new Cuteincave(), 55, 229);
+        }
+        if(timer % 300 == 0 ){
+            addObject(new Dot(), 600, 235);
+            addObject(new Obstacle(), 600, 245);
+        }
+        
+        if(Greenfoot.isKeyDown("escape")){
+            Greenfoot.setWorld(new gameMenu());
+        }
     }
 }

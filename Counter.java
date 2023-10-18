@@ -14,12 +14,16 @@ public class Counter extends Actor
      * Act - do whatever the Counter wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int score = 0;
+    int score = 0, fontsize = 30;
     public void act()
     {
         // Add your action code here.
         getScore();
-        setImage(new GreenfootImage("Score : " + score, 30, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
+        setImage(new GreenfootImage("Score : " + score, fontsize, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
+    }
+    
+    public void changeFontSize(int val){
+        fontsize = val;
     }
     
     public void addScore(){

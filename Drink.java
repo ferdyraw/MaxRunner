@@ -14,6 +14,7 @@ public class Drink extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int countDrink = 0;
+    private int countDrink1 = 0;
     public Drink(){
         animDrink();
     }
@@ -27,11 +28,19 @@ public class Drink extends Actor
     public void animDrink(){
         for(int i = 0; i < 10; i++){
             int a = i+1;
-            String filename = "coin"+ a + ".png";
-            imagesDrink[i] = new GreenfootImage(filename);   
+            String filename = "kaleng_"+ a +".png";
+            imagesDrink[i] = new GreenfootImage(filename); 
+            imagesDrink[i].scale(33, 40);
         } 
     }
     public void Anim(){
+        if(countDrink1 % 4 == 0 ){
         setImage(imagesDrink[countDrink++ %10]);
+        
+        }
+        if(countDrink > 32){
+            countDrink1 = 0;
+        }
+        countDrink1 ++;
     }
 }
