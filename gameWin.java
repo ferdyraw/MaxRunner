@@ -19,6 +19,7 @@ public class gameWin extends World
     }
     
     public void prepare(){
+        counter.getScore();
         highscore.putScore(counter.score);
         addObject(highscore, 300, 280);
     }

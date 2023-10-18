@@ -5,7 +5,7 @@ public class City extends Main
     public City()
     {
         super();
-        backgroundImage = new GreenfootImage("bege3.png");
+        backgroundImage = new GreenfootImage("71.png");
         setBackground(backgroundImage);
         prepare();
     }
