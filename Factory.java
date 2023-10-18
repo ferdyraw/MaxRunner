@@ -53,7 +53,7 @@ public class Factory extends World
         addObject(block2, 300, 376);
 
         Cute cute = new Cute();
-        addObject(cute,111,295);
+        addObject(cute,111,327);
         
     }
     
@@ -66,7 +66,7 @@ public class Factory extends World
             addObject(new Obstacle(), 600, 340);
             addObject(new Obstacle(), 600, 167);
         }
-        if(timer % 400 == 0){
+        if(timer % 200 == 0){
             addObject(new Drink(), 600, 340);
             
         }
