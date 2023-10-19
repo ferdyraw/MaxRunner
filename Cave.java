@@ -22,11 +22,16 @@ public class Cave extends Main
     public void act(){
         super.act();
         if(timer == 85){
-            addObject(new Cuteincave(), 55, 229);
+            addObject(new Cuteincave(), 55, 184);
         }
         if(timer % 300 == 0 ){
             addObject(new Dot(), 600, 235);
             addObject(new Obstacle(), 600, 245);
+        }
+        
+        if (timer % 400 == 0){
+            addObject(new Dot2(), 600, 112);
+            addObject(new Obstacle2(), 600, 122);
         }
         
         if(Greenfoot.isKeyDown("escape")){

@@ -12,7 +12,7 @@ public class Lava extends Actor
      * Act - do whatever the Block wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private GreenfootImage[] imagesLava = new GreenfootImage[10];
+    private GreenfootImage[] imagesLava = new GreenfootImage[6];
     private int count = 0;
     private int countBlock = 0;
     public Lava(){

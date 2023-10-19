@@ -26,7 +26,7 @@ public class Cuteincave extends Cute
             jump();
         }
         
-        if(getOneIntersectingObject(Dot.class) != null){
+        if(getOneIntersectingObject(Dot2.class) != null){
             Greenfoot.setWorld(new gameOver());
         }
         
@@ -59,7 +59,7 @@ public class Cuteincave extends Cute
     
     public boolean isOnGround(){
         boolean isOnGround = false;
-        if(getY() == 229) isOnGround = true;
+        if(getY() == 250) isOnGround = true;
         
         return isOnGround;            
     }
