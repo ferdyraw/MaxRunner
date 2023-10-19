@@ -28,7 +28,7 @@ public class Lab extends Main
             addObject(new Obstacle(), 600, 167);
         }
         if(timer % 200 == 0){
-            addObject(new Drink(), 600, 340);
+            addObject(new Drink(), 600, 337);
             
         }
         if(timer % 7 == 0){
