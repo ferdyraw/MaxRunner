@@ -48,7 +48,7 @@ public class PortalB extends Actor
             num = 0;
             
         }
-        if(timer == 180){
+        if(timer == 270){
             num = -1;
         }
     }

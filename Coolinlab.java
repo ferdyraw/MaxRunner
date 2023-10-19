@@ -6,13 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Cuteinfactory extends Cute
+public class Coolinlab extends Cool
 {
     /**
      * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Cuteinfactory() {
+    public Coolinlab() {
         super();
     }
     
@@ -20,6 +20,7 @@ public class Cuteinfactory extends Cute
     {
         // Add your action code here.
         fall();
+        out();
         
         if(Greenfoot.isKeyDown("space") && isOnGround()) {
             jump();

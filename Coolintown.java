@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Coolincity extends Cool
+public class Coolintown extends Cool
 {
     /**
      * Act - do whatever the Coolincity wants to do. This method is called whenever

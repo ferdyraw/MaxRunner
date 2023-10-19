@@ -6,13 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Coolinfactory extends Cool
+public class Cuteinlab extends Cute
 {
     /**
      * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Coolinfactory() {
+    public Cuteinlab() {
         super();
     }
     
@@ -20,6 +20,7 @@ public class Coolinfactory extends Cool
     {
         // Add your action code here.
         fall();
+        out();
         
         if(Greenfoot.isKeyDown("space") && isOnGround()) {
             jump();
@@ -39,6 +40,10 @@ public class Coolinfactory extends Cool
         if(getOneIntersectingObject(PortalD.class) != null){
             Greenfoot.setWorld(new Cave());
         
+        }
+        if(getX() == 110){
+            World myWorld = getWorld();
+            myWorld.addObject(new Coolinlab(),-25,327);
         }
         
         addScore();
@@ -70,5 +75,6 @@ public class Coolinfactory extends Cool
         
         return isOnGround;            
     }
+    
     
 }

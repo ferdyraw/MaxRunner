@@ -37,11 +37,11 @@ public class Cute extends Actor
         
     }
     public void Running(){
-        if(countRun1 % 4 == 0 ){
+        if(countRun1 % 2 == 0 ){
         setImage(imagesRun[countRun++ %8]);
         
         }
-        if(countRun1 > 32){
+        if(countRun1 > 16){
             countRun1 = 0;
         }
         countRun1 ++;
@@ -99,5 +99,12 @@ public class Cute extends Actor
             
              
         }
+    }
+    public void out(){
+        setLocation(getX() + num, getY());
+        if(getX() == 111){
+            num = 0;
+        }
+    
     }
 }
