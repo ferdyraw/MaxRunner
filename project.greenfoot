@@ -1,16 +1,23 @@
 #Greenfoot project file
 class.Block.image=besi10.png
 class.Cave.image=bege2.png
+<<<<<<< HEAD
 class.Cool.image=Jump_1.png
 class.Coolincave.image=Jump_1.png
 class.Coolinlab.image=Jump_1.png
 class.Coolintown.image=Jump_1.png
+=======
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 class.Cute.image=CuteRun_8.png
 class.Dot.image=dot.png
 class.Dot2.image=dot.png
 class.Drink.image=kaleng_1.png
 class.Lab.image=bege.png
+<<<<<<< HEAD
 class.Lava.image=blockcave1.png
+=======
+class.Lava.image=cave1.png
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 class.Obstacle.image=cone.png
 class.Obstacle2.image=coneFlipped.png
 class.PortalB.image=portal1_b.png
@@ -22,6 +29,7 @@ class.gameWin.image=72.png
 dependency1.from=gameWin
 dependency1.to=Highscore
 dependency1.type=UsesDependency
+<<<<<<< HEAD
 dependency10.from=gameMenu
 dependency10.to=Highscore
 dependency10.type=UsesDependency
@@ -51,10 +59,42 @@ dependency18.to=Dot
 dependency18.type=UsesDependency
 dependency19.from=Lab
 dependency19.to=Obstacle
+=======
+dependency10.from=Main
+dependency10.to=Energy
+dependency10.type=UsesDependency
+dependency11.from=Main
+dependency11.to=Highscore
+dependency11.type=UsesDependency
+dependency12.from=Main
+dependency12.to=gameMenu
+dependency12.type=UsesDependency
+dependency13.from=Lab
+dependency13.to=Block
+dependency13.type=UsesDependency
+dependency14.from=Lab
+dependency14.to=Cuteinfactory
+dependency14.type=UsesDependency
+dependency15.from=Lab
+dependency15.to=Dot
+dependency15.type=UsesDependency
+dependency16.from=Lab
+dependency16.to=Obstacle
+dependency16.type=UsesDependency
+dependency17.from=Lab
+dependency17.to=Drink
+dependency17.type=UsesDependency
+dependency18.from=Lab
+dependency18.to=gameMenu
+dependency18.type=UsesDependency
+dependency19.from=Cave
+dependency19.to=Lava
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 dependency19.type=UsesDependency
 dependency2.from=gameWin
 dependency2.to=Counter
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 dependency20.from=Lab
 dependency20.to=Drink
 dependency20.type=UsesDependency
@@ -193,6 +233,131 @@ editor.fx.0.x=0
 editor.fx.0.y=0
 height=686
 package.numDependencies=56
+=======
+dependency20.from=Cave
+dependency20.to=PortalB
+dependency20.type=UsesDependency
+dependency21.from=Cave
+dependency21.to=Coolincave
+dependency21.type=UsesDependency
+dependency22.from=Cave
+dependency22.to=Cuteincave
+dependency22.type=UsesDependency
+dependency23.from=Cave
+dependency23.to=Dot2
+dependency23.type=UsesDependency
+dependency24.from=Cave
+dependency24.to=Obstacle2
+dependency24.type=UsesDependency
+dependency25.from=Cave
+dependency25.to=gameMenu
+dependency25.type=UsesDependency
+dependency26.from=Cool
+dependency26.to=Main
+dependency26.type=UsesDependency
+dependency27.from=Cool
+dependency27.to=Counter
+dependency27.type=UsesDependency
+dependency28.from=Cool
+dependency28.to=Energy
+dependency28.type=UsesDependency
+dependency29.from=Cool
+dependency29.to=PortalD
+dependency29.type=UsesDependency
+dependency3.from=gameWin
+dependency3.to=gameMenu
+dependency3.type=UsesDependency
+dependency30.from=Cool
+dependency30.to=Drink
+dependency30.type=UsesDependency
+dependency31.from=Coolinfactory
+dependency31.to=gameOver
+dependency31.type=UsesDependency
+dependency32.from=Coolinfactory
+dependency32.to=Cave
+dependency32.type=UsesDependency
+dependency33.from=Coolinfactory
+dependency33.to=Dot
+dependency33.type=UsesDependency
+dependency34.from=Coolinfactory
+dependency34.to=PortalD
+dependency34.type=UsesDependency
+dependency35.from=Coolincave
+dependency35.to=gameOver
+dependency35.type=UsesDependency
+dependency36.from=Coolincave
+dependency36.to=Town
+dependency36.type=UsesDependency
+dependency37.from=Coolincave
+dependency37.to=Dot
+dependency37.type=UsesDependency
+dependency38.from=Coolincave
+dependency38.to=PortalD
+dependency38.type=UsesDependency
+dependency39.from=Cute
+dependency39.to=Main
+dependency39.type=UsesDependency
+dependency4.from=gameOver
+dependency4.to=Counter
+dependency4.type=UsesDependency
+dependency40.from=Cute
+dependency40.to=Counter
+dependency40.type=UsesDependency
+dependency41.from=Cute
+dependency41.to=Energy
+dependency41.type=UsesDependency
+dependency42.from=Cute
+dependency42.to=PortalD
+dependency42.type=UsesDependency
+dependency43.from=Cute
+dependency43.to=Drink
+dependency43.type=UsesDependency
+dependency44.from=Cuteinfactory
+dependency44.to=gameOver
+dependency44.type=UsesDependency
+dependency45.from=Cuteinfactory
+dependency45.to=Cave
+dependency45.type=UsesDependency
+dependency46.from=Cuteinfactory
+dependency46.to=Dot
+dependency46.type=UsesDependency
+dependency47.from=Cuteinfactory
+dependency47.to=PortalD
+dependency47.type=UsesDependency
+dependency48.from=Cuteincave
+dependency48.to=gameOver
+dependency48.type=UsesDependency
+dependency49.from=Cuteincave
+dependency49.to=Town
+dependency49.type=UsesDependency
+dependency5.from=gameOver
+dependency5.to=gameMenu
+dependency5.type=UsesDependency
+dependency50.from=Cuteincave
+dependency50.to=Dot2
+dependency50.type=UsesDependency
+dependency51.from=Cuteincave
+dependency51.to=PortalD
+dependency51.type=UsesDependency
+dependency6.from=gameMenu
+dependency6.to=MenuOption
+dependency6.type=UsesDependency
+dependency7.from=gameMenu
+dependency7.to=Counter
+dependency7.type=UsesDependency
+dependency8.from=gameMenu
+dependency8.to=Highscore
+dependency8.type=UsesDependency
+dependency9.from=Main
+dependency9.to=Counter
+dependency9.type=UsesDependency
+editor.fx.0.height=686
+editor.fx.0.width=1294
+editor.fx.0.x=-7
+editor.fx.0.y=-7
+height=686
+package.numDependencies=51
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 package.numTargets=31
 project.charset=UTF-8
 publish.hasSource=false
@@ -216,42 +381,66 @@ target1.width=120
 target1.x=0
 target1.y=0
 target10.height=70
+<<<<<<< HEAD
 target10.name=Button
+=======
+target10.name=MenuOption
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=120
 target10.x=0
 target10.y=0
 target11.height=70
+<<<<<<< HEAD
 target11.name=Town
+=======
+target11.name=Button
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=120
 target11.x=0
 target11.y=0
 target12.height=70
+<<<<<<< HEAD
 target12.name=Obstacle2
+=======
+target12.name=Cuteincity
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=120
 target12.x=0
 target12.y=0
 target13.height=70
+<<<<<<< HEAD
 target13.name=Coolinlab
+=======
+target13.name=Town
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=120
 target13.x=0
 target13.y=0
 target14.height=70
+<<<<<<< HEAD
 target14.name=gameWin
+=======
+target14.name=Obstacle2
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target14.showInterface=false
 target14.type=ClassTarget
 target14.width=120
 target14.x=0
 target14.y=0
 target15.height=70
+<<<<<<< HEAD
 target15.name=Cuteinlab
+=======
+target15.name=gameWin
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target15.showInterface=false
 target15.type=ClassTarget
 target15.width=120
@@ -286,91 +475,143 @@ target19.width=120
 target19.x=0
 target19.y=0
 target2.height=70
+<<<<<<< HEAD
 target2.name=Cool
+=======
+target2.name=Coolinfactory
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=120
 target2.x=0
 target2.y=0
 target20.height=70
+<<<<<<< HEAD
 target20.name=Dot
+=======
+target20.name=Coolincity
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target20.showInterface=false
 target20.type=ClassTarget
 target20.width=120
 target20.x=0
 target20.y=0
 target21.height=70
+<<<<<<< HEAD
 target21.name=gameOver
+=======
+target21.name=Dot
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target21.showInterface=false
 target21.type=ClassTarget
 target21.width=120
 target21.x=0
 target21.y=0
 target22.height=70
+<<<<<<< HEAD
 target22.name=Lab
+=======
+target22.name=gameOver
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target22.showInterface=false
 target22.type=ClassTarget
 target22.width=120
 target22.x=0
 target22.y=0
 target23.height=70
+<<<<<<< HEAD
 target23.name=PortalB
+=======
+target23.name=Lab
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target23.showInterface=false
 target23.type=ClassTarget
 target23.width=120
 target23.x=0
 target23.y=0
 target24.height=70
+<<<<<<< HEAD
 target24.name=Play
+=======
+target24.name=PortalB
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target24.showInterface=false
 target24.type=ClassTarget
 target24.width=120
 target24.x=0
 target24.y=0
 target25.height=70
+<<<<<<< HEAD
 target25.name=Cave
+=======
+target25.name=Cuteinfactory
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target25.showInterface=false
 target25.type=ClassTarget
 target25.width=120
 target25.x=0
 target25.y=0
 target26.height=70
+<<<<<<< HEAD
 target26.name=Cuteincave
+=======
+target26.name=Play
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target26.showInterface=false
 target26.type=ClassTarget
 target26.width=120
 target26.x=0
 target26.y=0
 target27.height=70
+<<<<<<< HEAD
 target27.name=Cuteintown
+=======
+target27.name=Cave
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target27.showInterface=false
 target27.type=ClassTarget
 target27.width=120
 target27.x=0
 target27.y=0
 target28.height=70
+<<<<<<< HEAD
 target28.name=gameMenu
+=======
+target28.name=Cuteincave
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target28.showInterface=false
 target28.type=ClassTarget
 target28.width=120
 target28.x=0
 target28.y=0
 target29.height=70
+<<<<<<< HEAD
 target29.name=Block
+=======
+target29.name=gameMenu
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target29.showInterface=false
 target29.type=ClassTarget
 target29.width=120
 target29.x=0
 target29.y=0
 target3.height=70
+<<<<<<< HEAD
 target3.name=Dot2
+=======
+target3.name=Cool
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=120
 target3.x=0
 target3.y=0
 target30.height=70
+<<<<<<< HEAD
 target30.name=Coolintown
+=======
+target30.name=Block
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target30.showInterface=false
 target30.type=ClassTarget
 target30.width=120
@@ -384,42 +625,66 @@ target31.width=120
 target31.x=0
 target31.y=0
 target4.height=70
+<<<<<<< HEAD
 target4.name=Coolincave
+=======
+target4.name=Dot2
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=120
 target4.x=0
 target4.y=0
 target5.height=70
+<<<<<<< HEAD
 target5.name=Drink
+=======
+target5.name=Coolincave
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=120
 target5.x=0
 target5.y=0
 target6.height=70
+<<<<<<< HEAD
 target6.name=Counter
+=======
+target6.name=Drink
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=120
 target6.x=0
 target6.y=0
 target7.height=70
+<<<<<<< HEAD
 target7.name=Credit
+=======
+target7.name=Counter
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=120
 target7.x=0
 target7.y=0
 target8.height=70
+<<<<<<< HEAD
 target8.name=Energy
+=======
+target8.name=Credit
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=120
 target8.x=0
 target8.y=0
 target9.height=70
+<<<<<<< HEAD
 target9.name=MenuOption
+=======
+target9.name=Energy
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=120
@@ -427,6 +692,10 @@ target9.x=0
 target9.y=0
 version=3.0.0
 width=1294
+<<<<<<< HEAD
 world.lastInstantiated=gameMenu
+=======
+world.lastInstantiated=Lab
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 xPosition=0
 yPosition=0

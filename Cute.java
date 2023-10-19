@@ -37,11 +37,19 @@ public class Cute extends Actor
         
     }
     public void Running(){
+<<<<<<< HEAD
         if(countRun1 % 2 == 0 ){
         setImage(imagesRun[countRun++ %8]);
         
         }
         if(countRun1 > 16){
+=======
+        if(countRun1 % 4 == 0 ){
+        setImage(imagesRun[countRun++ %8]);
+        
+        }
+        if(countRun1 > 32){
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
             countRun1 = 0;
         }
         countRun1 ++;
@@ -100,6 +108,7 @@ public class Cute extends Actor
              
         }
     }
+<<<<<<< HEAD
     public void out(){
         setLocation(getX() + num, getY());
         if(getX() == 111){
@@ -107,4 +116,6 @@ public class Cute extends Actor
         }
     
     }
+=======
+>>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
 }
