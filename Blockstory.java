@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Cuteincity here.
+ * Write a description of class Blockstory here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Cuteincity extends Cute
+public class Blockstory extends Actor
 {
     /**
-     * Act - do whatever the Cuteincity wants to do. This method is called whenever
+     * Act - do whatever the Blockstory wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()

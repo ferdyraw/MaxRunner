@@ -11,9 +11,12 @@ public class Cute extends Actor
 {
     public GreenfootImage[] imagesRun= new GreenfootImage[8];
     public GreenfootImage[] imagesJump= new GreenfootImage[12];
+    public GreenfootImage[] imagesIdle= new GreenfootImage[5];
     public int countRun= 0;
     public int countRun1 = 0;
     public int countJump = 0;
+    public int countIdle = 0;
+    public int countIdle1 = 0;
     public final int gravitasi = 1;
     public int kecepatan;
     public boolean falling = false;
@@ -28,6 +31,7 @@ public class Cute extends Actor
     public Cute(){
         animJump();
         animRun();
+        animIdle();
         kecepatan = 0;
         
         
@@ -37,22 +41,15 @@ public class Cute extends Actor
         
     }
     public void Running(){
-<<<<<<< HEAD
         if(countRun1 % 2 == 0 ){
         setImage(imagesRun[countRun++ %8]);
         
         }
         if(countRun1 > 16){
-=======
-        if(countRun1 % 4 == 0 ){
-        setImage(imagesRun[countRun++ %8]);
-        
-        }
-        if(countRun1 > 32){
->>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
             countRun1 = 0;
         }
         countRun1 ++;
+    
     }
     public void animRun(){
        for(int i = 0; i < 8; i++){
@@ -69,7 +66,24 @@ public class Cute extends Actor
         } 
         
     }
-    
+    public void animIdle(){
+        for(int i = 0; i < 5; i++){
+            int a = i+1;
+            String filename = "CuteIdle_"+ a + ".png";
+            imagesIdle[i] = new GreenfootImage(filename);   
+        }     
+    }
+    public void Idle(){
+        
+        if(countIdle1 % 8 == 0 ){
+        setImage(imagesIdle[countIdle++ %5]);
+        
+        }
+        if(countIdle1 > 40){
+            countIdle1 = 0;
+        }
+        countIdle1 ++;
+    }
     public void Jumping(){
         setImage(imagesJump[countJump++ %8]);
         
@@ -108,7 +122,7 @@ public class Cute extends Actor
              
         }
     }
-<<<<<<< HEAD
+
     public void out(){
         setLocation(getX() + num, getY());
         if(getX() == 111){
@@ -116,6 +130,6 @@ public class Cute extends Actor
         }
     
     }
-=======
->>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
+
+
 }

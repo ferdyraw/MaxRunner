@@ -33,9 +33,10 @@ public class Coolinlab extends Cool
             kecepatan = 20;
         }
         
-        if(getOneIntersectingObject(Dot.class) != null){
+        /*if(getOneIntersectingObject(Dot.class) != null){
             Greenfoot.setWorld(new gameOver());
         }
+        */
         
         if(getOneIntersectingObject(PortalD.class) != null){
             Greenfoot.setWorld(new Cave());
