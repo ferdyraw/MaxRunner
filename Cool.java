@@ -11,9 +11,12 @@ public class Cool extends Actor
 {
     public GreenfootImage[] imagesRun= new GreenfootImage[8];
     public GreenfootImage[] imagesJump= new GreenfootImage[11];
+    public GreenfootImage[] imagesIdle= new GreenfootImage[6];
     public int countRun= 0;
     public int countRun1 = 0;
     public int countJump = 0;
+    public int countIdle = 0;
+    public int countIdle1 = 0;
     public final int gravitasi = 1;
     public int kecepatan;
     public boolean falling = false;
@@ -28,6 +31,7 @@ public class Cool extends Actor
     public Cool(){
         animJump();
         animRun();
+        animIdle();
         kecepatan = 0;
         
         
@@ -37,6 +41,10 @@ public class Cool extends Actor
         
     }
     public void Running(){
+<<<<<<< HEAD
+=======
+
+>>>>>>> 478cda74f363a16ba49031f7ed4a52ae590393d4
         if(countRun1 % 2 == 0 ){
         setImage(imagesRun[countRun++ %8]);
         
@@ -44,7 +52,9 @@ public class Cool extends Actor
         if(countRun1 > 16){
             countRun1 = 0;
         }
+        
         countRun1 ++;
+        
     }
     public void animRun(){
        for(int i = 0; i < 8; i++){
@@ -61,6 +71,26 @@ public class Cool extends Actor
         } 
         
     }
+    public void animIdle(){
+        for(int i = 0; i < 6; i++){
+            int a = i+1;
+            String filename = "CoolIdle_"+ a + ".png";
+            imagesIdle[i] = new GreenfootImage(filename);   
+        }
+        
+    }
+    public void Idle(){
+        
+        if(countIdle1 % 8 == 0 ){
+        setImage(imagesIdle[countIdle++ %6]);
+        
+        }
+        if(countIdle1 > 40){
+            countIdle1 = 0;
+        }
+        countIdle1 ++;
+    }
+    
     
     public void Jumping(){
         setImage(imagesJump[countJump++ %8]);
@@ -100,6 +130,10 @@ public class Cool extends Actor
              
         }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 478cda74f363a16ba49031f7ed4a52ae590393d4
     
     public void out(){
         setLocation(getX() + num, getY());
@@ -108,4 +142,8 @@ public class Cool extends Actor
         }
     
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 478cda74f363a16ba49031f7ed4a52ae590393d4
 }

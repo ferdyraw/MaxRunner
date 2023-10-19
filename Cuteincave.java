@@ -63,5 +63,16 @@ public class Cuteincave extends Cute
         
         return isOnGround;            
     }
+<<<<<<< HEAD
+=======
+
+    public void out(){
+        setLocation(getX() + num, getY());
+        if(getX() == 111){
+            num = 0;
+        }
+    }
+
+>>>>>>> 478cda74f363a16ba49031f7ed4a52ae590393d4
     
 }

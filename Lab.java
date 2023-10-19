@@ -16,7 +16,15 @@ public class Lab extends Main
         Block block2 = new Block();
         addObject(block2, 300, 376);
         
+<<<<<<< HEAD
         addObject(new Cuteinlab(), 0, 327);
+=======
+
+        addObject(new Cuteinlab(), 0, 327);
+
+       
+
+>>>>>>> 478cda74f363a16ba49031f7ed4a52ae590393d4
     }
     
     public void act(){

@@ -26,14 +26,15 @@ public class Coolincave extends Cool
             jump();
         }
         
-        if(getOneIntersectingObject(Dot.class) != null){
+        /*if(getOneIntersectingObject(Dot.class) != null){
             Greenfoot.setWorld(new gameOver());
         }
-        
+        */
         if(getOneIntersectingObject(PortalD.class) != null){
             Greenfoot.setWorld(new Town());
         
         }
+        
         
         addScore();
         addDrink();
