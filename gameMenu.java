@@ -17,7 +17,6 @@ public class gameMenu extends World {
     }
 
     private void prepare() {
-        highscore.putScore(Integer.MAX_VALUE);
         counter.putScore(0);
         
         int initialX = getWidth() / 2;
@@ -26,7 +25,7 @@ public class gameMenu extends World {
 
         // Inisialisasi gambar-gambar menu
         menuImages[0] = new GreenfootImage("menu_start.png");
-        menuImages[1] = new GreenfootImage("menu_credits.png");
+        menuImages[1] = new GreenfootImage("menu_instructions.png");
         menuImages[2] = new GreenfootImage("menu_credits.png");
         menuImages[3] = new GreenfootImage("menu_quit.png");
 
@@ -87,6 +86,7 @@ public class gameMenu extends World {
             // Pindah ke tampilan credits
         } else {
             // Keluar dari permainan
+            highscore.putScore(Integer.MAX_VALUE);
             Greenfoot.stop();
         }
     }
