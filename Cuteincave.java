@@ -30,6 +30,10 @@ public class Cuteincave extends Cute
             Greenfoot.setWorld(new gameOver());
         }
         
+        if(getOneIntersectingObject(ObstacleLava.class) != null){
+            Greenfoot.setWorld(new gameOver());
+        }
+        
         if(getOneIntersectingObject(PortalD.class) != null){
             Greenfoot.setWorld(new Town());
         

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Lava extends Actor
+public class Blockcave extends Actor
 {
     /**
      * Act - do whatever the Block wants to do. This method is called whenever
@@ -15,7 +15,7 @@ public class Lava extends Actor
     private GreenfootImage[] imagesLava = new GreenfootImage[10];
     private int count = 0;
     private int countBlock = 0;
-    public Lava(){
+    public Blockcave(){
         animLava();
     }
     public void act()
