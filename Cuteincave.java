@@ -31,7 +31,7 @@ public class Cuteincave extends Cute
         }
         
         if(getOneIntersectingObject(PortalD.class) != null){
-            Greenfoot.setWorld(new City());
+            Greenfoot.setWorld(new Town());
         
         }
         

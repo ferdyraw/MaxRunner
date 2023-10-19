@@ -1,8 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Factory extends Main
+public class Lab extends Main
 {
-    public Factory()
+    public Lab()
     {
         super();
         backgroundImage = new GreenfootImage("bege.png");

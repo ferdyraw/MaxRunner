@@ -31,7 +31,7 @@ public class Coolincave extends Cool
         }
         
         if(getOneIntersectingObject(PortalD.class) != null){
-            Greenfoot.setWorld(new City());
+            Greenfoot.setWorld(new Town());
         
         }
         

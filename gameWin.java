@@ -28,7 +28,7 @@ public class gameWin extends World
         
 
         if(Greenfoot.isKeyDown("R")){
-            Greenfoot.setWorld(new Factory());
+            Greenfoot.setWorld(new Lab());
             counter.putScore(0);
         }
         

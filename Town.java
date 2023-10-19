@@ -1,8 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class City extends Main
+public class Town extends Main
 {
-    public City()
+    public Town()
     {
         super();
         backgroundImage = new GreenfootImage("71.png");
