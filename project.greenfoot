@@ -2,12 +2,16 @@
 class.Block.image=besi10.png
 class.Cave.image=bege2.png
 class.City.image=71.png
+class.Cool.image=Jump_1.png
+class.Coolincave.image=Jump_1.png
+class.Coolincity.image=Jump_1.png
+class.Coolinfactory.image=Jump_1.png
 class.Cute.image=CuteRun_8.png
 class.Dot.image=dot.png
 class.Dot2.image=dot.png
 class.Drink.image=kaleng_1.png
 class.Factory.image=bege.png
-class.Lava.image=cave1.png
+class.Lava.image=blockcave1.png
 class.Obstacle.image=cone.png
 class.Obstacle2.image=coneFlipped.png
 class.PortalB.image=portal1_b.png
@@ -140,11 +144,19 @@ dependency9.to=Counter
 dependency9.type=UsesDependency
 editor.fx.0.height=737
 editor.fx.0.width=814
+<<<<<<< HEAD
 editor.fx.0.x=232
 editor.fx.0.y=0
 height=686
 package.numDependencies=41
 package.numTargets=27
+=======
+editor.fx.0.x=225
+editor.fx.0.y=24
+height=686
+package.numDependencies=41
+package.numTargets=29
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -167,182 +179,297 @@ target1.width=120
 target1.x=0
 target1.y=0
 target10.height=70
+<<<<<<< HEAD
 target10.name=Cuteincity
+=======
+target10.name=MenuOption
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=120
 target10.x=0
 target10.y=0
 target11.height=70
+<<<<<<< HEAD
 target11.name=Obstacle2
+=======
+target11.name=Button
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=120
 target11.x=0
 target11.y=0
 target12.height=70
+<<<<<<< HEAD
 target12.name=gameWin
+=======
+target12.name=Cuteincity
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=120
 target12.x=0
 target12.y=0
 target13.height=70
+<<<<<<< HEAD
 target13.name=PortalD
+=======
+target13.name=gameWin
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=120
 target13.x=0
 target13.y=0
 target14.height=70
+<<<<<<< HEAD
 target14.name=Cute
+=======
+target14.name=PortalD
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target14.showInterface=false
 target14.type=ClassTarget
 target14.width=120
 target14.x=0
 target14.y=0
 target15.height=70
+<<<<<<< HEAD
 target15.name=Lava
+=======
+target15.name=Cute
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target15.showInterface=false
 target15.type=ClassTarget
 target15.width=120
 target15.x=0
 target15.y=0
 target16.height=70
+<<<<<<< HEAD
 target16.name=Highscore
+=======
+target16.name=Lava
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=120
 target16.x=0
 target16.y=0
 target17.height=70
+<<<<<<< HEAD
 target17.name=Dot
+=======
+target17.name=Highscore
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target17.showInterface=false
 target17.type=ClassTarget
 target17.width=120
 target17.x=0
 target17.y=0
 target18.height=70
+<<<<<<< HEAD
 target18.name=City
+=======
+target18.name=Dot
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target18.showInterface=false
 target18.type=ClassTarget
 target18.width=120
 target18.x=0
 target18.y=0
 target19.height=70
+<<<<<<< HEAD
 target19.name=gameOver
+=======
+target19.name=Coolincity
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target19.showInterface=false
 target19.type=ClassTarget
 target19.width=120
 target19.x=0
 target19.y=0
 target2.height=70
-target2.name=Factory
+target2.name=Coolinfactory
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=120
 target2.x=0
 target2.y=0
 target20.height=70
+<<<<<<< HEAD
 target20.name=PortalB
+=======
+target20.name=City
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target20.showInterface=false
 target20.type=ClassTarget
 target20.width=120
 target20.x=0
 target20.y=0
 target21.height=70
+<<<<<<< HEAD
 target21.name=Cuteinfactory
+=======
+target21.name=gameOver
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target21.showInterface=false
 target21.type=ClassTarget
 target21.width=120
 target21.x=0
 target21.y=0
 target22.height=70
+<<<<<<< HEAD
 target22.name=Play
+=======
+target22.name=PortalB
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target22.showInterface=false
 target22.type=ClassTarget
 target22.width=120
 target22.x=0
 target22.y=0
 target23.height=70
+<<<<<<< HEAD
 target23.name=Cave
+=======
+target23.name=Cuteinfactory
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target23.showInterface=false
 target23.type=ClassTarget
 target23.width=120
 target23.x=0
 target23.y=0
 target24.height=70
+<<<<<<< HEAD
 target24.name=Cuteincave
+=======
+target24.name=Play
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target24.showInterface=false
 target24.type=ClassTarget
 target24.width=120
 target24.x=0
 target24.y=0
 target25.height=70
+<<<<<<< HEAD
 target25.name=gameMenu
+=======
+target25.name=Cave
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target25.showInterface=false
 target25.type=ClassTarget
 target25.width=120
 target25.x=0
 target25.y=0
 target26.height=70
+<<<<<<< HEAD
 target26.name=Block
+=======
+target26.name=Cuteincave
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target26.showInterface=false
 target26.type=ClassTarget
 target26.width=120
 target26.x=0
 target26.y=0
 target27.height=70
+<<<<<<< HEAD
 target27.name=Main
+=======
+target27.name=gameMenu
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target27.showInterface=false
 target27.type=ClassTarget
 target27.width=120
 target27.x=0
 target27.y=0
+<<<<<<< HEAD
 target3.height=70
 target3.name=Dot2
+=======
+target28.height=70
+target28.name=Block
+target28.showInterface=false
+target28.type=ClassTarget
+target28.width=120
+target28.x=0
+target28.y=0
+target29.height=70
+target29.name=Main
+target29.showInterface=false
+target29.type=ClassTarget
+target29.width=120
+target29.x=0
+target29.y=0
+target3.height=70
+target3.name=Factory
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=120
 target3.x=0
 target3.y=0
 target4.height=70
+<<<<<<< HEAD
 target4.name=Drink
+=======
+target4.name=Cool
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=120
 target4.x=0
 target4.y=0
 target5.height=70
+<<<<<<< HEAD
 target5.name=Counter
+=======
+target5.name=Coolincave
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=120
 target5.x=0
 target5.y=0
 target6.height=70
+<<<<<<< HEAD
 target6.name=Credit
+=======
+target6.name=Drink
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=120
 target6.x=0
 target6.y=0
 target7.height=70
+<<<<<<< HEAD
 target7.name=Energy
+=======
+target7.name=Counter
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=120
 target7.x=0
 target7.y=0
 target8.height=70
+<<<<<<< HEAD
 target8.name=MenuOption
+=======
+target8.name=Credit
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=120
 target8.x=0
 target8.y=0
 target9.height=70
+<<<<<<< HEAD
 target9.name=Button
+=======
+target9.name=Energy
+>>>>>>> 44c1f97e2bc56affe56a0bbe0a363820754881e6
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=120
