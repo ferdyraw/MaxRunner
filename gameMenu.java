@@ -22,12 +22,12 @@ public class gameMenu extends World {
         
         int initialX = getWidth() / 2;
         int initialY = getHeight() / 2;
-        int spacing = 70;
+        int spacing = 40;
 
         // Inisialisasi gambar-gambar menu
-        menuImages[0] = new GreenfootImage("Run_1.png");
-        menuImages[1] = new GreenfootImage("Run_2.png");
-        menuImages[2] = new GreenfootImage("Run_3.png");
+        menuImages[0] = new GreenfootImage("start.png");
+        menuImages[1] = new GreenfootImage("option.png");
+        menuImages[2] = new GreenfootImage("kredit.png");
 
         for (int i = 0; i < 3; i++) {
             menuOptions[i] = new MenuOption(menuImages[i], initialX, initialY + spacing * i);
