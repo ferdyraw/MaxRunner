@@ -11,13 +11,12 @@ public class Cool extends Actor
 {
     public GreenfootImage[] imagesRun= new GreenfootImage[8];
     public GreenfootImage[] imagesJump= new GreenfootImage[11];
-    public GreenfootImage[] imagesIdle1= new GreenfootImage[6];
-    public GreenfootImage[] imagesIdle2= new GreenfootImage[5];
+    public GreenfootImage[] imagesIdle= new GreenfootImage[6];
     public int countRun= 0;
     public int countRun1 = 0;
     public int countJump = 0;
+    public int countIdle = 0;
     public int countIdle1 = 0;
-    public int countIdle2 = 0;
     public final int gravitasi = 1;
     public int kecepatan;
     public boolean falling = false;
@@ -73,20 +72,22 @@ public class Cool extends Actor
         for(int i = 0; i < 6; i++){
             int a = i+1;
             String filename = "CoolIdle_"+ a + ".png";
-            imagesIdle1[i] = new GreenfootImage(filename);   
+            imagesIdle[i] = new GreenfootImage(filename);   
         }
-        for(int i = 0; i < 5; i++){
-            int a = i+1;
-            String filename = "CoolIdle_2_"+ a + ".png";
-            imagesIdle1[i] = new GreenfootImage(filename);   
-        } 
+        
     }
-    public void Idle1(){
-        setImage(imagesIdle1[countIdle1++ %6]);
+    public void Idle(){
+        
+        if(countIdle1 % 8 == 0 ){
+        setImage(imagesIdle[countIdle++ %6]);
+        
+        }
+        if(countIdle1 > 40){
+            countIdle1 = 0;
+        }
+        countIdle1 ++;
     }
-    public void Idle2(){
-        setImage(imagesIdle2[countIdle2++ %5]);
-    }
+    
     
     public void Jumping(){
         setImage(imagesJump[countJump++ %8]);
