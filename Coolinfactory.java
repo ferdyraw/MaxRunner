@@ -6,13 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Cuteincave extends Cute
+public class Coolinfactory extends Cool
 {
     /**
      * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Cuteincave() {
+    public Coolinfactory() {
         super();
     }
     
@@ -20,10 +20,16 @@ public class Cuteincave extends Cute
     {
         // Add your action code here.
         fall();
-        out();
         
         if(Greenfoot.isKeyDown("space") && isOnGround()) {
             jump();
+        }
+    
+        if(Greenfoot.isKeyDown("up") && isOnGround() && getY() == 327){
+            kecepatan = -20;
+        }else if(Greenfoot.isKeyDown("down") && isOnGround() && getY() == 153){
+            falling = true;
+            kecepatan = 20;
         }
         
         if(getOneIntersectingObject(Dot.class) != null){
@@ -31,7 +37,7 @@ public class Cuteincave extends Cute
         }
         
         if(getOneIntersectingObject(PortalD.class) != null){
-            Greenfoot.setWorld(new City());
+            Greenfoot.setWorld(new Cave());
         
         }
         
@@ -59,15 +65,10 @@ public class Cuteincave extends Cute
     
     public boolean isOnGround(){
         boolean isOnGround = false;
-        if(getY() == 250) isOnGround = true;
+        if(getY() == 327 || 
+        getY() == 153) isOnGround = true;
         
         return isOnGround;            
-    }
-    public void out(){
-        setLocation(getX() + num, getY());
-        if(getX() == 111){
-            num = 0;
-        }
     }
     
 }

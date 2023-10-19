@@ -24,16 +24,16 @@ public class Lava extends Actor
         ground();
     }
     public void animLava(){
-       for(int i = 0; i < 6; i++){
+       for(int i = 0; i < 10; i++){
             int a = i+1;
-            String filename = "cave"+ a + ".png";
+            String filename = "blockcave"+ a + ".png";
             imagesLava[i] = new GreenfootImage(filename);   
-            imagesLava[i].scale(600, 125);
+            
         } 
     }
     public void ground(){
         if(countBlock % 6 == 0 ){
-        setImage(imagesLava[count++ %6]);
+        setImage(imagesLava[count++ %10]);
         
         }
         if(countBlock > 36){
