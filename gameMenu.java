@@ -21,7 +21,7 @@ public class gameMenu extends World {
         counter.putScore(0);
         
         int initialX = getWidth() / 2;
-        int initialY = getHeight() / 2-27;
+        int initialY = getHeight() / 2-30;
         int spacing = 40;
 
         // Inisialisasi gambar-gambar menu
