@@ -28,6 +28,7 @@ public class Lava extends Actor
             int a = i+1;
             String filename = "cave"+ a + ".png";
             imagesLava[i] = new GreenfootImage(filename);   
+            imagesLava[i].scale(600, 125);
         } 
     }
     public void ground(){
