@@ -16,12 +16,7 @@ public class Lab extends Main
         Block block2 = new Block();
         addObject(block2, 300, 376);
         
-<<<<<<< HEAD
         addObject(new Cuteinlab(), 0, 327);
-=======
-        Cuteinfactory cute = new Cuteinfactory();
-        addObject(cute, 111, 327);
->>>>>>> c0fd9905bccb09ad5e231eefdb5026451301fea0
     }
     
     public void act(){
