@@ -43,7 +43,7 @@ public class Cuteinlab extends Cute
         }
         if(getX() == 110){
             World myWorld = getWorld();
-            myWorld.addObject(new Coolinlab(),-25,324);
+            myWorld.addObject(new Coolinlab(),-50,324);
         }
         
         addScore();

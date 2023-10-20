@@ -39,6 +39,10 @@ public class Cuteincave extends Cute
         
         }
         
+        if(getX() == 110){
+            World myWorld = getWorld();
+            myWorld.addObject(new Coolincave(),-50,184);
+        }
         addScore();
         addDrink();
         if(isOnGround()) Running();

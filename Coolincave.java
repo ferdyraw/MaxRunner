@@ -36,8 +36,6 @@ public class Coolincave extends Cool
         }
         
         
-        addScore();
-        addDrink();
         if(isOnGround()) Running();
         else Jumping(); 
     }
@@ -63,12 +61,6 @@ public class Coolincave extends Cool
         if(getY() == 250) isOnGround = true;
         
         return isOnGround;            
-    }
-    public void out(){
-        setLocation(getX() + num, getY());
-        if(getX() == 111){
-            num = 0;
-        }
     }
     
 }

@@ -17,8 +17,6 @@ public class Cave extends Main
         PortalB portalb = new PortalB();
         addObject(portalb, -35, 184);
         
-        Coolincave cool = new Coolincave();
-        addObject(cool, 300, 184);
         
     }
     public void act(){
