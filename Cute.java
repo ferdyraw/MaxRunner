@@ -125,7 +125,7 @@ public class Cute extends Actor
     
     public void out(){
         setLocation(getX() + num, getY());
-        if(getX() == 111){
+        if(getX() == 200){
             num = 0;
         }
     

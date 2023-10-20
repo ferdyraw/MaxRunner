@@ -22,17 +22,6 @@ public class Cuteinlab extends Cute
         fall();
         out();
         
-        if(Greenfoot.isKeyDown("space") && isOnGround()) {
-            jump();
-        }
-    
-        if(Greenfoot.isKeyDown("up") && isOnGround() && getY() == 327){
-            kecepatan = -20;
-        }else if(Greenfoot.isKeyDown("down") && isOnGround() && getY() == 153){
-            falling = true;
-            kecepatan = 20;
-        }
-        
         if(getOneIntersectingObject(Dot.class) != null){
             Greenfoot.setWorld(new gameOver());
         }
@@ -40,10 +29,6 @@ public class Cuteinlab extends Cute
         if(getOneIntersectingObject(PortalD.class) != null){
             Greenfoot.setWorld(new Cave());
         
-        }
-        if(getX() == 110){
-            World myWorld = getWorld();
-            myWorld.addObject(new Coolinlab(),-50,324);
         }
         
         addScore();

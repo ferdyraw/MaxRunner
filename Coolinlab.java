@@ -22,17 +22,6 @@ public class Coolinlab extends Cool
         fall();
         out();
         
-        if(Greenfoot.isKeyDown("space") && isOnGround()) {
-            jump();
-        }
-    
-        if(Greenfoot.isKeyDown("up") && isOnGround() && getY() == 327){
-            kecepatan = -20;
-        }else if(Greenfoot.isKeyDown("down") && isOnGround() && getY() == 153){
-            falling = true;
-            kecepatan = 20;
-        }
-        
         /*if(getOneIntersectingObject(Dot.class) != null){
             Greenfoot.setWorld(new gameOver());
         }
@@ -43,8 +32,6 @@ public class Coolinlab extends Cool
         
         }
         
-        addScore();
-        addDrink();
         if(isOnGround()) Running();
         else Jumping(); 
     }

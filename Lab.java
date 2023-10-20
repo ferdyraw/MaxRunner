@@ -2,6 +2,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Lab extends Main
 {
+    private boolean up = false;
+    private boolean down = false;
+    private int diff_up = 0;
+    private int diff_down = 0;
+    
+    Cuteinlab cute = new Cuteinlab();
+    Coolinlab cool = new Coolinlab();
+    
     public Lab()
     {
         super();
@@ -16,7 +24,7 @@ public class Lab extends Main
         Block block2 = new Block();
         addObject(block2, 300, 376);
         
-        addObject(new Cuteinlab(), 0, 327);
+        addObject(cute, 0, 327);
     }
     
     public void act(){
@@ -38,6 +46,44 @@ public class Lab extends Main
         
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
+        }
+        
+        if(cute.getX() == 199){
+            addObject(cool,-50,324);
+        }
+        
+        if (Greenfoot.isKeyDown("space") && cute.isOnGround() && cute.getX() == 200) {
+            cute.jump();
+        }
+        
+        if(Greenfoot.isKeyDown("up") && cute.isOnGround() && cute.getY() == 327 && 
+            cute.getX() == 200){
+            cute.kecepatan = -20;
+            up = true;
+            diff_up = timer;
+        }
+        
+        if(Greenfoot.isKeyDown("down") && cute.isOnGround() && cute.getY() == 153 && 
+            cute.getX() == 200){
+            cute.falling = true;
+            cute.kecepatan = 20;
+            down = true;
+            diff_down = timer;
+        }
+        
+        if (timer > 300 && timer % 300 == 90) {
+            cool.jump();
+        }
+        
+        if (up && (timer-diff_up) == 10) {
+            cool.kecepatan = -20;
+            up = false;
+        } 
+        
+        if (down && (timer-diff_down) == 10) {
+            cool.falling = true;
+            cool.kecepatan = 20;
+            down = false;
         }
     }
 }
