@@ -22,12 +22,16 @@ public class gameStory extends World
         
         prepare();
     }
+    
     public void prepare(){
         Blockstory block = new Blockstory();
         addObject(block, 300, 376);
-        
-        addObject(new Cuteinstory(), 300, 327);
+
+        addObject(new Cuteinstory(), 500, 327);
+        Entry entry = new Entry();
+        addObject(entry,244,321);
     }
+
     public void act(){
         timer ++;
         if(timer == 100){
