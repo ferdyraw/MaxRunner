@@ -14,13 +14,15 @@ public class Coolinstory extends Cool
      */
     private int timer = 0;
     private int num = 2;
+    Entry gate = new Entry();
     public void act()
     {
         timer++;
         setLocation(getX() + num, getY());
         
-        if(getX() == 150){
+        if(getX() == 300){
             num = 0;
+            gate.Close();
         } else Running();
         
         if(timer == 350){
