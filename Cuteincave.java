@@ -39,10 +39,6 @@ public class Cuteincave extends Cute
         
         }
         
-        if(getX() == 110){
-            World myWorld = getWorld();
-            myWorld.addObject(new Coolincave(),-50,184);
-        }
         addScore();
         addDrink();
         if(isOnGround()) Running();
@@ -72,4 +68,40 @@ public class Cuteincave extends Cute
         return isOnGround;            
     }
     
+    public void addScore(){
+        World myWorld = getWorld();
+        Main bg = (Main)myWorld;
+        Energy energy = bg.getEnergy();
+        
+        score++;
+        if (score % 5 == 0 && energy.energy < 10){
+            
+            Counter counter = bg.getCounter();
+            counter.addScore();
+        }
+    }
+    
+    public void addDrink(){
+        Actor drink = getOneIntersectingObject(Drink.class);
+        World myWorld = getWorld();
+        
+        if (drink != null){    
+            myWorld.removeObject(drink);
+            
+            backSoundCoin = new GreenfootSound("koin.mp3"); //
+            backSoundCoin.play();
+            
+            Main bg = (Main)myWorld;
+            Energy energy = bg.getEnergy();
+            energy.addEnergy();
+            
+            if (energy.energy == 10) {
+                myWorld.addObject(new PortalD(),600,279); 
+                num = 1;
+                
+            }
+            
+             
+        }
+    }
 }

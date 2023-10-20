@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Cuteinlab extends Cute
 {
+    private boolean inPortal = false;
+    
     /**
      * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -26,12 +28,13 @@ public class Cuteinlab extends Cute
             Greenfoot.setWorld(new gameOver());
         }
         
-        if(getOneIntersectingObject(PortalD.class) != null){
-            Greenfoot.setWorld(new Cave());
-        
+        if (getOneIntersectingObject(PortalD.class) != null) {
+            setLocation(-50, getY());
+            num = 0;
+            inPortal = true;
         }
         
-        addScore();
+        if (!inPortal) addScore();
         addDrink();
         if(isOnGround()) Running();
         else Jumping(); 
@@ -61,5 +64,37 @@ public class Cuteinlab extends Cute
         return isOnGround;            
     }
     
+    public void addScore(){
+        World myWorld = getWorld();
+        Main bg = (Main)myWorld;
+        
+        score++;
+        if (score % 5 == 0){
+            
+            Counter counter = bg.getCounter();
+            counter.addScore();
+        }
+    }
     
+    public void addDrink(){
+        Actor drink = getOneIntersectingObject(Drink.class);
+        World myWorld = getWorld();
+        
+        if (drink != null){    
+            myWorld.removeObject(drink);
+            
+            backSoundCoin = new GreenfootSound("koin.mp3"); //
+            backSoundCoin.play();
+            
+            Main bg = (Main)myWorld;
+            Energy energy = bg.getEnergy();
+            energy.addEnergy();
+            
+            if (energy.energy == 5) {
+                myWorld.addObject(new PortalD(),600,279); 
+                num = 1;
+                
+            }
+        }
+    }
 }

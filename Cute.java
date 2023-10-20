@@ -89,45 +89,11 @@ public class Cute extends Actor
         
     }
     
-    
-    public void addScore(){
-        World myWorld = getWorld();
-        
-        score++;
-        if (score % 5 == 0){
-            Main bg = (Main)myWorld;
-            Counter counter = bg.getCounter();
-            counter.addScore();
-        }
-    }
-    
-    public void addDrink(){
-        Actor drink = getOneIntersectingObject(Drink.class);
-        World myWorld = getWorld();
-        
-        if (drink != null){    
-            myWorld.removeObject(drink);
-            
-            backSoundCoin = new GreenfootSound("koin.mp3"); //
-            backSoundCoin.play();
-            
-            Main bg = (Main)myWorld;
-            Energy energy = bg.getEnergy();
-            energy.addEnergy();
-            
-            if (energy.energy == 5) {
-                myWorld.addObject(new PortalD(),600,279); 
-            }
-            
-             
-        }
-    }
-    
     public void out(){
         setLocation(getX() + num, getY());
         if(getX() == 200){
             num = 0;
-        }
+        } 
     
     }
 }

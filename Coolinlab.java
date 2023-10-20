@@ -29,9 +29,9 @@ public class Coolinlab extends Cool
         
         if(getOneIntersectingObject(PortalD.class) != null){
             Greenfoot.setWorld(new Cave());
-        
         }
         
+        checkDrink();
         if(isOnGround()) Running();
         else Jumping(); 
     }
@@ -60,4 +60,13 @@ public class Coolinlab extends Cool
         return isOnGround;            
     }
     
+    public void checkDrink() {
+        World myWorld = getWorld();
+        Main bg = (Main)myWorld;
+        Energy energy = bg.getEnergy();
+        
+        if (energy.energy == 5){
+            num = 1;
+        }
+    }
 }

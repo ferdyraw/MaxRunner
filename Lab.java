@@ -29,16 +29,24 @@ public class Lab extends Main
     
     public void act(){
         super.act();
-        if(timer % 300 == 0 ){
-            addObject(new Dot(), 600, 330);
-            addObject(new Dot(), 600, 155);
-            addObject(new Obstacle(), 600, 340);
-            addObject(new Obstacle(), 600, 167);
-        }
-        if(timer % 200 == 0){
-            addObject(new Drink(), 600, 337);
+        
+        if (energy.energy < 5 ) {
+            if(timer % 300 == 0 ){
+                addObject(new Dot(), 600, 330);
+                addObject(new Dot(), 600, 155);
+                addObject(new Obstacle(), 600, 340);
+                addObject(new Obstacle(), 600, 167);
+            }
             
+            if(timer % 200 == 0){
+                addObject(new Drink(), 600, 337);   
+            }
+            
+            if (timer > 300 && timer % 300 == 90) {
+                cool.jump();
+            }
         }
+        
         if(timer % 7 == 0){
             scrollPosition = (scrollPosition - scrollSpeed) % getWidth();
             paint(scrollPosition);
@@ -71,16 +79,13 @@ public class Lab extends Main
             diff_down = timer;
         }
         
-        if (timer > 300 && timer % 300 == 90) {
-            cool.jump();
-        }
         
-        if (up && (timer-diff_up) == 10) {
+        if (up && (timer-diff_up) > 10 && cool.isOnGround()) {
             cool.kecepatan = -20;
             up = false;
         } 
         
-        if (down && (timer-diff_down) == 10) {
+        if (down && (timer-diff_down) > 10 && cool.isOnGround()) {
             cool.falling = true;
             cool.kecepatan = 20;
             down = false;

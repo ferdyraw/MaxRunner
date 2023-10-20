@@ -20,7 +20,6 @@ public class Coolincave extends Cool
     {
         // Add your action code here.
         fall();
-        out();
         
         if(Greenfoot.isKeyDown("space") && isOnGround()) {
             jump();
