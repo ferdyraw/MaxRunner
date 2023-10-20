@@ -31,7 +31,7 @@ public class gameStory extends World
     public void act(){
         timer ++;
         if(timer == 100){
-            addObject(new Coolinstory(), 0, 327);
+            addObject(new Coolinstory(), 0, 324);
         }
     }
 }

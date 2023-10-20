@@ -41,7 +41,6 @@ public class Cool extends Actor
         
     }
     public void Running(){
-
         if(countRun1 % 2 == 0 ){
         setImage(imagesRun[countRun++ %8]);
         
@@ -127,7 +126,6 @@ public class Cool extends Actor
              
         }
     }
-
     
     public void out(){
         setLocation(getX() + num, getY());
@@ -136,5 +134,4 @@ public class Cool extends Actor
         }
     
     }
-    
 }

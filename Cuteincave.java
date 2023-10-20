@@ -30,6 +30,10 @@ public class Cuteincave extends Cute
             Greenfoot.setWorld(new gameOver());
         }
         
+        if(getOneIntersectingObject(ObstacleLava.class) != null){
+            Greenfoot.setWorld(new gameOver());
+        }
+        
         if(getOneIntersectingObject(PortalD.class) != null){
             Greenfoot.setWorld(new Town());
         
@@ -63,13 +67,5 @@ public class Cuteincave extends Cute
         
         return isOnGround;            
     }
-
-    public void out(){
-        setLocation(getX() + num, getY());
-        if(getX() == 111){
-            num = 0;
-        }
-    }
-
     
 }

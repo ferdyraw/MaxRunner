@@ -12,8 +12,7 @@ public class Cave extends Main
     
     private void prepare()
     {   
-        Lava lava = new Lava();
-        addObject(lava, 300,335);
+        addObject(new Blockcave(), 300,335);
         
         PortalB portalb = new PortalB();
         addObject(portalb, -35, 184);
@@ -31,6 +30,10 @@ public class Cave extends Main
         if (timer % 400 == 0){
             addObject(new Dot2(), 600, 112);
             addObject(new Obstacle2(), 600, 122);
+        }
+        
+        if (timer % 250 == 0){
+            addObject(new ObstacleLava(), 600, 304);
         }
         
         if(Greenfoot.isKeyDown("escape")){

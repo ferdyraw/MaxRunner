@@ -2,8 +2,8 @@ import greenfoot.*;  // atau package yang sesuai
 
 public class gameMenu extends World {
     private int currentSelection = 0;
-    private GreenfootImage[] menuImages = new GreenfootImage[3];
-    private MenuOption[] menuOptions = new MenuOption[3];
+    private GreenfootImage[] menuImages = new GreenfootImage[4];
+    private MenuOption[] menuOptions = new MenuOption[4];
     
     private boolean keyDownPressed = false;
     private boolean keyUpPressed = false;
@@ -17,19 +17,19 @@ public class gameMenu extends World {
     }
 
     private void prepare() {
-        highscore.putScore(Integer.MAX_VALUE);
         counter.putScore(0);
         
         int initialX = getWidth() / 2;
-        int initialY = getHeight() / 2;
+        int initialY = getHeight() / 2-30;
         int spacing = 40;
 
         // Inisialisasi gambar-gambar menu
-        menuImages[0] = new GreenfootImage("start.png");
-        menuImages[1] = new GreenfootImage("option.png");
-        menuImages[2] = new GreenfootImage("kredit.png");
+        menuImages[0] = new GreenfootImage("menu_start.png");
+        menuImages[1] = new GreenfootImage("menu_instructions.png");
+        menuImages[2] = new GreenfootImage("menu_credits.png");
+        menuImages[3] = new GreenfootImage("menu_quit.png");
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             menuOptions[i] = new MenuOption(menuImages[i], initialX, initialY + spacing * i);
             addObject(menuOptions[i], initialX, initialY + spacing * i);
         }
@@ -83,7 +83,10 @@ public class gameMenu extends World {
             // Pindah ke tampilan cara bermain
             // Lakukan apa pun yang diperlukan untuk menampilkan tampilan cara bermain
         } else if (currentSelection == 2) {
+            // Pindah ke tampilan credits
+        } else {
             // Keluar dari permainan
+            highscore.putScore(Integer.MAX_VALUE);
             Greenfoot.stop();
         }
     }
