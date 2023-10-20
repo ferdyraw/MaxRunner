@@ -22,7 +22,6 @@ public class Coolinstory extends Cool
         
         if(getX() == 300){
             num = 0;
-            gate.Close();
         } else Running();
         
         if(timer == 350){

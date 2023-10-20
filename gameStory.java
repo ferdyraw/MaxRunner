@@ -7,14 +7,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class gameStory extends World
-{
-
-    /**
-     * Constructor for objects of class gameStory.
-     * 
-     */
+{   
+    public int timer = 0;
     
-    private int timer = 0;
+    Cuteinstory cute = new Cuteinstory();
+    Coolinstory cool = new Coolinstory();
+    Entry entry = new Entry();
+    
     public gameStory()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -27,15 +26,29 @@ public class gameStory extends World
         Blockstory block = new Blockstory();
         addObject(block, 300, 376);
 
-        addObject(new Cuteinstory(), 500, 327);
-        Entry entry = new Entry();
+        addObject(cute, 500, 327);
         addObject(entry,244,321);
     }
 
     public void act(){
         timer ++;
-        if(timer == 100){
-            addObject(new Coolinstory(), 0, 324);
+        
+        if (timer == 100){
+            addObject(cool, 0, 324);
+        }
+        
+        for (int i = 0; i < 25; i++) {
+            int j = i/5;
+            if (timer >= 140+(j*5) && timer < 140+((j+1)*5)) {
+                entry.Open(j);
+            }
+        }
+    
+        for (int i = 0; i < 20; i++) {
+            int j = i/5;
+            if (timer >= 300+(j*5) && timer < 300+((j+1)*5)) {
+                entry.Close(j);
+            }
         }
     }
 }

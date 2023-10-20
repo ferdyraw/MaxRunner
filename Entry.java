@@ -17,10 +17,12 @@ public class Entry extends Actor
     { 
         animGate();
     }
+    
     public void act() 
     {
         
-    }    
+    }   
+    
     public void animGate(){
         for(int i = 0; i < 5; i++){
             int a = i+1;
@@ -33,14 +35,12 @@ public class Entry extends Actor
             imagesGateClose[i] = new GreenfootImage(filename);   
         } 
     }
-    public void Open(){
-        for(int i  = 0; i < 5; i++){
-            setImage(imagesGateOpen[i]);
-        }
+    
+    public void Open(int i){
+        setImage(imagesGateOpen[i]);
     }
-    public void Close(){
-        for(int i  = 0; i < 4; i++){
-            setImage(imagesGateClose[i]);
-        }
+
+    public void Close(int i){
+        setImage(imagesGateClose[i]);
     }
 }
