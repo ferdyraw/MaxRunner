@@ -22,12 +22,8 @@ public class Coolinlab extends Cool
         fall();
         out();
         
-        /*if(getOneIntersectingObject(Dot.class) != null){
-            Greenfoot.setWorld(new gameOver());
-        }
-        */
-        
-        if(getOneIntersectingObject(PortalD.class) != null){
+        if (getOneIntersectingObject(PortalD.class) != null) 
+        {
             Greenfoot.setWorld(new Cave());
         }
         

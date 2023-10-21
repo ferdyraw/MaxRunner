@@ -6,8 +6,8 @@ public class Main extends World
     public GreenfootImage backgroundImage;
     public int scrollSpeed = 1;
     public int scrollPosition = 0;
-    public GreenfootSound backgroundJump;
-    public GreenfootSound backgroundSound;
+    public GreenfootSound backSoundJump;
+    public GreenfootSound backSound;
     
     Counter counter = new Counter();
     Energy energy = new Energy();
@@ -39,16 +39,15 @@ public class Main extends World
     }
     
     public void soundJump() {
-        backgroundJump = new GreenfootSound("jump1.mp3");
-        backgroundJump.play();
+        backSoundJump = new GreenfootSound("jump1.mp3");
+        backSoundJump.setVolume(40);
+        backSoundJump.play();
     }
     
     private void prepare()
     {
         addObject(counter, 75, 40);
         addObject(energy, 515, 40);
-        
-        
     }
     
     public void act(){
