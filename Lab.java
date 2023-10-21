@@ -31,6 +31,11 @@ public class Lab extends Main
     public void act(){
         super.act();
         
+        if (timer == 5) {
+            backgroundSound = new GreenfootSound("gamesound1.mp3");
+            backgroundSound.play();
+        }
+        
         if (energy.energy < 5 ) {
             if(timer % 300 == 0 ){
                 addObject(new Dot(), 600, 330);

@@ -7,6 +7,7 @@ public class Main extends World
     public int scrollSpeed = 1;
     public int scrollPosition = 0;
     public GreenfootSound backgroundJump;
+    public GreenfootSound backgroundSound;
     
     Counter counter = new Counter();
     Energy energy = new Energy();
@@ -46,6 +47,8 @@ public class Main extends World
     {
         addObject(counter, 75, 40);
         addObject(energy, 515, 40);
+        
+        
     }
     
     public void act(){

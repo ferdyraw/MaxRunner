@@ -25,6 +25,10 @@ public class Cuteinlab extends Cute
         out();
         
         if(getOneIntersectingObject(Dot.class) != null){
+            World myWorld = getWorld();
+            Main bg = (Main) myWorld;
+            bg.backgroundSound.stop();
+            
             Greenfoot.setWorld(new gameOver());
         }
         
