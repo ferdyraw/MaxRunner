@@ -6,6 +6,7 @@ public class Lab extends Main
     private boolean down = false;
     private int diff_up = 0;
     private int diff_down = 0;
+    private
     
     Cuteinlab cute = new Cuteinlab();
     Coolinlab cool = new Coolinlab();
@@ -62,6 +63,7 @@ public class Lab extends Main
         
         if (Greenfoot.isKeyDown("space") && cute.isOnGround() && cute.getX() == 200) {
             cute.jump();
+            soundJump();
         }
         
         if(Greenfoot.isKeyDown("up") && cute.isOnGround() && cute.getY() == 327 && 

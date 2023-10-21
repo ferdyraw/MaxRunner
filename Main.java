@@ -6,6 +6,7 @@ public class Main extends World
     public GreenfootImage backgroundImage;
     public int scrollSpeed = 1;
     public int scrollPosition = 0;
+    public GreenfootSound backgroundJump;
     
     Counter counter = new Counter();
     Energy energy = new Energy();
@@ -34,6 +35,11 @@ public class Main extends World
     
     public Highscore getHighscore(){
         return highscore;
+    }
+    
+    public void soundJump() {
+        backgroundJump = new GreenfootSound("jump1.mp3");
+        backgroundJump.play();
     }
     
     private void prepare()

@@ -83,7 +83,7 @@ public class Cuteinlab extends Cute
         if (drink != null){    
             myWorld.removeObject(drink);
             
-            backSoundCoin = new GreenfootSound("koin.mp3"); //
+            backSoundCoin = new GreenfootSound("getPower1.mp3"); //
             backSoundCoin.play();
             
             Main bg = (Main)myWorld;
