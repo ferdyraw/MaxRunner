@@ -209,7 +209,11 @@ editor.fx.0.x=-7
 editor.fx.0.y=-7
 height=670
 package.numDependencies=59
+<<<<<<< HEAD
 package.numTargets=38
+=======
+package.numTargets=39
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -323,56 +327,88 @@ target21.width=120
 target21.x=0
 target21.y=0
 target22.height=70
+<<<<<<< HEAD
 target22.name=Highscore
+=======
+target22.name=Lava
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target22.showInterface=false
 target22.type=ClassTarget
 target22.width=120
 target22.x=0
 target22.y=0
 target23.height=70
+<<<<<<< HEAD
 target23.name=Dot
+=======
+target23.name=Highscore
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target23.showInterface=false
 target23.type=ClassTarget
 target23.width=120
 target23.x=0
 target23.y=0
 target24.height=70
+<<<<<<< HEAD
 target24.name=Coolinstory
+=======
+target24.name=Dot
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target24.showInterface=false
 target24.type=ClassTarget
 target24.width=120
 target24.x=0
 target24.y=0
 target25.height=70
+<<<<<<< HEAD
 target25.name=gameOver
+=======
+target25.name=Coolinstory
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target25.showInterface=false
 target25.type=ClassTarget
 target25.width=120
 target25.x=0
 target25.y=0
 target26.height=70
+<<<<<<< HEAD
 target26.name=Lab
+=======
+target26.name=gameOver
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target26.showInterface=false
 target26.type=ClassTarget
 target26.width=120
 target26.x=0
 target26.y=0
 target27.height=70
+<<<<<<< HEAD
 target27.name=PortalB
+=======
+target27.name=Lab
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target27.showInterface=false
 target27.type=ClassTarget
 target27.width=120
 target27.x=0
 target27.y=0
 target28.height=70
+<<<<<<< HEAD
 target28.name=Play
+=======
+target28.name=PortalB
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target28.showInterface=false
 target28.type=ClassTarget
 target28.width=120
 target28.x=0
 target28.y=0
 target29.height=70
+<<<<<<< HEAD
 target29.name=Blockstory
+=======
+target29.name=Play
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target29.showInterface=false
 target29.type=ClassTarget
 target29.width=120
@@ -386,49 +422,77 @@ target3.width=120
 target3.x=0
 target3.y=0
 target30.height=70
+<<<<<<< HEAD
 target30.name=Cave
+=======
+target30.name=Blockstory
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target30.showInterface=false
 target30.type=ClassTarget
 target30.width=120
 target30.x=0
 target30.y=0
 target31.height=70
+<<<<<<< HEAD
 target31.name=Cuteincave
+=======
+target31.name=Cave
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target31.showInterface=false
 target31.type=ClassTarget
 target31.width=120
 target31.x=0
 target31.y=0
 target32.height=70
+<<<<<<< HEAD
 target32.name=Cuteintown
+=======
+target32.name=Cuteincave
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target32.showInterface=false
 target32.type=ClassTarget
 target32.width=120
 target32.x=0
 target32.y=0
 target33.height=70
+<<<<<<< HEAD
 target33.name=gameMenu
+=======
+target33.name=Cuteintown
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target33.showInterface=false
 target33.type=ClassTarget
 target33.width=120
 target33.x=0
 target33.y=0
 target34.height=70
+<<<<<<< HEAD
 target34.name=Block
+=======
+target34.name=gameMenu
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target34.showInterface=false
 target34.type=ClassTarget
 target34.width=120
 target34.x=0
 target34.y=0
 target35.height=70
+<<<<<<< HEAD
 target35.name=Coolintown
+=======
+target35.name=Block
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target35.showInterface=false
 target35.type=ClassTarget
 target35.width=120
 target35.x=0
 target35.y=0
 target36.height=70
+<<<<<<< HEAD
 target36.name=blabla
+=======
+target36.name=Coolintown
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target36.showInterface=false
 target36.type=ClassTarget
 target36.width=120
@@ -448,6 +512,16 @@ target38.type=ClassTarget
 target38.width=120
 target38.x=0
 target38.y=0
+<<<<<<< HEAD
+=======
+target39.height=70
+target39.name=Cuteinstory
+target39.showInterface=false
+target39.type=ClassTarget
+target39.width=120
+target39.x=0
+target39.y=0
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 target4.height=70
 target4.name=Dot2
 target4.showInterface=false
@@ -492,6 +566,10 @@ target9.x=0
 target9.y=0
 version=3.0.0
 width=1278
+<<<<<<< HEAD
 world.lastInstantiated=gameMenu
+=======
+world.lastInstantiated=Cave
+>>>>>>> d02e20e64172d87587de332ef39af629ad218ea5
 xPosition=0
 yPosition=0

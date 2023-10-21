@@ -18,7 +18,7 @@ public class Dot2 extends Actor
     public void act()
     {
         // Add your action code here.
-        if (getX() == 180) fall();
+        if (getX() == 258) fall();
         else move(-6);
     }
     
