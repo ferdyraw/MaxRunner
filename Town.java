@@ -43,7 +43,9 @@ public class Town extends Main
         }
         
         if (energy.energy < 15) {
-            
+            if (timer % 600 == 0) {
+                addObject(new ObstacleTruck(), 600, 310);
+            }
         }
         
         if(timer % 7 == 0){

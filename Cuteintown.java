@@ -24,6 +24,10 @@ public class Cuteintown extends Cute
         fall();
         out();
         
+        if(getOneIntersectingObject(ObstacleTruck.class) != null){
+            Greenfoot.setWorld(new gameOver());
+        }
+        
         if (getOneIntersectingObject(PortalD.class) != null) {
             setLocation(-50, getY());
             num = 0;
