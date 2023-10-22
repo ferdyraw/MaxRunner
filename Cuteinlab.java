@@ -68,18 +68,6 @@ public class Cuteinlab extends Cute
         return isOnGround;            
     }
     
-    public void addScore(){
-        World myWorld = getWorld();
-        Main bg = (Main)myWorld;
-        
-        score++;
-        if (score % 5 == 0){
-            
-            Counter counter = bg.getCounter();
-            counter.addScore();
-        }
-    }
-    
     public void addDrink(){
         Actor drink = getOneIntersectingObject(Drink.class);
         World myWorld = getWorld();

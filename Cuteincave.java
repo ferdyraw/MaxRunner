@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Cuteincave extends Cute
 {
+    private boolean inPortal = false;
     /**
      * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,11 +22,7 @@ public class Cuteincave extends Cute
         // Add your action code here.
         fall();
         out();
-        
-        if(Greenfoot.isKeyDown("space") && isOnGround()) {
-            jump();
-        }
-        
+    
         if(getOneIntersectingObject(Dot2.class) != null){
             Greenfoot.setWorld(new gameOver());
         }
@@ -34,12 +31,13 @@ public class Cuteincave extends Cute
             Greenfoot.setWorld(new gameOver());
         }
         
-        if(getOneIntersectingObject(PortalD.class) != null){
-            Greenfoot.setWorld(new Town());
-        
+        if (getOneIntersectingObject(PortalD.class) != null) {
+            setLocation(-50, getY());
+            num = 0;
+            inPortal = true;
         }
         
-        addScore();
+        if (!inPortal) addScore();
         addDrink();
         if(isOnGround()) Running();
         else Jumping(); 
@@ -68,19 +66,6 @@ public class Cuteincave extends Cute
         return isOnGround;            
     }
     
-    public void addScore(){
-        World myWorld = getWorld();
-        Main bg = (Main)myWorld;
-        Energy energy = bg.getEnergy();
-        
-        score++;
-        if (score % 5 == 0 && energy.energy < 10){
-            
-            Counter counter = bg.getCounter();
-            counter.addScore();
-        }
-    }
-    
     public void addDrink(){
         Actor drink = getOneIntersectingObject(Drink.class);
         World myWorld = getWorld();
@@ -88,7 +73,8 @@ public class Cuteincave extends Cute
         if (drink != null){    
             myWorld.removeObject(drink);
             
-            backSoundCoin = new GreenfootSound("koin.mp3"); //
+            backSoundCoin = new GreenfootSound("getPower1.mp3");
+            backSoundCoin.setVolume(40);
             backSoundCoin.play();
             
             Main bg = (Main)myWorld;

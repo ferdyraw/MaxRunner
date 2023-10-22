@@ -21,10 +21,6 @@ public class Coolincave extends Cool
         // Add your action code here.
         fall();
         
-        if(Greenfoot.isKeyDown("space") && isOnGround()) {
-            jump();
-        }
-        
         /*if(getOneIntersectingObject(Dot.class) != null){
             Greenfoot.setWorld(new gameOver());
         }
@@ -34,7 +30,7 @@ public class Coolincave extends Cool
         
         }
         
-        
+        checkDrink(10);
         if(isOnGround()) Running();
         else Jumping(); 
     }

@@ -32,17 +32,32 @@ public class Cave extends Main
             addObject(cool, 0, 184);
         }
         
-        if (timer % 400 == 0){
-            addObject(new Dot2(), 600, 112);
-            addObject(new Obstacle2(), 600, 122);
-        }
-        
-        if (timer % 350 == 0){
-            addObject(new ObstacleLava(), 600, 304);
+        if (energy.energy < 10) {
+            if (timer % 400 == 0){
+                addObject(new Dot2(), 600, 100);
+                addObject(new Obstacle2(), 600, 110);
+            }
+            
+            if (timer % 350 == 0){
+                addObject(new ObstacleLava(), 600, 302);
+            }
+            
+            if (timer % 200 == 0) {
+                addObject(new Drink(), 600, 260);
+            }
+            
+            if (timer > 350 && (timer % 350 == 85 || timer % 400 == 100)) {
+                cool.jump();
+            }
         }
         
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
+        }
+        
+        if (Greenfoot.isKeyDown("space") && cute.isOnGround() && cute.getX() == 200) {
+            cute.jump();
+            soundJump();
         }
     }
 }

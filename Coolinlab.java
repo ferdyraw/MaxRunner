@@ -27,7 +27,7 @@ public class Coolinlab extends Cool
             Greenfoot.setWorld(new Cave());
         }
         
-        checkDrink();
+        checkDrink(5);
         if(isOnGround()) Running();
         else Jumping(); 
     }
@@ -54,15 +54,5 @@ public class Coolinlab extends Cool
         getY() == 153) isOnGround = true;
         
         return isOnGround;            
-    }
-    
-    public void checkDrink() {
-        World myWorld = getWorld();
-        Main bg = (Main)myWorld;
-        Energy energy = bg.getEnergy();
-        
-        if (energy.energy == 5){
-            num = 1;
-        }
     }
 }

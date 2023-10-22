@@ -101,4 +101,14 @@ public class Cool extends Actor
         }
     
     }
+    
+    public void checkDrink(int val) {
+        World myWorld = getWorld();
+        Main bg = (Main)myWorld;
+        Energy energy = bg.getEnergy();
+        
+        if (energy.energy == val){
+            num = 1;
+        }
+    }
 }

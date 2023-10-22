@@ -89,6 +89,18 @@ public class Cute extends Actor
         
     }
     
+    public void addScore(){
+        World myWorld = getWorld();
+        Main bg = (Main)myWorld;
+        
+        score++;
+        if (score % 5 == 0){
+            
+            Counter counter = bg.getCounter();
+            counter.addScore();
+        }
+    }
+    
     public void out(){
         setLocation(getX() + num, getY());
         if(getX() == 200){
