@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Dot2 extends Actor
+public class Dot2 extends Obstacle
 {
     private final int gravitasi = 1;
     public int kecepatan = 10;

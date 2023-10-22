@@ -28,10 +28,16 @@ public class Cuteintown extends Cute
             Greenfoot.setWorld(new gameOver());
         }
         
-        if (getOneIntersectingObject(PortalD.class) != null) {
-            setLocation(-50, getY());
-            num = 0;
-            inPortal = true;
+        if (getOneIntersectingObject(ObstacleSubSurf.class) != null) {
+            Greenfoot.setWorld(new gameOver());
+        }
+        
+        if (getOneIntersectingObject(ObstacleMouse.class) != null) {
+            Greenfoot.setWorld(new gameOver());
+        }
+        
+        if (getOneIntersectingObject(PortalD.class) != null)  {
+            Greenfoot.setWorld(new gameWin());
         }
         
         if (!inPortal) addScore();
@@ -80,7 +86,9 @@ public class Cuteintown extends Cute
             energy.addEnergy();
             
             if (energy.energy == 15) {
-                myWorld.addObject(new PortalD(),600,279); 
+                PortalD portal = new PortalD();
+                myWorld.addObject(portal,600,131); 
+                portal.soundOpen();
                 num = 1;
                 
             }

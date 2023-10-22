@@ -19,9 +19,9 @@ public class Lab extends Main
     }
     
     private void prepare(){
-        Block block1 = new Block();
+        Blocklab block1 = new Blocklab();
         addObject(block1, 300, 203);
-        Block block2 = new Block();
+        Blocklab block2 = new Blocklab();
         addObject(block2, 300, 376);
         
         addObject(counter, 75, 40);
@@ -32,13 +32,19 @@ public class Lab extends Main
     
     public void act(){
         super.act();
+        
+        if (timer == 5) {
+            GreenfootSound backsound = new GreenfootSound("gamesound1.mp3");
+            backsound.setVolume(70);
+            backsound.play();
+        }
             
         if (energy.energy < 5 ) {
             if(timer % 300 == 0 ){
                 addObject(new Dot(), 600, 330);
                 addObject(new Dot(), 600, 155);
-                addObject(new Obstacle(), 600, 340);
-                addObject(new Obstacle(), 600, 167);
+                addObject(new ObstacleCone(), 600, 340);
+                addObject(new ObstacleCone(), 600, 167);
             }
             
             if(timer % 200 == 0){
@@ -69,6 +75,7 @@ public class Lab extends Main
             cute.kecepatan = -20;
             up = true;
             diff_up = timer;
+            soundSwap();
         }
         
         if(Greenfoot.isKeyDown("down") && cute.isOnGround() && cute.getY() == 153 && 
@@ -77,6 +84,7 @@ public class Lab extends Main
             cute.kecepatan = 20;
             down = true;
             diff_down = timer;
+            soundSwap();
         }
         
         

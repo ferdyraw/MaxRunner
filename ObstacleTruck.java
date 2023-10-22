@@ -1,20 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Truck here.
+ * Write a description of class ObstacleTruck here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ObstacleTruck extends Actor
+public class ObstacleTruck extends Obstacle
 {
     /**
-     * Act - do whatever the Truck wants to do. This method is called whenever
+     * Act - do whatever the ObstacleTruck wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
         // Add your action code here.
-        move(-6);
+        super.act();
     }
 }

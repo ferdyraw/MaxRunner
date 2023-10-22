@@ -8,24 +8,40 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class gameWin extends World
 {
+    private GreenfootImage backgroundImage;
+    private int timer = 0;
+    
     Highscore highscore = new Highscore();
     Counter counter = new Counter();
+    PortalB portal = new PortalB();
     
     public gameWin()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        backgroundImage = new GreenfootImage("bege4.png");
+        setBackground(backgroundImage);
         prepare();
     }
     
     public void prepare(){
         counter.getScore();
         highscore.putScore(counter.score);
-        addObject(highscore, 300, 280);
+        //addObject(highscore, 300, 280);
+        
+        addObject(new Blockwin(), 300, 350);
+        addObject(portal, 1, 250);
     }
     
     public void act(){
+        timer++;
         
+        if (timer == 1) {
+            portal.soundClose();
+        }
+        
+        if (timer == 60) {
+            addObject(new Cuteinwin(), 55, 250);
+        }
 
         if(Greenfoot.isKeyDown("R")){
             Greenfoot.setWorld(new Lab());

@@ -7,6 +7,7 @@ public class Main extends World
     public int scrollSpeed = 1;
     public int scrollPosition = 0;
     public GreenfootSound backSoundJump;
+    public GreenfootSound backSoundSwap;
     
     Counter counter = new Counter();
     Energy energy = new Energy();
@@ -40,6 +41,12 @@ public class Main extends World
         backSoundJump = new GreenfootSound("jump1.mp3");
         backSoundJump.setVolume(40);
         backSoundJump.play();
+    }
+    
+    public void soundSwap() {
+        backSoundSwap = new GreenfootSound("sound_swap.mp3");
+        backSoundSwap.setVolume(40);
+        backSoundSwap.play();
     }
     
     public void act(){

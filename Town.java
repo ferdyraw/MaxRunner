@@ -34,6 +34,10 @@ public class Town extends Main
     public void act(){
         super.act();
         
+        if (timer == 1) {
+            portalb.soundClose();
+        }
+        
         if(timer == 60){
             addObject(cute, 55, 132);
         }
@@ -43,8 +47,29 @@ public class Town extends Main
         }
         
         if (energy.energy < 15) {
+            if (timer % 300 == 0) {
+                addObject(new ObstacleSubSurf(), 600, 163);
+                addObject(new ObstacleSubSurf(), 600, 335);
+            }
+            
             if (timer % 600 == 0) {
                 addObject(new ObstacleTruck(), 600, 310);
+            }
+            
+            if (timer % 1100 == 0) {
+                addObject(new ObstacleTruck(), 600, 138);
+            }
+            
+            if (timer % 500 == 0) {
+                addObject(new ObstacleMouse(), 0, 174);
+            }
+            
+            if(timer % 200 == 0){
+                addObject(new Drink(), 600, 337);   
+            }
+            
+            if (timer > 300 && timer % 300 == 90) {
+                cool.jump();
             }
         }
         
@@ -63,6 +88,7 @@ public class Town extends Main
             cute.kecepatan = -20;
             up = true;
             diff_up = timer;
+            soundSwap();
         }
         
         if(Greenfoot.isKeyDown("down") && cute.isOnGround() && cute.getY() == 153 && 
@@ -71,6 +97,7 @@ public class Town extends Main
             cute.kecepatan = 20;
             down = true;
             diff_down = timer;
+            soundSwap();
         }
         
         

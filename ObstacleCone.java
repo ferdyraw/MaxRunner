@@ -1,19 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Blockstory here.
+ * Write a description of class ObstacleCone here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Blockstory extends Block
+public class ObstacleCone extends Obstacle
 {
     /**
-     * Act - do whatever the Blockstory wants to do. This method is called whenever
+     * Act - do whatever the ObstacleCone wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
         // Add your action code here.
+        super.act();
     }
 }

@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Obstacle2 here.
+ * Write a description of class ObstacleDrop here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Obstacle2 extends Actor
+public class ObstacleDrop extends Obstacle
 {
     private final int gravitasi = 1;
     public int kecepatan = 10;
@@ -19,7 +19,7 @@ public class Obstacle2 extends Actor
     {
         // Add your action code here.
         if (getX() == 258) fall();
-        else move(-6);
+        else super.act();
     }
     
     public void fall(){

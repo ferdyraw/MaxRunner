@@ -80,7 +80,9 @@ public class Cuteinlab extends Cute
             energy.addEnergy();
             
             if (energy.energy == 5) {
-                myWorld.addObject(new PortalD(),600,279); 
+                PortalD portal = new PortalD();
+                myWorld.addObject(portal, 600,279); 
+                portal.soundOpen();
                 num = 1;
                 
             }

@@ -82,7 +82,9 @@ public class Cuteincave extends Cute
             energy.addEnergy();
             
             if (energy.energy == 10) {
-                myWorld.addObject(new PortalD(),600,209); 
+                PortalD portal = new PortalD();
+                myWorld.addObject(portal,600,209); 
+                portal.soundOpen();
                 num = 1;
                 
             }

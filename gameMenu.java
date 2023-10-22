@@ -4,6 +4,7 @@ public class gameMenu extends World {
     private int currentSelection = 0;
     private GreenfootImage[] menuImages = new GreenfootImage[4];
     private MenuOption[] menuOptions = new MenuOption[4];
+    private GreenfootSound backsoundStart;
     
     private boolean keyDownPressed = false;
     private boolean keyUpPressed = false;
@@ -79,6 +80,9 @@ public class gameMenu extends World {
         if (currentSelection == 0) {
             // Pindah ke lapisan permainan
             Greenfoot.setWorld(new gameStory()); // Ganti dengan kelas dunia permainan Anda
+            backsoundStart = new GreenfootSound("start.mp3");
+            backsoundStart.setVolume(70);
+            backsoundStart.play();
         } else if (currentSelection == 1) {
             // Pindah ke tampilan cara bermain
             // Lakukan apa pun yang diperlukan untuk menampilkan tampilan cara bermain

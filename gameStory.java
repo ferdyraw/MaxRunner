@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class gameStory extends World
 {   
+    private GreenfootSound backsoundGate;
     public int timer = 0;
     
     Cuteinstory cute = new Cuteinstory();
@@ -35,6 +36,12 @@ public class gameStory extends World
         
         if (timer == 100){
             addObject(cool, 0, 324);
+        }
+        
+        if (timer == 160) {
+            backsoundGate = new GreenfootSound("gate_open.mp3");
+            backsoundGate.setVolume(80);
+            backsoundGate.play();
         }
         
         for (int i = 0; i < 25; i++) {

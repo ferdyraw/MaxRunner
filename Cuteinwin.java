@@ -1,19 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Cuteinfactory here.
+ * Write a description of class Cuteinwin here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Coolintown extends Cool
+public class Cuteinwin extends Cute
 {
     /**
-     * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
+     * Act - do whatever the Cuteinwin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Coolintown() {
+    
+    public Cuteinwin() {
         super();
+        num = 3;
     }
     
     public void act()
@@ -21,10 +23,8 @@ public class Coolintown extends Cool
         // Add your action code here.
         fall();
         out();
-        
-        checkDrink(15);
-        if(isOnGround()) Running();
-        else Jumping(); 
+        if (getX() != 298) Running();
+        else Idle();
     }
     
     public void fall(){
@@ -41,9 +41,15 @@ public class Coolintown extends Cool
     
     public boolean isOnGround(){
         boolean isOnGround = false;
-        if(getY() == 327 || 
-        getY() == 153) isOnGround = true;
+        if(getY() == 305) isOnGround = true;
         
         return isOnGround;            
+    }
+    
+    public void out() {
+        setLocation(getX() + num, getY());
+        if(getX() == 298){
+            num = 0;
+        } 
     }
 }

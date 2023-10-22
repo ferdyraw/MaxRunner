@@ -23,11 +23,14 @@ public class Cave extends Main
         addObject(energy, 515, 40);
         
         addObject(portalb, 1, 184);
-        
-        
     }
     public void act(){
         super.act();
+        
+        if (timer == 1) {
+            portalb.soundClose();
+        }
+        
         if(timer == 60){
             addObject(cute, 55, 184);
         }
@@ -39,7 +42,7 @@ public class Cave extends Main
         if (energy.energy < 10) {
             if (timer % 400 == 0){
                 addObject(new Dot2(), 600, 79);
-                addObject(new Obstacle2(), 600, 89);
+                addObject(new ObstacleDrop(), 600, 89);
             }
             
             if (timer % 350 == 0){

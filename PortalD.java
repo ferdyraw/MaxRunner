@@ -9,13 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class PortalD extends Actor
 {
     private GreenfootImage[] imagesPortal= new GreenfootImage[8];
-    /**
-     * Act - do whatever the coin wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public GreenfootSound backSoundPortal;
     private int countPortal = 0;
     private int num = 1;
     private int countPortal1 = 0;
+    
+    
     public PortalD(){
         animPortal();
     }
@@ -48,5 +47,11 @@ public class PortalD extends Actor
             countPortal1 = 0;
         }
         countPortal1 ++;
+    }
+    
+    public void soundOpen() {
+        backSoundPortal = new GreenfootSound("sound_teleport.mp3");
+        backSoundPortal.setVolume(40);
+        backSoundPortal.play();
     }
 }
