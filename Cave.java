@@ -24,7 +24,7 @@ public class Cave extends Main
     }
     public void act(){
         super.act();
-        if(timer == 85){
+        if(timer == 60){
             addObject(cute, 55, 184);
         }
         
@@ -32,7 +32,7 @@ public class Cave extends Main
             addObject(cool, 0, 184);
         }
         
-        if (energy.energy < 10) {
+        if (energy.energy < 1) {
             if (timer % 400 == 0){
                 addObject(new Dot2(), 600, 100);
                 addObject(new Obstacle2(), 600, 110);

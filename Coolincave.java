@@ -31,7 +31,7 @@ public class Coolincave extends Cool
         
         }
         
-        checkDrink(10);
+        checkDrink(1);
         if(isOnGround()) Running();
         else Jumping(); 
     }
@@ -46,10 +46,6 @@ public class Coolincave extends Cool
             else kecepatan += gravitasi;
         }
         
-    }
-    
-    public void jump(){
-        kecepatan = -13;
     }
     
     public boolean isOnGround(){

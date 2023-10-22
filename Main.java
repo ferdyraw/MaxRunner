@@ -7,7 +7,6 @@ public class Main extends World
     public int scrollSpeed = 1;
     public int scrollPosition = 0;
     public GreenfootSound backSoundJump;
-    public GreenfootSound backSound;
     
     Counter counter = new Counter();
     Energy energy = new Energy();
@@ -55,7 +54,6 @@ public class Main extends World
         
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
-            backSound.stop();
         }
     }
 }

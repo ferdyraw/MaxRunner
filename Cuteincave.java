@@ -39,7 +39,11 @@ public class Cuteincave extends Cute
         
         if (!inPortal) addScore();
         addDrink();
-        if(isOnGround()) Running();
+        if(isOnGround()) {
+            Running();
+            countJump = 0;
+            countJump1 = 0;
+        }
         else Jumping(); 
     }
     
@@ -77,7 +81,7 @@ public class Cuteincave extends Cute
             Energy energy = bg.getEnergy();
             energy.addEnergy();
             
-            if (energy.energy == 10) {
+            if (energy.energy == 1) {
                 myWorld.addObject(new PortalD(),600,209); 
                 num = 1;
                 

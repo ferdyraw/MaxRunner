@@ -29,13 +29,7 @@ public class Lab extends Main
     
     public void act(){
         super.act();
-        
-        if (timer == 5) {
-            backSound = new GreenfootSound("gamesound1.mp3");
-            backSound.setVolume(60);
-            backSound.play();
-        }
-        
+            
         if (energy.energy < 5 ) {
             if(timer % 300 == 0 ){
                 addObject(new Dot(), 600, 330);

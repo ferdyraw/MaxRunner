@@ -23,7 +23,7 @@ public class Cool extends Actor
     public boolean falling = false;
     public GreenfootSound backSoundCoin;
     public int score = 0;
-    public int num = 1;
+    public int num = 0;
     /*
      * Act - do whatever the dino wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -82,17 +82,17 @@ public class Cool extends Actor
         setImage(imagesIdle[countIdle++ %6]);
         
         }
-        if(countIdle1 > 40){
+        if(countIdle1 > 48){
             countIdle1 = 0;
         }
         countIdle1 ++;
     }
     
     public void Jumping(){
-        if (countJump1 % 3 == 0) {
+        if (countJump1 % 2 == 0) {
             setImage(imagesJump[countJump++ % 11]);
         }
-        if (countJump1 > 33) {
+        if (countJump1 > 2) {
             countJump1 = 0;
         }
         countJump1 ++;
@@ -106,6 +106,8 @@ public class Cool extends Actor
         setLocation(getX() + num, getY());
         if(getX() == 0){
             num = 0;
+        } else {
+            num = 1;
         }
     
     }
