@@ -17,6 +17,10 @@ public class Cave extends Main
     private void prepare()
     {   
         addObject(new Blockcave(), 300,335);
+        addObject(new Blockcave2(), 300, 25);
+        
+        addObject(counter, 75, 40);
+        addObject(energy, 515, 40);
         
         addObject(portalb, 1, 184);
         
@@ -32,10 +36,10 @@ public class Cave extends Main
             addObject(cool, 0, 184);
         }
         
-        if (energy.energy < 1) {
+        if (energy.energy < 10) {
             if (timer % 400 == 0){
-                addObject(new Dot2(), 600, 100);
-                addObject(new Obstacle2(), 600, 110);
+                addObject(new Dot2(), 600, 79);
+                addObject(new Obstacle2(), 600, 89);
             }
             
             if (timer % 350 == 0){

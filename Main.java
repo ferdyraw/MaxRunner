@@ -22,7 +22,6 @@ public class Main extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false); 
-        prepare();
     }
     
     public Counter getCounter(){
@@ -41,12 +40,6 @@ public class Main extends World
         backSoundJump = new GreenfootSound("jump1.mp3");
         backSoundJump.setVolume(40);
         backSoundJump.play();
-    }
-    
-    private void prepare()
-    {
-        addObject(counter, 75, 40);
-        addObject(energy, 515, 40);
     }
     
     public void act(){

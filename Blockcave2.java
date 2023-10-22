@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Blockcave extends Actor
+public class Blockcave2 extends Actor
 {
     /**
      * Act - do whatever the Block wants to do. This method is called whenever
@@ -15,7 +15,8 @@ public class Blockcave extends Actor
     private GreenfootImage[] imagesLava = new GreenfootImage[10];
     private int count = 0;
     private int countBlock = 0;
-    public Blockcave(){
+    
+    public Blockcave2(){
         animLava();
     }
     public void act()
@@ -24,11 +25,12 @@ public class Blockcave extends Actor
         ground();
     }
     public void animLava(){
-       for(int i = 0; i < 10; i++){
-            int a = i+1;
-            String filename = "blockcave"+ a + ".png";
-            imagesLava[i] = new GreenfootImage(filename);   
-        } 
+       int a = 6; 
+       for (int i = 0; i < 10; i++) {
+           if (a == 0) a = 10;
+           String filename = "blockcave"+ a-- + " - Copy.png";
+           imagesLava[i] = new GreenfootImage(filename);
+       }   
     }
     public void ground(){
         if(countBlock % 6 == 0 ){

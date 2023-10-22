@@ -24,6 +24,9 @@ public class Lab extends Main
         Block block2 = new Block();
         addObject(block2, 300, 376);
         
+        addObject(counter, 75, 40);
+        addObject(energy, 515, 40);
+        
         addObject(cute, 0, 327);
     }
     

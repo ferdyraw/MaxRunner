@@ -26,6 +26,9 @@ public class Town extends Main
         Blocktown block2 = new Blocktown();
         addObject(block2, 300, 376);
         
+        addObject(counter, 75, 40);
+        addObject(energy, 515, 40);
+        
         addObject(portalb, 1, 131);
     }
     public void act(){
