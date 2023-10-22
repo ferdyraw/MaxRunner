@@ -44,9 +44,7 @@ public class Coolinlab extends Cool
         
     }
     
-    public void jump(){
-        kecepatan = -13;
-    }
+    
     
     public boolean isOnGround(){
         boolean isOnGround = false;

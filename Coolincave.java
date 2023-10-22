@@ -20,6 +20,7 @@ public class Coolincave extends Cool
     {
         // Add your action code here.
         fall();
+        out();
         
         /*if(getOneIntersectingObject(Dot.class) != null){
             Greenfoot.setWorld(new gameOver());

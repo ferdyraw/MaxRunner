@@ -15,6 +15,7 @@ public class Cute extends Actor
     public int countRun= 0;
     public int countRun1 = 0;
     public int countJump = 0;
+    public int countJump1 = 0;
     public int countIdle = 0;
     public int countIdle1 = 0;
     public final int gravitasi = 1;
@@ -41,11 +42,11 @@ public class Cute extends Actor
         
     }
     public void Running(){
-        if(countRun1 % 2 == 0 ){
+        if(countRun1 % 4 == 0 ){
         setImage(imagesRun[countRun++ %8]);
         
         }
-        if(countRun1 > 16){
+        if(countRun1 > 32){
             countRun1 = 0;
         }
         countRun1 ++;
@@ -85,8 +86,18 @@ public class Cute extends Actor
         countIdle1 ++;
     }
     public void Jumping(){
+        if(countJump1 % 3 == 0 ){
         setImage(imagesJump[countJump++ %8]);
         
+        }
+        if(countJump1 > 24){
+            countJump1 = 0;
+        }
+        countJump1 ++;
+    }
+    
+    public void jump(){
+        kecepatan = -13;
     }
     
     public void addScore(){

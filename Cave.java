@@ -51,6 +51,11 @@ public class Cave extends Main
             }
         }
         
+        if(timer % 7 == 0){
+            scrollPosition = (scrollPosition - scrollSpeed) % getWidth();
+            paint(scrollPosition);
+        }
+        
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
         }

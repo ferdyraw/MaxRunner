@@ -40,7 +40,11 @@ public class Cuteinlab extends Cute
         
         if (!inPortal) addScore();
         addDrink();
-        if(isOnGround()) Running();
+        if(isOnGround()) {
+            Running();
+            countJump = 0;
+            countJump1 = 0;
+        }
         else Jumping(); 
     }
     
@@ -54,10 +58,6 @@ public class Cuteinlab extends Cute
             else kecepatan += gravitasi;
         }
         
-    }
-    
-    public void jump(){
-        kecepatan = -13;
     }
     
     public boolean isOnGround(){

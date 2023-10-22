@@ -6,7 +6,6 @@ public class Lab extends Main
     private boolean down = false;
     private int diff_up = 0;
     private int diff_down = 0;
-    private
     
     Cuteinlab cute = new Cuteinlab();
     Coolinlab cool = new Coolinlab();
@@ -46,7 +45,7 @@ public class Lab extends Main
             }
             
             if(timer % 200 == 0){
-                addObject(new Drink(), 600, 337);   
+                addObject(new Drink(), 600, 337 );   
             }
             
             if (timer > 300 && timer % 300 == 90) {

@@ -55,10 +55,6 @@ public class Cuteincave extends Cute
         
     }
     
-    public void jump(){
-        kecepatan = -13;
-    }
-    
     public boolean isOnGround(){
         boolean isOnGround = false;
         if(getY() == 250) isOnGround = true;
@@ -82,7 +78,7 @@ public class Cuteincave extends Cute
             energy.addEnergy();
             
             if (energy.energy == 10) {
-                myWorld.addObject(new PortalD(),600,279); 
+                myWorld.addObject(new PortalD(),600,209); 
                 num = 1;
                 
             }
