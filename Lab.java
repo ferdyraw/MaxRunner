@@ -58,10 +58,6 @@ public class Lab extends Main
             paint(scrollPosition);
         }
         
-        if(Greenfoot.isKeyDown("escape")){
-            Greenfoot.setWorld(new gameMenu());
-        }
-        
         if(cute.getX() == 199){
             addObject(cool,-50,324);
         }

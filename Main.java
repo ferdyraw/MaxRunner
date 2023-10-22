@@ -55,6 +55,7 @@ public class Main extends World
         
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
+            backSound.stop();
         }
     }
 }

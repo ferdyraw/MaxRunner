@@ -56,10 +56,6 @@ public class Cave extends Main
             paint(scrollPosition);
         }
         
-        if(Greenfoot.isKeyDown("escape")){
-            Greenfoot.setWorld(new gameMenu());
-        }
-        
         if (Greenfoot.isKeyDown("space") && cute.isOnGround() && cute.getX() == 200) {
             cute.jump();
             soundJump();
