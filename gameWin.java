@@ -26,7 +26,7 @@ public class gameWin extends World
     public void prepare(){
         counter.getScore();
         highscore.putScore(counter.score);
-        //addObject(highscore, 300, 280);
+        addObject(highscore, 300, 100);
         
         addObject(new Blockwin(), 300, 350);
         addObject(portal, 1, 250);

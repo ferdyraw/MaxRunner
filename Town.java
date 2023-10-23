@@ -47,13 +47,14 @@ public class Town extends Main
         
         if(timer == 60){
             addObject(cute, 55, 132);
+            addObject(dialogue, 300, 80);
+            lastDialogue = timer;
+            zero = true;
         }
         
         if (portalb.getX() == 0) {
             addObject(cool, 0, 132);
-            addObject(dialogue, 300, 80);
-            lastDialogue = timer;
-            zero = true;
+            
         }
         
         if (zero == true) {
