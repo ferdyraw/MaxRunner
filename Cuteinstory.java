@@ -19,7 +19,7 @@ public class Cuteinstory extends Cute
     {
         timer++;
         setLocation(getX() + num, getY());
-        if(timer == 800){
+        if(timer == 1100){
             num = 3;
             idle = false;
         }

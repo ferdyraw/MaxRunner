@@ -51,7 +51,7 @@ public class gameStory2 extends World
         }
         
         for (int i = 0; i < 5; i++) {
-            if (timer == 215+i*150) {
+            if (timer == 315+i*200) {
                 dialogue.next();
             }
         }

@@ -64,7 +64,7 @@ public class Lab extends Main
             addObject(dialogue, 300, 80);
         }
         
-        if (five && (timer-lastDialogue) > 150) {
+        if (five && (timer-lastDialogue) == 150) {
             dialogue.next();
         }
         

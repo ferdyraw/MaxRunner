@@ -24,7 +24,7 @@ public class Coolinstory extends Cool
             num = 0;
         } else Running();
         
-        if(timer == 810){
+        if(timer == 1110){
             num = 3;
         }
         if(getX() > 600){

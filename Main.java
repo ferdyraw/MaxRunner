@@ -45,7 +45,7 @@ public class Main extends World
     
     public void soundSwap() {
         backSoundSwap = new GreenfootSound("sound_swap.mp3");
-        backSoundSwap.setVolume(40);
+        backSoundSwap.setVolume(30);
         backSoundSwap.play();
     }
     

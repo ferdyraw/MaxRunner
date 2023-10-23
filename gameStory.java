@@ -41,12 +41,12 @@ public class gameStory extends World
         }
         
         for (int i = 0; i < 1; i++) {
-            if (timer == 230+i*150) {
+            if (timer == 300+i*200) {
                 dialogue.next();
             }
         }
         
-        if (timer == 360) {
+        if (timer == 450) {
             Greenfoot.setWorld(new gameStory2());
         }
     }
