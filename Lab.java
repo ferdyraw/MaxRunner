@@ -53,6 +53,7 @@ public class Lab extends Main
             
             if (timer > 300 && timer % 300 == 90) {
                 cool.jump();
+                soundJump();
             }
         }
         
@@ -74,6 +75,7 @@ public class Lab extends Main
             cute.getX() == 200){
             cute.kecepatan = -20;
             up = true;
+            soundSwap();
             diff_up = timer;
             soundSwap();
         }
@@ -83,6 +85,7 @@ public class Lab extends Main
             cute.falling = true;
             cute.kecepatan = 20;
             down = true;
+            soundSwap();
             diff_down = timer;
             soundSwap();
         }

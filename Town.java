@@ -31,12 +31,17 @@ public class Town extends Main
         
         addObject(portalb, 1, 131);
     }
+
     public void act(){
         super.act();
         
+<<<<<<< HEAD
+        int a = 100;
+=======
         if (timer == 1) {
             portalb.soundClose();
         }
+>>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
         
         if(timer == 60){
             addObject(cute, 55, 132);
@@ -47,6 +52,14 @@ public class Town extends Main
         }
         
         if (energy.energy < 15) {
+<<<<<<< HEAD
+        
+            if (timer % 600 == 0){
+                addObject(new ObstacleTruck(), 600, 310);
+            }
+            if (timer % a + 600 == 0){ //a nya 100 biar habis truct ada kucing
+                addObject(new ObstacleWalk_1(), 600, 325);
+=======
             if (timer % 300 == 0) {
                 addObject(new ObstacleSubSurf(), 600, 163);
                 addObject(new ObstacleSubSurf(), 600, 335);
@@ -71,6 +84,7 @@ public class Town extends Main
             if (timer > 300 && timer % 300 == 90) {
                 cool.jump();
             }
+>>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
         }
         
         if(timer % 7 == 0){
@@ -112,4 +126,5 @@ public class Town extends Main
             down = false;
         }
     }
+}
 }

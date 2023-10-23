@@ -85,7 +85,7 @@ public class gameMenu extends World {
             backsoundStart.play();
         } else if (currentSelection == 1) {
             // Pindah ke tampilan cara bermain
-            // Lakukan apa pun yang diperlukan untuk menampilkan tampilan cara bermain
+            Greenfoot.setWorld(new gameInstruction());        
         } else if (currentSelection == 2) {
             // Pindah ke tampilan credits
         } else {
