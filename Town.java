@@ -58,9 +58,9 @@ public class Town extends Main
         }
         
         if (zero == true) {
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 3; i++) {
                 if ((timer-lastDialogue) == 200) {
-                    if (i < 3) {
+                    if (i < 2) {
                         dialogue.next();
                     } else {
                         removeObject(dialogue);
@@ -105,8 +105,6 @@ public class Town extends Main
             lastDialogue = timer;
             fteen = true;
         }
-        
-        
         
         if(timer % 7 == 0){
             scrollPosition = (scrollPosition - scrollSpeed) % getWidth();

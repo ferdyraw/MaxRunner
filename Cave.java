@@ -49,9 +49,9 @@ public class Cave extends Main
         }
         
         if (zero == true) {
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 3; i++) {
                 if ((timer-lastDialogue) == 200) {
-                    if (i < 3) {
+                    if (i < 2) {
                         dialogue.next();
                     } else {
                         removeObject(dialogue);
@@ -62,7 +62,7 @@ public class Cave extends Main
         }
         
         if (energy.energy < 5) {
-            if (timer % 400 == 0){
+            if (timer % 800 == 0){
                 addObject(new Dot2(), 600, 79);
                 addObject(new ObstacleDrop(), 600, 89);
             }
