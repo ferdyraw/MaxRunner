@@ -4,12 +4,17 @@ public class Town extends Main
 {
     public boolean up = false;
     public boolean down = false;
+    private boolean zero = false;
+    private boolean fteen = false;
+    private int lastDialogue;
     private int diff_up = 0;
     private int diff_down = 0;
     
     Cuteintown cute = new Cuteintown();
     Coolintown cool = new Coolintown();
     PortalB portalb = new PortalB();
+    DialogueTown1 dialogue = new DialogueTown1();
+    DialogueTown2 dialogue2 = new DialogueTown2();
     
     public Town()
     {
@@ -46,17 +51,24 @@ public class Town extends Main
         
         if (portalb.getX() == 0) {
             addObject(cool, 0, 132);
+            addObject(dialogue, 300, 80);
+            lastDialogue = timer;
+            zero = true;
         }
         
-        if (energy.energy < 15) {
-        
-            if (timer % 600 == 0){
-                addObject(new ObstacleTruck(), 600, 310);
-            }
-            if (timer % a + 600 == 0){ //a nya 100 biar habis truct ada kucing
-                addObject(new ObstacleWalk_1(), 600, 325);
+        if (zero == true) {
+            for (int i = 0; i < 4; i++) {
+                if ((timer-lastDialogue) == 200) {
+                    if (i < 3) {
+                        dialogue.next();
+                    } else {
+                        removeObject(dialogue);
+                    }
+                    lastDialogue = timer;
+                }
             }
         }
+        
         if (energy.energy < 5) {
             if (timer % (a + 600) == 0){ //a nya 100 biar habis truct ada kucing
                 addObject(new ObstacleWalk_1(), 600, 325);
@@ -87,7 +99,13 @@ public class Town extends Main
             if (timer > 300 && timer % 300 == 90) {
                 cool.jump();
             }
+        } else if (energy.energy == 5 && fteen == false) {
+            addObject(dialogue2, 300, 80);
+            lastDialogue = timer;
+            fteen = true;
         }
+        
+        
         
         if(timer % 7 == 0){
             scrollPosition = (scrollPosition - scrollSpeed) % getWidth();

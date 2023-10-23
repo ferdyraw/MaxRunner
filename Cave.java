@@ -2,9 +2,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Cave extends Main
 {
+    private boolean zero = false;
+    private boolean ten = false;
+    private int lastDialogue;
+    
     Cuteincave cute = new Cuteincave();
     Coolincave cool = new Coolincave();
     PortalB portalb = new PortalB();
+    DialogueCave1 dialogue = new DialogueCave1();
+    DialogueCave2 dialogue2 = new DialogueCave2();
     
     public Cave()
     {
@@ -37,6 +43,22 @@ public class Cave extends Main
         
         if (portalb.getX() == 0) {
             addObject(cool, 0, 184);
+            addObject(dialogue, 300, 80);
+            lastDialogue = timer;
+            zero = true;
+        }
+        
+        if (zero == true) {
+            for (int i = 0; i < 4; i++) {
+                if ((timer-lastDialogue) == 200) {
+                    if (i < 3) {
+                        dialogue.next();
+                    } else {
+                        removeObject(dialogue);
+                    }
+                    lastDialogue = timer;
+                }
+            }
         }
         
         if (energy.energy < 5) {
@@ -56,6 +78,9 @@ public class Cave extends Main
             if (timer > 350 && (timer % 350 == 85 || timer % 400 == 100)) {
                 cool.jump();
             }
+        } else if (energy.energy == 5 && ten == false) {
+            addObject(dialogue2, 300, 80);
+            ten = true;
         }
         
         if(timer % 7 == 0){

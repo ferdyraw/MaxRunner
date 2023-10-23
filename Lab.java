@@ -38,7 +38,7 @@ public class Lab extends Main
         
         if (timer == 5) {
             GreenfootSound backsound = new GreenfootSound("gamesound1.mp3");
-            backsound.setVolume(70);
+            backsound.setVolume(50);
             backsound.play();
         }
             
