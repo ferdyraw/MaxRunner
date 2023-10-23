@@ -2,39 +2,31 @@ import greenfoot.*;
 
 public class gameInstruction extends World
 {
-    private int currentInstruction = 1; // Mengikuti langkah instruksi saat ini
+    private int currentInstruction = 2; // Mengikuti langkah instruksi saat ini
+    private int timer = 0;
+    private int lastSpace;
     
     public gameInstruction()
     {   
         super(600, 400, 1); 
-        setBackground("instruksi_1.png");
+        setBackground("intruksi_1.png");
     }
     
     public void act()
     {
-        if (Greenfoot.isKeyDown("space")) {
-            switch (currentInstruction) {
-                case 1:
-                    setBackground("instruksi_2.png");
-                    currentInstruction++;
-                    break;
-                case 2:
-                    setBackground("instruksi_3.png");
-                    currentInstruction++;
-                    break;
-                case 3:
-                    Greenfoot.setWorld(new gameMenu()); 
-                    break;
+        timer++;
+        
+        if (Greenfoot.isKeyDown("space") && (timer-lastSpace > 5)) {
+            if (currentInstruction != 4) {
+                setBackground("intruksi_" + currentInstruction + ".png");
+                lastSpace = timer;
             }
+            currentInstruction++;
         }
-        if(Greenfoot.isKeyDown("escape")){
+        
+        if(Greenfoot.isKeyDown("escape") || currentInstruction == 5){
             Greenfoot.setWorld(new gameMenu());
         }
-    }
-    
-    public void prepare()
-    {
-        
     }
 }
 

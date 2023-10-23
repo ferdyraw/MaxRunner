@@ -25,7 +25,6 @@ class.ObstacleLava.image=lava.png
 class.ObstacleMouse.image=mouse1.png
 class.ObstacleSubSurf.image=subwaysurf.png
 class.ObstacleTruck.image=truck.png
-class.ObstacleWalk_1.image=Walk_1.png
 class.PortalB.image=portal1_b.png
 class.PortalD.image=portal1.png
 class.Town.image=bege3.png
@@ -82,24 +81,6 @@ dependency23.from=Town
 dependency23.to=Cuteintown
 dependency23.type=UsesDependency
 dependency24.from=Town
-<<<<<<< HEAD
-dependency24.to=ObstacleWalk_1
-dependency24.type=UsesDependency
-dependency25.from=Lab
-dependency25.to=Cuteinlab
-dependency25.type=UsesDependency
-dependency26.from=Lab
-dependency26.to=Coolinlab
-dependency26.type=UsesDependency
-dependency27.from=Lab
-dependency27.to=Block
-dependency27.type=UsesDependency
-dependency28.from=Lab
-dependency28.to=Dot
-dependency28.type=UsesDependency
-dependency29.from=Lab
-dependency29.to=Obstacle
-=======
 dependency24.to=Coolintown
 dependency24.type=UsesDependency
 dependency25.from=Town
@@ -116,42 +97,10 @@ dependency28.to=ObstacleTruck
 dependency28.type=UsesDependency
 dependency29.from=Town
 dependency29.to=ObstacleMouse
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
 dependency29.type=UsesDependency
 dependency3.from=gameWin
 dependency3.to=PortalB
 dependency3.type=UsesDependency
-<<<<<<< HEAD
-dependency30.from=Lab
-dependency30.to=Drink
-dependency30.type=UsesDependency
-dependency31.from=Cave
-dependency31.to=Cuteincave
-dependency31.type=UsesDependency
-dependency32.from=Cave
-dependency32.to=Coolincave
-dependency32.type=UsesDependency
-dependency33.from=Cave
-dependency33.to=PortalB
-dependency33.type=UsesDependency
-dependency34.from=Cave
-dependency34.to=Blockcave
-dependency34.type=UsesDependency
-dependency35.from=Cave
-dependency35.to=Blockcave2
-dependency35.type=UsesDependency
-dependency36.from=Cave
-dependency36.to=Dot2
-dependency36.type=UsesDependency
-dependency37.from=Cave
-dependency37.to=Obstacle2
-dependency37.type=UsesDependency
-dependency38.from=Cave
-dependency38.to=ObstacleLava
-dependency38.type=UsesDependency
-dependency39.from=Cave
-dependency39.to=Drink
-=======
 dependency30.from=Town
 dependency30.to=Drink
 dependency30.type=UsesDependency
@@ -181,41 +130,10 @@ dependency38.to=Coolincave
 dependency38.type=UsesDependency
 dependency39.from=Cave
 dependency39.to=PortalB
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
 dependency39.type=UsesDependency
 dependency4.from=gameWin
 dependency4.to=Blockwin
 dependency4.type=UsesDependency
-<<<<<<< HEAD
-dependency40.from=Cool
-dependency40.to=Main
-dependency40.type=UsesDependency
-dependency41.from=Cool
-dependency41.to=Energy
-dependency41.type=UsesDependency
-dependency42.from=Coolincave
-dependency42.to=Town
-dependency42.type=UsesDependency
-dependency43.from=Coolincave
-dependency43.to=PortalD
-dependency43.type=UsesDependency
-dependency44.from=Coolinlab
-dependency44.to=Cave
-dependency44.type=UsesDependency
-dependency45.from=Coolinlab
-dependency45.to=PortalD
-dependency45.type=UsesDependency
-dependency46.from=Coolinstory
-dependency46.to=Entry
-dependency46.type=UsesDependency
-dependency47.from=Coolinstory
-dependency47.to=Lab
-dependency47.type=UsesDependency
-dependency48.from=Coolintown
-dependency48.to=gameWin
-dependency48.type=UsesDependency
-dependency49.from=Coolintown
-=======
 dependency40.from=Cave
 dependency40.to=Blockcave
 dependency40.type=UsesDependency
@@ -244,43 +162,11 @@ dependency48.from=Coolincave
 dependency48.to=Town
 dependency48.type=UsesDependency
 dependency49.from=Coolincave
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
 dependency49.to=PortalD
 dependency49.type=UsesDependency
 dependency5.from=gameWin
 dependency5.to=Cuteinwin
 dependency5.type=UsesDependency
-<<<<<<< HEAD
-dependency50.from=Play
-dependency50.to=Lab
-dependency50.type=UsesDependency
-dependency51.from=Cute
-dependency51.to=Main
-dependency51.type=UsesDependency
-dependency52.from=Cute
-dependency52.to=Counter
-dependency52.type=UsesDependency
-dependency53.from=Cuteinlab
-dependency53.to=gameOver
-dependency53.type=UsesDependency
-dependency54.from=Cuteinlab
-dependency54.to=Main
-dependency54.type=UsesDependency
-dependency55.from=Cuteinlab
-dependency55.to=Energy
-dependency55.type=UsesDependency
-dependency56.from=Cuteinlab
-dependency56.to=PortalD
-dependency56.type=UsesDependency
-dependency57.from=Cuteinlab
-dependency57.to=Dot
-dependency57.type=UsesDependency
-dependency58.from=Cuteinlab
-dependency58.to=Drink
-dependency58.type=UsesDependency
-dependency59.from=Cuteincave
-dependency59.to=gameOver
-=======
 dependency50.from=Coolinlab
 dependency50.to=Cave
 dependency50.type=UsesDependency
@@ -309,57 +195,11 @@ dependency58.from=Cuteinlab
 dependency58.to=Energy
 dependency58.type=UsesDependency
 dependency59.from=Cuteinlab
-<<<<<<< HEAD
 dependency59.to=PortalD
-=======
-dependency59.to=Main
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
->>>>>>> a120d971e09db5547c6869df3b393bcff3f2b601
 dependency59.type=UsesDependency
 dependency6.from=gameWin
 dependency6.to=Lab
 dependency6.type=UsesDependency
-<<<<<<< HEAD
-dependency60.from=Cuteincave
-dependency60.to=Main
-dependency60.type=UsesDependency
-dependency61.from=Cuteincave
-dependency61.to=Energy
-dependency61.type=UsesDependency
-dependency62.from=Cuteincave
-dependency62.to=PortalD
-dependency62.type=UsesDependency
-dependency63.from=Cuteincave
-dependency63.to=Dot2
-dependency63.type=UsesDependency
-dependency64.from=Cuteincave
-dependency64.to=ObstacleLava
-dependency64.type=UsesDependency
-dependency65.from=Cuteincave
-dependency65.to=Drink
-dependency65.type=UsesDependency
-dependency66.from=Cuteintown
-dependency66.to=gameOver
-dependency66.type=UsesDependency
-dependency67.from=Cuteintown
-dependency67.to=Main
-dependency67.type=UsesDependency
-dependency68.from=Cuteintown
-dependency68.to=Energy
-dependency68.type=UsesDependency
-dependency69.from=Cuteintown
-dependency69.to=PortalD
-dependency69.type=UsesDependency
-dependency7.from=gameStory
-dependency7.to=Entry
-dependency7.type=UsesDependency
-dependency70.from=Cuteintown
-dependency70.to=ObstacleTruck
-dependency70.type=UsesDependency
-dependency71.from=Cuteintown
-dependency71.to=Drink
-dependency71.type=UsesDependency
-=======
 dependency60.from=Cuteinlab
 dependency60.to=Dot
 dependency60.type=UsesDependency
@@ -417,36 +257,18 @@ dependency76.type=UsesDependency
 dependency77.from=Cuteintown
 dependency77.to=Drink
 dependency77.type=UsesDependency
-<<<<<<< HEAD
-=======
-dependency78.from=Cuteintown
-dependency78.to=Drink
-dependency78.type=UsesDependency
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
->>>>>>> a120d971e09db5547c6869df3b393bcff3f2b601
 dependency8.from=gameStory
 dependency8.to=Cuteinstory
 dependency8.type=UsesDependency
 dependency9.from=gameStory
 dependency9.to=Coolinstory
 dependency9.type=UsesDependency
-editor.fx.0.height=737
-editor.fx.0.width=814
-<<<<<<< HEAD
-editor.fx.0.x=232
-editor.fx.0.y=-22
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 height=686
 package.numDependencies=77
-=======
-editor.fx.0.x=68
-editor.fx.0.y=54
-height=686
-<<<<<<< HEAD
-package.numDependencies=71
-=======
-package.numDependencies=78
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
->>>>>>> a120d971e09db5547c6869df3b393bcff3f2b601
 package.numTargets=43
 project.charset=UTF-8
 publish.hasSource=false
@@ -603,22 +425,14 @@ target27.width=120
 target27.x=0
 target27.y=0
 target28.height=70
-<<<<<<< HEAD
-target28.name=ObstacleWalk_1
-=======
 target28.name=gameOver
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
 target28.showInterface=false
 target28.type=ClassTarget
-target28.width=150
+target28.width=120
 target28.x=0
 target28.y=0
 target29.height=70
-<<<<<<< HEAD
-target29.name=PortalB
-=======
 target29.name=Lab
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
 target29.showInterface=false
 target29.type=ClassTarget
 target29.width=120
@@ -632,22 +446,14 @@ target3.width=120
 target3.x=0
 target3.y=0
 target30.height=70
-<<<<<<< HEAD
-target30.name=gameInstruction
-=======
 target30.name=PortalB
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
 target30.showInterface=false
 target30.type=ClassTarget
 target30.width=120
 target30.x=0
 target30.y=0
 target31.height=70
-<<<<<<< HEAD
-target31.name=Play
-=======
 target31.name=Blockwin
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
 target31.showInterface=false
 target31.type=ClassTarget
 target31.width=120
@@ -696,30 +502,14 @@ target37.width=120
 target37.x=0
 target37.y=0
 target38.height=70
-<<<<<<< HEAD
 target38.name=Block
-=======
-<<<<<<< HEAD
-target38.name=Block
-=======
-target38.name=Coolintown
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
->>>>>>> a120d971e09db5547c6869df3b393bcff3f2b601
 target38.showInterface=false
 target38.type=ClassTarget
 target38.width=120
 target38.x=0
 target38.y=0
 target39.height=70
-<<<<<<< HEAD
 target39.name=Coolintown
-=======
-<<<<<<< HEAD
-target39.name=Coolintown
-=======
-target39.name=Block
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
->>>>>>> a120d971e09db5547c6869df3b393bcff3f2b601
 target39.showInterface=false
 target39.type=ClassTarget
 target39.width=120
@@ -733,30 +523,14 @@ target4.width=120
 target4.x=0
 target4.y=0
 target40.height=70
-<<<<<<< HEAD
 target40.name=Blocklab
-=======
-<<<<<<< HEAD
-target40.name=blabla
-=======
-target40.name=Main
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
->>>>>>> a120d971e09db5547c6869df3b393bcff3f2b601
 target40.showInterface=false
 target40.type=ClassTarget
 target40.width=120
 target40.x=0
 target40.y=0
 target41.height=70
-<<<<<<< HEAD
 target41.name=Main
-=======
-<<<<<<< HEAD
-target41.name=Main
-=======
-target41.name=Blocklab
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
->>>>>>> a120d971e09db5547c6869df3b393bcff3f2b601
 target41.showInterface=false
 target41.type=ClassTarget
 target41.width=120
@@ -813,14 +587,6 @@ target9.x=0
 target9.y=0
 version=3.0.0
 width=1294
-<<<<<<< HEAD
-world.lastInstantiated=gameMenu
-=======
-<<<<<<< HEAD
-world.lastInstantiated=gameStory
-=======
-world.lastInstantiated=gameWin
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
->>>>>>> a120d971e09db5547c6869df3b393bcff3f2b601
+world.lastInstantiated=Town
 xPosition=0
 yPosition=0

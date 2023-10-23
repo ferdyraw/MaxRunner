@@ -8,10 +8,6 @@ public class Main extends World
     public int scrollPosition = 0;
     public GreenfootSound backSoundJump;
     public GreenfootSound backSoundSwap;
-<<<<<<< HEAD
-    
-=======
->>>>>>> 8ef136a8c7d4d4d8c75b0eb0e23c6d781b43306e
     
     Counter counter = new Counter();
     Energy energy = new Energy();
