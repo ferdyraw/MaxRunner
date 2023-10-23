@@ -2,8 +2,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Town extends Main
 {
-    private boolean up = false;
-    private boolean down = false;
+    public boolean up = false;
+    public boolean down = false;
     private int diff_up = 0;
     private int diff_down = 0;
     
@@ -46,7 +46,7 @@ public class Town extends Main
             addObject(cool, 0, 132);
         }
         
-        if (energy.energy < 15) {
+        if (energy.energy < 5) {
             if (timer % 300 == 0) {
                 addObject(new ObstacleSubSurf(), 600, 163);
                 addObject(new ObstacleSubSurf(), 600, 335);
@@ -65,7 +65,8 @@ public class Town extends Main
             }
             
             if(timer % 200 == 0){
-                addObject(new Drink(), 600, 337);   
+                addObject(new Drink(), 600, 337);
+                addObject(new Drink(), 600, 163);
             }
             
             if (timer > 300 && timer % 300 == 90) {

@@ -39,7 +39,7 @@ public class Cave extends Main
             addObject(cool, 0, 184);
         }
         
-        if (energy.energy < 10) {
+        if (energy.energy < 5) {
             if (timer % 400 == 0){
                 addObject(new Dot2(), 600, 79);
                 addObject(new ObstacleDrop(), 600, 89);
@@ -49,7 +49,7 @@ public class Cave extends Main
                 addObject(new ObstacleLava(), 600, 302);
             }
             
-            if (timer % 200 == 0) {
+            if (timer % 190 == 0) {
                 addObject(new Drink(), 600, 260);
             }
             

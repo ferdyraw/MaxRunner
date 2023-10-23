@@ -75,13 +75,17 @@ public class Cuteinlab extends Cute
             backSoundCoin.setVolume(40);
             backSoundCoin.play();
             
-            Main bg = (Main)myWorld;
+            Lab bg = (Lab)myWorld;
             Energy energy = bg.getEnergy();
             energy.addEnergy();
             
             if (energy.energy == 5) {
                 PortalD portal = new PortalD();
-                myWorld.addObject(portal, 600,279); 
+                if ((getY() > 277 && getY() < 327) || bg.down == true) {
+                    myWorld.addObject(portal, 600,279); 
+                } else if ((getY() > 103 && getY() < 153) || bg.up == true) {
+                    myWorld.addObject(portal, 600, 105);
+                }
                 portal.soundOpen();
                 num = 1;
                 

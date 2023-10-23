@@ -2,8 +2,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Lab extends Main
 {
-    private boolean up = false;
-    private boolean down = false;
+    public boolean up = false;
+    public boolean down = false;
     private int diff_up = 0;
     private int diff_down = 0;
     
