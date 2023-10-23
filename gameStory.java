@@ -38,6 +38,10 @@ public class gameStory extends World
             addObject(cool, 0, 324);
         }
         
+        if (timer == 5) {
+            addObject(new Dialogue(), 300, 85);
+        }
+        
         if (timer == 160) {
             backsoundGate = new GreenfootSound("gate_open.mp3");
             backsoundGate.setVolume(80);

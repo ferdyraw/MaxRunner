@@ -17,7 +17,7 @@ public class gameWin extends World
     
     public gameWin()
     {    
-        super(600, 400, 1); 
+        super(600, 400, 1, false); 
         backgroundImage = new GreenfootImage("bege4.png");
         setBackground(backgroundImage);
         prepare();
