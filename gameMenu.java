@@ -88,6 +88,7 @@ public class gameMenu extends World {
             Greenfoot.setWorld(new gameInstruction());
         } else if (currentSelection == 2) {
             // Pindah ke tampilan credits
+            Greenfoot.setWorld(new gameCredits());
         } else {
             // Keluar dari permainan
             highscore.putScore(Integer.MAX_VALUE);

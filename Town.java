@@ -48,11 +48,20 @@ public class Town extends Main
             addObject(cool, 0, 132);
         }
         
+        if (energy.energy < 15) {
+        
+            if (timer % 600 == 0){
+                addObject(new ObstacleTruck(), 600, 310);
+            }
+            if (timer % a + 600 == 0){ //a nya 100 biar habis truct ada kucing
+                addObject(new ObstacleWalk_1(), 600, 325);
+            }
+        }
         if (energy.energy < 5) {
             if (timer % (a + 600) == 0){ //a nya 100 biar habis truct ada kucing
                 addObject(new ObstacleWalk_1(), 600, 325);
             }
-            
+        
             if (timer % 300 == 0) {
                 addObject(new ObstacleSubSurf(), 600, 163);
                 addObject(new ObstacleSubSurf(), 600, 335);

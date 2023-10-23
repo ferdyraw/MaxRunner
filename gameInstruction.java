@@ -5,6 +5,7 @@ public class gameInstruction extends World
     private int currentInstruction = 2; // Mengikuti langkah instruksi saat ini
     private int timer = 0;
     private int lastSpace;
+    private boolean canChangeInstruction = true;
     
     public gameInstruction()
     {   
@@ -23,7 +24,9 @@ public class gameInstruction extends World
             }
             currentInstruction++;
         }
-        
+        if (timer - lastSpace > 5){
+            canChangeInstruction = true;
+        }
         if(Greenfoot.isKeyDown("escape") || currentInstruction == 5){
             Greenfoot.setWorld(new gameMenu());
         }
