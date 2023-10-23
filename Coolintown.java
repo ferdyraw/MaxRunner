@@ -22,7 +22,7 @@ public class Coolintown extends Cool
         fall();
         out();
         
-        checkDrink(15);
+        checkDrink(5);
         if(isOnGround()) Running();
         else Jumping(); 
     }

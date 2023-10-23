@@ -1,7 +1,7 @@
 import greenfoot.*;  // atau package yang sesuai
 
 public class gameMenu extends World {
-    private int currentSelection = 0;
+    public int currentSelection = 0;
     private GreenfootImage[] menuImages = new GreenfootImage[4];
     private MenuOption[] menuOptions = new MenuOption[4];
     private GreenfootSound backsoundStart;
@@ -13,7 +13,7 @@ public class gameMenu extends World {
     Highscore highscore = new Highscore();
     
     public gameMenu() {
-        super(600, 400, 1); // Atur ukuran dunia sesuai kebutuhan Anda
+        super(600, 400, 1);  
         prepare();
     }
 
@@ -29,7 +29,7 @@ public class gameMenu extends World {
         menuImages[1] = new GreenfootImage("menu_instructions.png");
         menuImages[2] = new GreenfootImage("menu_credits.png");
         menuImages[3] = new GreenfootImage("menu_quit.png");
-
+        
         for (int i = 0; i < 4; i++) {
             menuOptions[i] = new MenuOption(menuImages[i], initialX, initialY + spacing * i);
             addObject(menuOptions[i], initialX, initialY + spacing * i);
@@ -85,9 +85,10 @@ public class gameMenu extends World {
             backsoundStart.play();
         } else if (currentSelection == 1) {
             // Pindah ke tampilan cara bermain
-            Greenfoot.setWorld(new gameInstruction());        
+            Greenfoot.setWorld(new gameInstruction());
         } else if (currentSelection == 2) {
             // Pindah ke tampilan credits
+            Greenfoot.setWorld(new gameCredits());
         } else {
             // Keluar dari permainan
             highscore.putScore(Integer.MAX_VALUE);

@@ -81,7 +81,7 @@ public class Cuteincave extends Cute
             Energy energy = bg.getEnergy();
             energy.addEnergy();
             
-            if (energy.energy == 10) {
+            if (energy.energy == 5) {
                 PortalD portal = new PortalD();
                 myWorld.addObject(portal,600,209); 
                 portal.soundOpen();

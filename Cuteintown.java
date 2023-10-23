@@ -81,13 +81,17 @@ public class Cuteintown extends Cute
             backSoundCoin.setVolume(40);
             backSoundCoin.play();
             
-            Main bg = (Main)myWorld;
+            Town bg = (Town)myWorld;
             Energy energy = bg.getEnergy();
             energy.addEnergy();
             
-            if (energy.energy == 15) {
+            if (energy.energy == 5) {
                 PortalD portal = new PortalD();
-                myWorld.addObject(portal,600,131); 
+                if (getY() == 327 || bg.down == true) {
+                    myWorld.addObject(portal, 600,279); 
+                } else if (getY() == 153 || bg.up == true) {
+                    myWorld.addObject(portal, 600, 105);
+                } 
                 portal.soundOpen();
                 num = 1;
                 
