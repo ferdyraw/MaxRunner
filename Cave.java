@@ -51,11 +51,7 @@ public class Cave extends Main
         if (zero == true) {
             for (int i = 0; i < 3; i++) {
                 if ((timer-lastDialogue) == 200) {
-                    if (i < 2) {
-                        dialogue.next();
-                    } else {
-                        removeObject(dialogue);
-                    }
+                    dialogue.next();
                     lastDialogue = timer;
                 }
             }

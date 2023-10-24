@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DialogueCave1 extends Dialogue
 {
-    GreenfootImage dialogue[] = new GreenfootImage[3];
+    GreenfootImage dialogue[] = new GreenfootImage[4];
     public int currentDialogue = 1;
     
     public DialogueCave1() {
@@ -26,6 +26,7 @@ public class DialogueCave1 extends Dialogue
             String filename = "dialogue" + a + ".png";
             dialogue[i] = new GreenfootImage(filename);
         }
+        dialogue[3] = new GreenfootImage("transparan.png");
     }
     
     public void next() {
