@@ -14,6 +14,7 @@ public class gameWin extends World
     Highscore highscore = new Highscore();
     Counter counter = new Counter();
     PortalB portal = new PortalB();
+    DialogueWin dialogue = new DialogueWin();
     
     public gameWin()
     {    
@@ -26,7 +27,6 @@ public class gameWin extends World
     public void prepare(){
         counter.getScore();
         highscore.putScore(counter.score);
-        addObject(highscore, 300, 100);
         
         addObject(new Blockwin(), 300, 350);
         addObject(portal, 1, 250);
@@ -41,6 +41,18 @@ public class gameWin extends World
         
         if (timer == 60) {
             addObject(new Cuteinwin(), 55, 250);
+        }
+        
+        if (timer == 200) {
+            addObject(dialogue, 300, 80);
+        }
+        
+        if (timer == 400) {
+            dialogue.next();
+        }
+        
+        if (timer == 450) {
+            addObject(highscore, 300, 100);
         }
 
         if(Greenfoot.isKeyDown("R")){

@@ -39,7 +39,7 @@ public class Cuteintown extends Cute
         
         if (getOneIntersectingObject(PortalD.class) != null)  {
             puff = true;
-            Greenfoot.setWorld(new gameOver());
+            Greenfoot.setWorld(new gameWin());
         }
         
         if (!inPortal) addScore();
