@@ -89,11 +89,15 @@ public class Cuteintown extends Cute
             
             if (energy.energy == 5) {
                 PortalD portal = new PortalD();
-                if (getY() == 327 || bg.down == true) {
-                    myWorld.addObject(portal, 600,279); 
-                } else if (getY() == 153 || bg.up == true) {
+                if (bg.up == true) {
                     myWorld.addObject(portal, 600, 105);
-                } 
+                } else if (bg.down == true) {
+                    myWorld.addObject(portal, 600,279); 
+                } else if (getY() >= 277 && getY() <= 327) {
+                    myWorld.addObject(portal, 600,279); 
+                } else if (getY() >= 103 && getY() <= 153) {
+                    myWorld.addObject(portal, 600, 105);
+                }
                 portal.soundOpen();
                 num = 1;
                 
