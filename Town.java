@@ -6,6 +6,7 @@ public class Town extends Main
     public boolean down = false;
     private boolean zero = false;
     private boolean fteen = false;
+    private boolean isCute = false;
     private int lastDialogue;
     private int diff_up = 0;
     private int diff_down = 0;
@@ -50,6 +51,7 @@ public class Town extends Main
             addObject(dialogue, 300, 80);
             lastDialogue = timer;
             zero = true;
+            isCute = true;
         }
         
         if (portalb.getX() == 0) {
@@ -107,12 +109,12 @@ public class Town extends Main
             paint(scrollPosition);
         }     
         
-        if (Greenfoot.isKeyDown("space") && cute.isOnGround() && cute.getX() == 200) {
+        if (isCute == true && Greenfoot.isKeyDown("space") && cute.isOnGround() && cute.getX() == 200) {
             cute.jump();
             soundJump();
         }
         
-        if(Greenfoot.isKeyDown("up") && cute.isOnGround() && cute.getY() == 327 && 
+        if(isCute == true &&Greenfoot.isKeyDown("up") && cute.isOnGround() && cute.getY() == 327 && 
             cute.getX() == 200){
             cute.kecepatan = -20;
             up = true;
@@ -120,7 +122,7 @@ public class Town extends Main
             soundSwap();
         }
         
-        if(Greenfoot.isKeyDown("down") && cute.isOnGround() && cute.getY() == 153 && 
+        if(isCute == true && Greenfoot.isKeyDown("down") && cute.isOnGround() && cute.getY() == 153 && 
             cute.getX() == 200){
             cute.falling = true;
             cute.kecepatan = 20;

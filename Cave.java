@@ -4,6 +4,7 @@ public class Cave extends Main
 {
     private boolean zero = false;
     private boolean ten = false;
+    private boolean isCute = false;
     private int lastDialogue;
     
     Cuteincave cute = new Cuteincave();
@@ -39,6 +40,7 @@ public class Cave extends Main
         
         if(timer == 60){
             addObject(cute, 55, 184);
+            isCute = true;
         }
         
         if (portalb.getX() == 0) {
@@ -84,7 +86,7 @@ public class Cave extends Main
             paint(scrollPosition);
         }
         
-        if (Greenfoot.isKeyDown("space") && cute.isOnGround() && cute.getX() == 200) {
+        if (isCute == true && Greenfoot.isKeyDown("space") && cute.isOnGround() && cute.getX() == 200) {
             cute.jump();
             soundJump();
         }
