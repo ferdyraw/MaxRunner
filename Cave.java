@@ -6,6 +6,7 @@ public class Cave extends Main
     private boolean ten = false;
     private boolean isCute = false;
     private int lastDialogue;
+    private int count = 0;
     
     Cuteincave cute = new Cuteincave();
     Coolincave cool = new Coolincave();
@@ -50,12 +51,11 @@ public class Cave extends Main
             zero = true;
         }
         
-        if (zero == true) {
-            for (int i = 0; i < 3; i++) {
-                if ((timer-lastDialogue) == 200) {
-                    dialogue.next();
-                    lastDialogue = timer;
-                }
+        if (zero == true && count < 3) {
+            if ((timer-lastDialogue) == 200) {
+                dialogue.next();
+                lastDialogue = timer;
+                count++;
             }
         }
         

@@ -10,6 +10,7 @@ public class Town extends Main
     private int lastDialogue;
     private int diff_up = 0;
     private int diff_down = 0;
+    private int count = 0;
     
     Cuteintown cute = new Cuteintown();
     Coolintown cool = new Coolintown();
@@ -59,12 +60,11 @@ public class Town extends Main
             
         }
         
-        if (zero == true) {
-            for (int i = 0; i < 3; i++) {
-                if ((timer-lastDialogue) == 200) {
-                    dialogue.next();
-                    lastDialogue = timer;
-                }
+        if (zero == true && count < 3) {
+            if ((timer-lastDialogue) == 200) {
+                dialogue.next();
+                lastDialogue = timer;
+                count++;
             }
         }
         
