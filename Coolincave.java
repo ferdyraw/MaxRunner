@@ -31,7 +31,7 @@ public class Coolincave extends Cool
         
         }
         
-        checkDrink(5);
+        checkDrink(10);
         if(isOnGround()) Running();
         else Jumping(); 
     }

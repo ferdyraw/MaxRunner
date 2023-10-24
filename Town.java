@@ -68,7 +68,7 @@ public class Town extends Main
             }
         }
         
-        if (energy.energy < 5) {
+        if (energy.energy < 15) {
             if (timer % (a + 600) == 0){ //a nya 100 biar habis truct ada kucing
                 addObject(new ObstacleWalk_1(), 600, 325);
             }

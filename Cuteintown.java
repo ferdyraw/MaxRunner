@@ -87,7 +87,7 @@ public class Cuteintown extends Cute
             Energy energy = bg.getEnergy();
             energy.addEnergy();
             
-            if (energy.energy == 5) {
+            if (energy.energy == 15) {
                 PortalD portal = new PortalD();
                 if (bg.up == true) {
                     myWorld.addObject(portal, 600, 105);

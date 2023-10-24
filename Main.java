@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Main extends World
 {
-
+    public GreenfootSound backsound;
     public GreenfootImage backgroundImage;
     public int scrollSpeed = 1;
     public int scrollPosition = 0;

@@ -59,7 +59,7 @@ public class Cave extends Main
             }
         }
         
-        if (energy.energy < 5) {
+        if (energy.energy < 10) {
             if (timer % 800 == 0){
                 addObject(new Dot2(), 600, 79);
                 addObject(new ObstacleDrop(), 600, 89);
@@ -73,7 +73,7 @@ public class Cave extends Main
                 addObject(new Drink(), 600, 260);
             }
             
-            if (timer > 350 && (timer % 350 == 85 || timer % 400 == 100)) {
+            if (timer > 350 && (timer % 350 == 85 || timer % 800 == 100)) {
                 cool.jump();
             }
         } else if (energy.energy == 5 && ten == false) {

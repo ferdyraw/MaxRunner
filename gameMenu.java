@@ -8,6 +8,7 @@ public class gameMenu extends World {
     
     private boolean keyDownPressed = false;
     private boolean keyUpPressed = false;
+    private int timer = 0;
 
     Counter counter = new Counter();    
     Highscore highscore = new Highscore();
@@ -38,6 +39,7 @@ public class gameMenu extends World {
     }
 
     public void act() {
+        timer++;
         checkKeyPress();
     }
 
@@ -62,7 +64,7 @@ public class gameMenu extends World {
             keyUpPressed = false;
         }
 
-        if (Greenfoot.isKeyDown("space")) {
+        if (timer > 5 && Greenfoot.isKeyDown("space")) {
             selectOption();
         }
     }
