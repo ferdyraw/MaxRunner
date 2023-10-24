@@ -4,11 +4,14 @@ public class Lab extends Main
 {
     public boolean up = false;
     public boolean down = false;
+    public boolean five = false;
     private int diff_up = 0;
     private int diff_down = 0;
+    private int lastDialogue;
     
     Cuteinlab cute = new Cuteinlab();
     Coolinlab cool = new Coolinlab();
+    DialogueLab dialogue = new DialogueLab();
     
     public Lab()
     {
@@ -35,7 +38,7 @@ public class Lab extends Main
         
         if (timer == 5) {
             GreenfootSound backsound = new GreenfootSound("gamesound1.mp3");
-            backsound.setVolume(70);
+            backsound.setVolume(50);
             backsound.play();
         }
             
@@ -55,6 +58,14 @@ public class Lab extends Main
                 cool.jump();
                 soundJump();
             }
+        } else if (energy.energy == 5 && five == false) {
+            five = true;
+            lastDialogue = timer;
+            addObject(dialogue, 300, 80);
+        }
+        
+        if (five && (timer-lastDialogue) == 150) {
+            dialogue.next();
         }
         
         if(timer % 7 == 0){

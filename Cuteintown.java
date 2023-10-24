@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Cuteintown extends Cute
 {
     private boolean inPortal = false;
+    public boolean puff = false;
     
     /**
      * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
@@ -37,7 +38,8 @@ public class Cuteintown extends Cute
         }
         
         if (getOneIntersectingObject(PortalD.class) != null)  {
-            Greenfoot.setWorld(new gameWin());
+            puff = true;
+            Greenfoot.setWorld(new gameOver());
         }
         
         if (!inPortal) addScore();
