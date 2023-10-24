@@ -9,7 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class gameWin extends World
 {
     private GreenfootImage backgroundImage;
+    private GreenfootSound backsoundReward;
+    private GreenfootSound backsound;
     private int timer = 0;
+    private int startHighscore = Integer.MAX_VALUE;
+    private boolean isHighscore = false;
     
     Highscore highscore = new Highscore();
     Counter counter = new Counter();
@@ -54,15 +58,44 @@ public class gameWin extends World
         
         if (timer == 450) {
             addObject(highscore, 300, 100);
+            backsoundReward = new GreenfootSound("reward.mp3");
+            backsoundReward.setVolume(70);
+            backsoundReward.play();
+            startHighscore = timer;
+        }
+        
+        
+        if ((timer-startHighscore) == 15) {
+            backsound = new GreenfootSound("gamesound4.mp3");
+            backsound.setVolume(5);
+            backsound.play();
+            isHighscore = true;
+        }
+        
+        if (isHighscore == true) {
+            if ((timer-startHighscore) == 25) {
+                backsound.setVolume(15);
+            } else if ((timer-startHighscore) == 30) {
+                backsound.setVolume(25);
+            } else if ((timer-startHighscore) == 40) {
+                backsound.setVolume(35);
+            } else if ((timer-startHighscore) == 50) {
+                backsound.setVolume(45);
+            } else if ((timer-startHighscore) == 65) {
+                backsound.setVolume(55);
+            } else if ((timer-startHighscore) == 80) {
+                backsound.setVolume(65);
+            }
         }
 
         if(Greenfoot.isKeyDown("R")){
             Greenfoot.setWorld(new Lab());
-            counter.putScore(0);
+            backsound.stop();
         }
         
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
+            backsound.stop();
         }
     }
 

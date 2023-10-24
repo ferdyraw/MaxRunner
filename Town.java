@@ -164,6 +164,26 @@ public class Town extends Main
             down = false;
         }
         
+        if (isCute == true && cute.startPortal == true) {
+            if (startPortal == 0) {
+                startPortal = timer;
+            } else if (timer-startPortal == 40) {
+                backsound.setVolume(60);
+            } else if (timer-startPortal == 80) {
+                backsound.setVolume(50);
+            } else if (timer-startPortal == 120) {
+                backsound.setVolume(40);
+            } else if (timer-startPortal == 180) {
+                backsound.setVolume(30);
+            } else if (timer-startPortal == 210) {
+                backsound.setVolume(20);
+            } else if (timer-startPortal == 230) {
+                backsound.setVolume(10);
+            } else if (timer-startPortal == 250) {
+                backsound.setVolume(5);
+            }
+        }
+        
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
             backsound.stop();
