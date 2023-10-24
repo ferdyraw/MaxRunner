@@ -31,5 +31,6 @@ public class DialogueCave1 extends Dialogue
     
     public void next() {
         setImage(dialogue[currentDialogue++]);
+        soundDialogue();
     }
 }

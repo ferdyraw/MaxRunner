@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Cuteinlab extends Cute
 {
     private boolean inPortal = false;
+    public boolean startPortal = false;
     
     /**
      * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
@@ -26,7 +27,7 @@ public class Cuteinlab extends Cute
         
         if(getOneIntersectingObject(Dot.class) != null){
             World myWorld = getWorld();
-            Main bg = (Main) myWorld;
+            Lab bg = (Lab) myWorld;
             bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
@@ -94,6 +95,7 @@ public class Cuteinlab extends Cute
                     myWorld.addObject(portal, 600, 105);
                 }
                 portal.soundOpen();
+                startPortal = true;
                 num = 1;
                 
             }

@@ -6,6 +6,7 @@ public class Cave extends Main
     private boolean ten = false;
     private boolean isCute = false;
     private int lastDialogue;
+    private int startPortal = 0;
     private int count = 0;
     
     Cuteincave cute = new Cuteincave();
@@ -39,6 +40,25 @@ public class Cave extends Main
             portalb.soundClose();
         }
         
+        if (timer == 1) {
+            backsound = new GreenfootSound("gamesound2.mp3");
+            backsound.setVolume(5);
+            backsound.play();
+        } else if (timer == 10) {
+            backsound.setVolume(15);
+        } else if (timer == 15) {
+            backsound.setVolume(25);
+        } else if (timer == 25) {
+            backsound.setVolume(35);
+        } else if (timer == 35) {
+            backsound.setVolume(45);
+        } else if (timer == 50) {
+            backsound.setVolume(55);
+        } else if (timer == 65) {
+            backsound.setVolume(65);
+        }
+        
+        
         if(timer == 60){
             addObject(cute, 55, 184);
             isCute = true;
@@ -47,6 +67,7 @@ public class Cave extends Main
         if (portalb.getX() == 0) {
             addObject(cool, 0, 184);
             addObject(dialogue, 300, 80);
+            dialogue.soundDialogue();
             lastDialogue = timer;
             zero = true;
         }
@@ -73,11 +94,12 @@ public class Cave extends Main
                 addObject(new Drink(), 600, 260);
             }
             
-            if (timer > 350 && (timer % 350 == 85 || timer % 800 == 100)) {
+            if (cool != null && timer > 350 && (timer % 350 == 85 || timer % 800 == 100)) {
                 cool.jump();
             }
         } else if (energy.energy == 5 && ten == false) {
             addObject(dialogue2, 300, 80);
+            dialogue2.soundDialogue();
             ten = true;
         }
         
@@ -89,6 +111,31 @@ public class Cave extends Main
         if (isCute == true && Greenfoot.isKeyDown("space") && cute.isOnGround() && cute.getX() == 200) {
             cute.jump();
             soundJump();
+        }
+        
+        if (isCute == true && cute.startPortal == true) {
+            if (startPortal == 0) {
+                startPortal = timer;
+            } else if (timer-startPortal == 40) {
+                backsound.setVolume(60);
+            } else if (timer-startPortal == 80) {
+                backsound.setVolume(50);
+            } else if (timer-startPortal == 120) {
+                backsound.setVolume(40);
+            } else if (timer-startPortal == 180) {
+                backsound.setVolume(30);
+            } else if (timer-startPortal == 210) {
+                backsound.setVolume(20);
+            } else if (timer-startPortal == 230) {
+                backsound.setVolume(10);
+            } else if (timer-startPortal == 250) {
+                backsound.setVolume(5);
+            }
+        }
+        
+        if(Greenfoot.isKeyDown("escape")){
+            Greenfoot.setWorld(new gameMenu());
+            backsound.stop();
         }
     }
 }

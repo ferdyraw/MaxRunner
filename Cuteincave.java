@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Cuteincave extends Cute
 {
     private boolean inPortal = false;
+    public boolean startPortal = false;
     /**
      * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -24,10 +25,16 @@ public class Cuteincave extends Cute
         out();
     
         if(getOneIntersectingObject(Dot2.class) != null){
+            World myWorld = getWorld();
+            Cave bg = (Cave) myWorld;
+            bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
         
-        if(getOneIntersectingObject(ObstacleLava.class) != null){            
+        if(getOneIntersectingObject(ObstacleLava.class) != null){   
+            World myWorld = getWorld();
+            Cave bg = (Cave) myWorld;
+            bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
         
@@ -85,6 +92,7 @@ public class Cuteincave extends Cute
                 PortalD portal = new PortalD();
                 myWorld.addObject(portal,600,209); 
                 portal.soundOpen();
+                startPortal = true;
                 num = 1;
                 
             }

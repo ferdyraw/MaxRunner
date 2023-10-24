@@ -10,6 +10,7 @@ public class Cuteintown extends Cute
 {
     private boolean inPortal = false;
     public boolean puff = false;
+    public boolean startPortal = false;
     
     /**
      * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
@@ -26,14 +27,30 @@ public class Cuteintown extends Cute
         out();
         
         if(getOneIntersectingObject(ObstacleTruck.class) != null){
+            World myWorld = getWorld();
+            Town bg = (Town) myWorld;
+            bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
         
         if (getOneIntersectingObject(ObstacleSubSurf.class) != null) {
+            World myWorld = getWorld();
+            Town bg = (Town) myWorld;
+            bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
         
         if (getOneIntersectingObject(ObstacleMouse.class) != null) {
+            World myWorld = getWorld();
+            Town bg = (Town) myWorld;
+            bg.backsound.stop();
+            Greenfoot.setWorld(new gameOver());
+        }
+        
+        if (getOneIntersectingObject(ObstacleCat.class) != null) {
+            World myWorld = getWorld();
+            Town bg = (Town) myWorld;
+            bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
         
@@ -99,6 +116,7 @@ public class Cuteintown extends Cute
                     myWorld.addObject(portal, 600, 105);
                 }
                 portal.soundOpen();
+                startPortal = true;
                 num = 1;
                 
             }

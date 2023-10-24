@@ -30,5 +30,6 @@ public class DialogueTown2 extends Dialogue
     
     public void next() {
         setImage(dialogue[currentDialogue++]);
+        soundDialogue();
     }
 }

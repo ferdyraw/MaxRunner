@@ -30,5 +30,6 @@ public class DialogueLab extends Dialogue
     
     public void next() {
         setImage(dialogue[currentDialogue++]);
+        soundDialogue();
     }
 }

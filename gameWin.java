@@ -45,6 +45,7 @@ public class gameWin extends World
         
         if (timer == 200) {
             addObject(dialogue, 300, 80);
+            dialogue.soundDialogue();
         }
         
         if (timer == 400) {

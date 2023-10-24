@@ -1,11 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class ObstacleWalk_1 extends Obstacle
+public class ObstacleCat extends Obstacle
 {
     private int frame = 0;
     private GreenfootImage[] animationFrames = new GreenfootImage[6];
   
-    public ObstacleWalk_1()
+    public ObstacleCat()
     {
         for (int i = 0; i < 6; i++){
             animationFrames[i] = new GreenfootImage("Walk_" + (i + 1)+".png");

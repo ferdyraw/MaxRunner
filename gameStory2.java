@@ -48,6 +48,7 @@ public class gameStory2 extends World
         
         if (timer == 115) {
             addObject(dialogue, 300, 80);
+            dialogue.soundDialogue();
         }
         
         for (int i = 0; i < 5; i++) {

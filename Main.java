@@ -52,8 +52,6 @@ public class Main extends World
     public void act(){
         timer++;
         
-        if(Greenfoot.isKeyDown("escape")){
-            Greenfoot.setWorld(new gameMenu());
-        }
+        
     }
 }

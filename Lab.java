@@ -8,6 +8,7 @@ public class Lab extends Main
     private int diff_up = 0;
     private int diff_down = 0;
     private int lastDialogue;
+    private int startPortal = 0;
     
     Cuteinlab cute = new Cuteinlab();
     Coolinlab cool = new Coolinlab();
@@ -38,8 +39,8 @@ public class Lab extends Main
         
         if (timer == 5) {
             backsound = new GreenfootSound("gamesound1.mp3");
-            backsound.setVolume(50);
-            backsound.play();
+            backsound.setVolume(65);
+            backsound.playLoop();
         }
             
         if (energy.energy < 5 ) {
@@ -54,7 +55,7 @@ public class Lab extends Main
                 addObject(new Drink(), 600, 337 );   
             }
             
-            if (timer > 300 && timer % 300 == 90) {
+            if (cool != null && timer > 300 && timer % 300 == 90) {
                 cool.jump();
                 soundJump();
             }
@@ -62,6 +63,7 @@ public class Lab extends Main
             five = true;
             lastDialogue = timer;
             addObject(dialogue, 300, 80);
+            dialogue.soundDialogue();
         }
         
         if (five && (timer-lastDialogue) == 150) {
@@ -73,16 +75,16 @@ public class Lab extends Main
             paint(scrollPosition);
         }
         
-        if(cute.getX() == 199){
+        if(cute != null && cute.getX() == 199){
             addObject(cool,-50,324);
         }
         
-        if (Greenfoot.isKeyDown("space") && cute.isOnGround() && cute.getX() == 200) {
+        if (cute != null && Greenfoot.isKeyDown("space") && cute.isOnGround() && cute.getX() == 200) {
             cute.jump();
             soundJump();
         }
         
-        if(Greenfoot.isKeyDown("up") && cute.isOnGround() && cute.getY() == 327 && 
+        if(cute != null && Greenfoot.isKeyDown("up") && cute.isOnGround() && cute.getY() == 327 && 
             cute.getX() == 200){
             cute.kecepatan = -20;
             up = true;
@@ -91,7 +93,7 @@ public class Lab extends Main
             soundSwap();
         }
         
-        if(Greenfoot.isKeyDown("down") && cute.isOnGround() && cute.getY() == 153 && 
+        if(cute != null && Greenfoot.isKeyDown("down") && cute.isOnGround() && cute.getY() == 153 && 
             cute.getX() == 200){
             cute.falling = true;
             cute.kecepatan = 20;
@@ -102,15 +104,41 @@ public class Lab extends Main
         }
         
         
-        if (up && (timer-diff_up) > 10 && cool.isOnGround()) {
+        if (cool != null && up && (timer-diff_up) > 10 && cool.isOnGround()) {
             cool.kecepatan = -20;
             up = false;
         } 
         
-        if (down && (timer-diff_down) > 10 && cool.isOnGround()) {
+        if (cool != null && down && (timer-diff_down) > 10 && cool.isOnGround()) {
             cool.falling = true;
             cool.kecepatan = 20;
             down = false;
         }
+        
+        if (cute != null && cute.startPortal == true) {
+            if (startPortal == 0) {
+                startPortal = timer;
+            } else if (timer-startPortal == 40) {
+                backsound.setVolume(60);
+            } else if (timer-startPortal == 80) {
+                backsound.setVolume(50);
+            } else if (timer-startPortal == 120) {
+                backsound.setVolume(40);
+            } else if (timer-startPortal == 180) {
+                backsound.setVolume(30);
+            } else if (timer-startPortal == 210) {
+                backsound.setVolume(20);
+            } else if (timer-startPortal == 230) {
+                backsound.setVolume(10);
+            } else if (timer-startPortal == 250) {
+                backsound.setVolume(5);
+            }
+        }
+        
+        if(Greenfoot.isKeyDown("escape")){
+            Greenfoot.setWorld(new gameMenu());
+            backsound.stop();
+        }
+        
     }
 }

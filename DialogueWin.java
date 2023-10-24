@@ -31,5 +31,6 @@ public class DialogueWin extends Dialogue
     
     public void next() {
         setImage(dialogue[currentDialogue++]);
+        soundDialogue();
     }
 }

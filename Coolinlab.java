@@ -24,6 +24,9 @@ public class Coolinlab extends Cool
         
         if (getOneIntersectingObject(PortalD.class) != null) 
         {
+            World myWorld = getWorld();
+            Lab bg = (Lab) myWorld;
+            bg.backsound.stop();
             Greenfoot.setWorld(new Cave());
         }
         

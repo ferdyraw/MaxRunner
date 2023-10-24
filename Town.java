@@ -8,6 +8,7 @@ public class Town extends Main
     private boolean fteen = false;
     private boolean isCute = false;
     private int lastDialogue;
+    private int startPortal = 0;
     private int diff_up = 0;
     private int diff_down = 0;
     private int count = 0;
@@ -47,12 +48,31 @@ public class Town extends Main
             portalb.soundClose();
         }
         
+        if (timer == 1) {
+            backsound = new GreenfootSound("gamesound3.mp3");
+            backsound.setVolume(5);
+            backsound.play();
+        } else if (timer == 10) {
+            backsound.setVolume(15);
+        } else if (timer == 15) {
+            backsound.setVolume(25);
+        } else if (timer == 25) {
+            backsound.setVolume(35);
+        } else if (timer == 35) {
+            backsound.setVolume(45);
+        } else if (timer == 50) {
+            backsound.setVolume(55);
+        } else if (timer == 65) {
+            backsound.setVolume(65);
+        }
+        
         if(timer == 60){
             addObject(cute, 55, 132);
             addObject(dialogue, 300, 80);
             lastDialogue = timer;
             zero = true;
             isCute = true;
+            dialogue.soundDialogue();
         }
         
         if (portalb.getX() == 0) {
@@ -61,7 +81,7 @@ public class Town extends Main
         }
         
         if (zero == true && count < 3) {
-            if ((timer-lastDialogue) == 200) {
+            if ((timer-lastDialogue) == 170) {
                 dialogue.next();
                 lastDialogue = timer;
                 count++;
@@ -69,13 +89,13 @@ public class Town extends Main
         }
         
         if (energy.energy < 15) {
-            if (timer % (a + 600) == 0){ //a nya 100 biar habis truct ada kucing
-                addObject(new ObstacleWalk_1(), 600, 325);
-            }
+            /*if (timer % (a + 600) == 0){ //a nya 100 biar habis truct ada kucing
+                addObject(new ObstacleCat(), 600, 325);
+            } */
         
             if (timer % 300 == 0) {
-                addObject(new ObstacleSubSurf(), 600, 163);
-                addObject(new ObstacleSubSurf(), 600, 335);
+                addObject(new ObstacleSubSurf(), 600, 167);
+                addObject(new ObstacleSubSurf(), 600, 342);
             }
             
             if (timer % 600 == 0) {
@@ -95,13 +115,14 @@ public class Town extends Main
                 addObject(new Drink(), 600, 163);
             }
             
-            if (timer > 300 && timer % 300 == 90) {
+            if (cool != null && timer > 300 && (timer % 300 == 90)) {
                 cool.jump();
             }
         } else if (energy.energy == 5 && fteen == false) {
             addObject(dialogue2, 300, 80);
             lastDialogue = timer;
             fteen = true;
+            dialogue2.soundDialogue();
         }
         
         if(timer % 7 == 0){
@@ -132,15 +153,20 @@ public class Town extends Main
         }
         
         
-        if (up && (timer-diff_up) > 10 && cool.isOnGround()) {
+        if (isCute == true && up && (timer-diff_up) > 10 && cool.isOnGround()) {
             cool.kecepatan = -20;
             up = false;
         } 
         
-        if (down && (timer-diff_down) > 10 && cool.isOnGround()) {
+        if (isCute == true && down && (timer-diff_down) > 10 && cool.isOnGround()) {
             cool.falling = true;
             cool.kecepatan = 20;
             down = false;
+        }
+        
+        if(Greenfoot.isKeyDown("escape")){
+            Greenfoot.setWorld(new gameMenu());
+            backsound.stop();
         }
     }
 }
