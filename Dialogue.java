@@ -19,7 +19,7 @@ public class Dialogue extends Actor
     }
     
     public void soundDialogue() {
-        backsoundDialogue = new GreenfootSound("dialogue.mp3");
+        backsoundDialogue = new GreenfootSound("dialogue3.mp3");
         backsoundDialogue.setVolume(65);
         backsoundDialogue.play();
     }
