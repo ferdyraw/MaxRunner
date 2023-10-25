@@ -88,12 +88,12 @@ public class gameWin extends World
             }
         }
 
-        if(Greenfoot.isKeyDown("R")){
+        if(backsound != null && Greenfoot.isKeyDown("R")){
             Greenfoot.setWorld(new Lab());
             backsound.stop();
         }
         
-        if(Greenfoot.isKeyDown("escape")){
+        if(backsound != null && Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
             backsound.stop();
         }

@@ -133,7 +133,7 @@ public class Cave extends Main
             }
         }
         
-        if(Greenfoot.isKeyDown("escape")){
+        if(backsound != null && Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
             backsound.stop();
         }

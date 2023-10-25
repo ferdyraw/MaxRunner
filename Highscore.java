@@ -24,7 +24,7 @@ public class Highscore extends Actor
     public void putScore(int score){
         minScore = Math.min(minScore, score);   
         try {
-            FileOutputStream fos = new FileOutputStream("highscores.dat");
+            FileOutputStream fos = new FileOutputStream("highscores.txt");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(minScore);
             oos.close();
@@ -35,7 +35,7 @@ public class Highscore extends Actor
     
     public void getScore(){
         try {
-            FileInputStream fis = new FileInputStream("highscores.dat");
+            FileInputStream fis = new FileInputStream("highscores.txt");
             ObjectInputStream ois = new ObjectInputStream(fis);
             minScore = (int) ois.readObject();
             ois.close();

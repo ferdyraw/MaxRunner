@@ -33,7 +33,7 @@ public class Counter extends Actor
     
     public void getScore(){
         try {
-            FileInputStream fis = new FileInputStream("counter.dat");
+            FileInputStream fis = new FileInputStream("counter.txt");
             ObjectInputStream ois = new ObjectInputStream(fis);
             score = (int) ois.readObject();
             ois.close();
@@ -44,7 +44,7 @@ public class Counter extends Actor
     
     public void putScore(int val){
         try {
-            FileOutputStream fos = new FileOutputStream("counter.dat");
+            FileOutputStream fos = new FileOutputStream("counter.txt");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(val);
             oos.close();
