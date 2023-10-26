@@ -118,7 +118,7 @@ public class Town extends Main
             if (cool != null && timer > 300 && (timer % 300 == 90)) {
                 cool.jump();
             }
-        } else if (energy.energy == 5 && fteen == false) {
+        } else if (energy.energy == 15 && fteen == false) {
             addObject(dialogue2, 300, 80);
             lastDialogue = timer;
             fteen = true;

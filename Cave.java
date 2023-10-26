@@ -97,7 +97,7 @@ public class Cave extends Main
             if (cool != null && timer > 350 && (timer % 350 == 85 || timer % 800 == 100)) {
                 cool.jump();
             }
-        } else if (energy.energy == 5 && ten == false) {
+        } else if (energy.energy == 10 && ten == false) {
             addObject(dialogue2, 300, 80);
             dialogue2.soundDialogue();
             ten = true;

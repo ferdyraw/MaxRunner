@@ -70,5 +70,9 @@ public class gameStory2 extends World
                 entry.Close(j);
             }
         }
+        
+        if (Greenfoot.isKeyDown("escape")) {
+            Greenfoot.setWorld(new gameMenu());
+        }
     }
 }

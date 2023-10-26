@@ -50,5 +50,9 @@ public class gameStory extends World
         if (timer == 450) {
             Greenfoot.setWorld(new gameStory2());
         }
+        
+        if (Greenfoot.isKeyDown("escape")) {
+            Greenfoot.setWorld(new gameMenu());
+        }
     }
 }
