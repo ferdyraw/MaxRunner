@@ -54,5 +54,9 @@ public class gameStory extends World
         if (Greenfoot.isKeyDown("escape")) {
             Greenfoot.setWorld(new gameMenu());
         }
+        
+        if (Greenfoot.isKeyDown("N")) {
+            Greenfoot.setWorld(new Lab());
+        }
     }
 }
