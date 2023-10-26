@@ -19,7 +19,6 @@ public class gameMenu extends World {
     }
 
     private void prepare() {
-        counter.putScore(0);
 
         int initialX = getWidth() / 2;
         int initialY = getHeight() / 2-30;

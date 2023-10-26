@@ -32,7 +32,6 @@ public class gameOver extends World
 
         if(Greenfoot.isKeyDown("R")){
             Greenfoot.setWorld(new Lab());
-            counter.putScore(0);
         }
         
         if(Greenfoot.isKeyDown("escape")){

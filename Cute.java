@@ -105,9 +105,8 @@ public class Cute extends Actor
         
         score++;
         if (score % 5 == 0){
-            
             Counter counter = bg.getCounter();
-            counter.addScore();
+            counter.putScore(counter.get()+1);
         }
     }
     

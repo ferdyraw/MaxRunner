@@ -1,5 +1,4 @@
 import greenfoot.*;  
-import java.io.*;
 
 /**
  * Write a description of class Counter here.
@@ -13,42 +12,31 @@ public class Counter extends Actor
      * Act - do whatever the Counter wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int score = 0, fontsize = 30;
+    public UserInfo user;
+    public int fontsize = 30;
+    
+    public Counter() {
+        user = UserInfo.getMyInfo();
+    }
+    
     public void act()
     {
         // Add your action code here.
-        getScore();
-        setImage(new GreenfootImage("Score : " + score, fontsize, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
+        setImage(new GreenfootImage("Score : " + user.getScore(), fontsize, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
     }
     
     public void changeFontSize(int val){
         fontsize = val;
     }
-    
-    public void addScore(){
-        score++;
-        putScore(score);
-    }
-    
-    public void getScore(){
-        try {
-            FileInputStream fis = new FileInputStream("counter.txt");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            score = (int) ois.readObject();
-            ois.close();
-        } catch(IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+
+    public int get() {
+        return user.getScore();
     }
     
     public void putScore(int val){
-        try {
-            FileOutputStream fos = new FileOutputStream("counter.txt");
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(val);
-            oos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (user.isStorageAvailable() == true) {
+            user.setScore(val);
+            user.store();
         }
     }
 }

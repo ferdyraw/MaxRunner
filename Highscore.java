@@ -1,5 +1,4 @@
 import greenfoot.*;  
-import java.io.*;
 
 /**
  * Write a description of class Counter here.
@@ -13,33 +12,24 @@ public class Highscore extends Actor
      * Act - do whatever the Counter wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int minScore = Integer.MAX_VALUE;
+    
+    public UserInfo user;
+    
+    public Highscore() {
+        user = UserInfo.getMyInfo();
+    }
+    
     public void act()
     {
         // Add your action code here.
-        setImage(new GreenfootImage("Best game : " + minScore + " score", 30, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
+        setImage(new GreenfootImage("Best game : " + user.getScore() + " score", 30, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
     }
     
     public void putScore(int score){
-        minScore = Math.min(minScore, score);   
-        try {
-            FileOutputStream fos = new FileOutputStream("highscores.txt");
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(minScore);
-            oos.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    
-    public void getScore(){
-        try {
-            FileInputStream fis = new FileInputStream("highscores.txt");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            minScore = (int) ois.readObject();
-            ois.close();
-        } catch(IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+        int minScore = Math.min(user.getScore(), score);   
+        if (user.isStorageAvailable() == true) {
+            user.setScore(minScore);
+            user.store();
         }
     }
 }
