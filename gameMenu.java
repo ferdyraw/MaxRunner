@@ -20,7 +20,7 @@ public class gameMenu extends World {
 
     private void prepare() {
         counter.putScore(0);
-        
+
         int initialX = getWidth() / 2;
         int initialY = getHeight() / 2-30;
         int spacing = 40;
@@ -30,7 +30,7 @@ public class gameMenu extends World {
         menuImages[1] = new GreenfootImage("menu_instructions.png");
         menuImages[2] = new GreenfootImage("menu_credits.png");
         menuImages[3] = new GreenfootImage("menu_quit.png");
-        
+
         for (int i = 0; i < 4; i++) {
             menuOptions[i] = new MenuOption(menuImages[i], initialX, initialY + spacing * i);
             addObject(menuOptions[i], initialX, initialY + spacing * i);

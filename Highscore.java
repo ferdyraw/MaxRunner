@@ -1,5 +1,4 @@
 import greenfoot.*;  
-import java.awt.Color;
 import java.io.*;
 
 /**
