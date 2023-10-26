@@ -56,6 +56,9 @@ public class Cuteintown extends Cute
         
         if (getOneIntersectingObject(PortalD.class) != null)  {
             puff = true;
+            World myWorld = getWorld();
+            Town bg = (Town) myWorld;
+            bg.backsound.stop();
             Greenfoot.setWorld(new gameWin());
         }
         

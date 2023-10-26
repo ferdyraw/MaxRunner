@@ -167,19 +167,19 @@ public class Town extends Main
         if (isCute == true && cute.startPortal == true) {
             if (startPortal == 0) {
                 startPortal = timer;
-            } else if (timer-startPortal == 40) {
+            } else if (timer-startPortal == 20) {
                 backsound.setVolume(60);
-            } else if (timer-startPortal == 80) {
+            } else if (timer-startPortal == 40) {
                 backsound.setVolume(50);
-            } else if (timer-startPortal == 120) {
+            } else if (timer-startPortal == 60) {
                 backsound.setVolume(40);
-            } else if (timer-startPortal == 180) {
+            } else if (timer-startPortal == 70) {
                 backsound.setVolume(30);
-            } else if (timer-startPortal == 210) {
+            } else if (timer-startPortal == 80) {
                 backsound.setVolume(20);
-            } else if (timer-startPortal == 230) {
+            } else if (timer-startPortal == 90) {
                 backsound.setVolume(10);
-            } else if (timer-startPortal == 250) {
+            } else if (timer-startPortal == 100) {
                 backsound.setVolume(5);
             }
         }
