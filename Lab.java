@@ -141,5 +141,10 @@ public class Lab extends Main
             backsound.stop();
         }
         
+        if (backsound != null && Greenfoot.isKeyDown("R")) {
+            Greenfoot.setWorld(new Lab());
+            backsound.stop();
+        }
+        
     }
 }

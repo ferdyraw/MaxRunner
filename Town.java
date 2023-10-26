@@ -188,5 +188,10 @@ public class Town extends Main
             Greenfoot.setWorld(new gameMenu());
             backsound.stop();
         }
+        
+        if (backsound != null && Greenfoot.isKeyDown("R")) {
+            Greenfoot.setWorld(new Lab());
+            backsound.stop();
+        }
     }
 }
