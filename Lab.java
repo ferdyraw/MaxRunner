@@ -47,8 +47,11 @@ public class Lab extends Main
         if (energy.energy < 5 ) {
             if(timer % 300 == 0 ){
                 addObject(new Dot(), 600, 330);
-                addObject(new Dot(), 600, 155);
                 addObject(new ObstacleCone(), 600, 340);
+            }
+            
+            if (timer > 300 && timer % 300 == 120) {
+                addObject(new Dot(), 600, 155);
                 addObject(new ObstacleCone(), 600, 167);
             }
             
@@ -56,7 +59,12 @@ public class Lab extends Main
                 addObject(new Drink(), 600, 337 );   
             }
             
-            if (cool != null && timer > 300 && timer % 300 == 90) {
+            if (cool != null && timer > 300 && timer % 300 == 90 && cool.getY() == 327) {
+                cool.jump();
+                soundJump();
+            }
+            
+            if (cool != null && timer > 300 && timer % 300 == 210 && cool.getY() == 153) {
                 cool.jump();
                 soundJump();
             }
