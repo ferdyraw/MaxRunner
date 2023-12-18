@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 
 public class Town extends Main
 {
@@ -12,6 +13,8 @@ public class Town extends Main
     private int diff_up = 0;
     private int diff_down = 0;
     private int count = 0;
+    List<Integer> spawnMouse = Arrays.asList(174, 349);
+    Random rand = new Random();
     
     Cuteintown cute = new Cuteintown();
     Coolintown cool = new Coolintown();
@@ -107,7 +110,9 @@ public class Town extends Main
             }
             
             if (timer % 500 == 0) {
-                addObject(new ObstacleMouse(), 0, 174);
+                int randomIdx = rand.nextInt(spawnMouse.size());
+                int randomPos = spawnMouse.get(randomIdx);
+                addObject(new ObstacleMouse(), 0, randomPos);
             }
             
             if(timer % 200 == 0){
@@ -151,7 +156,6 @@ public class Town extends Main
             diff_down = timer;
             soundSwap();
         }
-        
         
         if (isCute == true && up && (timer-diff_up) > 10 && cool.isOnGround()) {
             cool.kecepatan = -20;
