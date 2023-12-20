@@ -28,7 +28,7 @@ public class Cuteinlab extends Cute
         if(getOneIntersectingObject(Dot.class) != null){
             World myWorld = getWorld();
             Lab bg = (Lab) myWorld;
-            bg.backsound.stop();
+            if (bg.backsound != null) bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
         

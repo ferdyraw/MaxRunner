@@ -26,8 +26,8 @@ public class Coolinlab extends Cool
         {
             World myWorld = getWorld();
             Lab bg = (Lab) myWorld;
-            bg.backsound.stop();
-            Greenfoot.setWorld(new Cave());
+            if (bg.backsound != null) bg.backsound.stop();
+            Greenfoot.setWorld(new gameWin());
         }
         
         checkDrink(5);

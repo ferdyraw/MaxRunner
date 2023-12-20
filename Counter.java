@@ -22,7 +22,7 @@ public class Counter extends Actor
     public void act()
     {
         // Add your action code here.
-        setImage(new GreenfootImage("Score : " + user.getScore(), fontsize, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
+        setImage(new GreenfootImage("Score : " + user.getInt(4), fontsize, greenfoot.Color.LIGHT_GRAY, greenfoot.Color.BLACK));
     }
     
     public void changeFontSize(int val){
@@ -30,12 +30,12 @@ public class Counter extends Actor
     }
 
     public int get() {
-        return user.getScore();
+        return user.getInt(4);
     }
     
     public void putScore(int val){
-        if (user.isStorageAvailable() == true) {
-            user.setScore(val);
+        if (user.isStorageAvailable()) {
+            user.setInt(4, val);
             user.store();
         }
     }

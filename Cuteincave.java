@@ -27,14 +27,14 @@ public class Cuteincave extends Cute
         if(getOneIntersectingObject(Dot2.class) != null){
             World myWorld = getWorld();
             Cave bg = (Cave) myWorld;
-            bg.backsound.stop();
+            if (bg.backsound != null) bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
         
         if(getOneIntersectingObject(ObstacleLava.class) != null){   
             World myWorld = getWorld();
             Cave bg = (Cave) myWorld;
-            bg.backsound.stop();
+            if (bg.backsound != null) bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
         

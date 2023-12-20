@@ -14,6 +14,8 @@ public class gameWin extends World
     private int timer = 0;
     private int startHighscore = Integer.MAX_VALUE;
     private boolean isHighscore = false;
+    private boolean isDiag = false;
+    private int volume = 0;
     
     Highscore highscore = new Highscore();
     Counter counter = new Counter();
@@ -47,11 +49,17 @@ public class gameWin extends World
         }
         
         if (timer == 200) {
-            addObject(dialogue, 300, 80);
-            dialogue.soundDialogue();
+            if (UserInfo.isStorageAvailable()) {
+                UserInfo myInfo = UserInfo.getMyInfo();
+                if (myInfo.getInt(0) == 0) {
+                    addObject(dialogue, 300, 80);
+                    dialogue.soundDialogue();
+                    isDiag = true;
+                }
+            }
         }
         
-        if (timer == 400) {
+        if (isDiag && timer == 400) {
             dialogue.next();
         }
         
@@ -65,36 +73,42 @@ public class gameWin extends World
         
         
         if ((timer-startHighscore) == 15) {
-            backsound = new GreenfootSound("gamesound4.mp3");
-            backsound.setVolume(5);
-            backsound.play();
-            isHighscore = true;
+            if (UserInfo.isStorageAvailable()) {
+                UserInfo myInfo = UserInfo.getMyInfo();
+                volume = myInfo.getInt(1);
+                if (volume != 0) {
+                    backsound = new GreenfootSound("gamesound4.mp3");
+                    backsound.setVolume(5);
+                    backsound.play();
+                    isHighscore = true;
+                }
+            }
         }
         
         if (isHighscore == true) {
-            if ((timer-startHighscore) == 25) {
+            if (volume >= 1 && (timer-startHighscore) == 25) {
                 backsound.setVolume(15);
-            } else if ((timer-startHighscore) == 30) {
+            } else if (volume >= 1 && (timer-startHighscore) == 30) {
                 backsound.setVolume(25);
-            } else if ((timer-startHighscore) == 40) {
+            } else if (volume >= 2 && (timer-startHighscore) == 40) {
                 backsound.setVolume(35);
-            } else if ((timer-startHighscore) == 50) {
+            } else if (volume >= 2 && (timer-startHighscore) == 50) {
                 backsound.setVolume(45);
-            } else if ((timer-startHighscore) == 65) {
+            } else if (volume >= 3 && (timer-startHighscore) == 65) {
                 backsound.setVolume(55);
-            } else if ((timer-startHighscore) == 80) {
+            } else if (volume >= 3 && (timer-startHighscore) == 80) {
                 backsound.setVolume(65);
             }
         }
 
-        if(backsound != null && Greenfoot.isKeyDown("R")){
+        if(Greenfoot.isKeyDown("R")){
             Greenfoot.setWorld(new Lab());
-            backsound.stop();
+            if (backsound != null) backsound.stop();
         }
         
-        if(backsound != null && Greenfoot.isKeyDown("escape")){
+        if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
-            backsound.stop();
+            if (backsound != null) backsound.stop();
         }
     }
 

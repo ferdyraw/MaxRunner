@@ -6,10 +6,12 @@ public class Lab extends Main
     public boolean up = false;
     public boolean down = false;
     public boolean five = false;
+    private boolean dun = false;
     private int diff_up = 0;
     private int diff_down = 0;
     private int lastDialogue;
     private int startPortal = 0;
+    private int volume = 0;
     
     List<Integer> spawnEnergy = Arrays.asList(113, 287);
     Random rand = new Random();
@@ -43,9 +45,15 @@ public class Lab extends Main
         super.act();
         
         if (timer == 5) {
-            backsound = new GreenfootSound("gamesound1.mp3");
-            backsound.setVolume(65);
-            backsound.playLoop();
+            if (UserInfo.isStorageAvailable()) {
+                UserInfo myInfo = UserInfo.getMyInfo();
+                volume = myInfo.getInt(1);
+                if (volume != 0) {
+                    backsound = new GreenfootSound("gamesound1.mp3");
+                    backsound.setVolume(volume*20 + 5);
+                    backsound.play();
+                }
+            }
         }
             
         if (energy.energy < 5 ) {
@@ -70,11 +78,17 @@ public class Lab extends Main
                 cool.jump();
                 soundJump();
             }
-        } else if (energy.energy == 5 && five == false) {
-            five = true;
-            lastDialogue = timer;
-            addObject(dialogue, 300, 80);
-            dialogue.soundDialogue();
+        } else if (energy.energy == 5 && five == false && dun == false) {
+            if (UserInfo.isStorageAvailable()) {
+                UserInfo myInfo = UserInfo.getMyInfo();
+                if (myInfo.getInt(0) == 0) {
+                    addObject(dialogue, 300, 80);
+                    dialogue.soundDialogue();
+                    five = true;
+                    lastDialogue = timer;
+                }
+            }
+            dun = true;
         }
         
         if (five && (timer-lastDialogue) == 150) {
@@ -129,31 +143,31 @@ public class Lab extends Main
         if (cute != null && cute.startPortal == true) {
             if (startPortal == 0) {
                 startPortal = timer;
-            } else if (timer-startPortal == 40) {
+            } else if (volume >= 3 && timer-startPortal == 40) {
                 backsound.setVolume(60);
-            } else if (timer-startPortal == 80) {
+            } else if (volume >= 3 && timer-startPortal == 80) {
                 backsound.setVolume(50);
-            } else if (timer-startPortal == 120) {
+            } else if (volume >= 2 && timer-startPortal == 120) {
                 backsound.setVolume(40);
-            } else if (timer-startPortal == 180) {
+            } else if (volume >= 2 && timer-startPortal == 180) {
                 backsound.setVolume(30);
-            } else if (timer-startPortal == 210) {
+            } else if (volume >= 1 && timer-startPortal == 210) {
                 backsound.setVolume(20);
-            } else if (timer-startPortal == 230) {
+            } else if (volume >= 1 && timer-startPortal == 230) {
                 backsound.setVolume(10);
-            } else if (timer-startPortal == 250) {
+            } else if (volume >= 1 && timer-startPortal == 250) {
                 backsound.setVolume(5);
             }
         }
         
-        if(backsound != null && Greenfoot.isKeyDown("escape")){
+        if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new gameMenu());
-            backsound.stop();
+            if (backsound != null) backsound.stop();
         }
         
-        if (backsound != null && Greenfoot.isKeyDown("R")) {
+        if (Greenfoot.isKeyDown("R")) {
             Greenfoot.setWorld(new Lab());
-            backsound.stop();
+            if (backsound != null) backsound.stop();
         }
         
     }

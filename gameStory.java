@@ -19,8 +19,8 @@ public class gameStory extends World
     
     public gameStory()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1, false); 
+        super(600, 400, 1, false);
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels. 
         
         prepare();
     }
@@ -35,6 +35,7 @@ public class gameStory extends World
 
     public void act(){
         timer ++;
+       
         
         if (timer == 100) {
             addObject(dialogue, 300, 80);

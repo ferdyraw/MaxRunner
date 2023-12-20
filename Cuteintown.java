@@ -29,28 +29,21 @@ public class Cuteintown extends Cute
         if(getOneIntersectingObject(ObstacleTruck.class) != null){
             World myWorld = getWorld();
             Town bg = (Town) myWorld;
-            bg.backsound.stop();
+            if (bg.backsound != null) bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
         
         if (getOneIntersectingObject(ObstacleSubSurf.class) != null) {
             World myWorld = getWorld();
             Town bg = (Town) myWorld;
-            bg.backsound.stop();
+            if (bg.backsound != null) bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
         
         if (getOneIntersectingObject(ObstacleMouse.class) != null) {
             World myWorld = getWorld();
             Town bg = (Town) myWorld;
-            bg.backsound.stop();
-            Greenfoot.setWorld(new gameOver());
-        }
-        
-        if (getOneIntersectingObject(ObstacleCat.class) != null) {
-            World myWorld = getWorld();
-            Town bg = (Town) myWorld;
-            bg.backsound.stop();
+            if (bg.backsound != null) bg.backsound.stop();
             Greenfoot.setWorld(new gameOver());
         }
         

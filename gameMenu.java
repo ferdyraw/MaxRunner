@@ -2,8 +2,8 @@ import greenfoot.*;  // atau package yang sesuai
 
 public class gameMenu extends World {
     public int currentSelection = 0;
-    private GreenfootImage[] menuImages = new GreenfootImage[4];
-    private MenuOption[] menuOptions = new MenuOption[4];
+    private GreenfootImage[] menuImages = new GreenfootImage[5];
+    private MenuOption[] menuOptions = new MenuOption[5];
     private GreenfootSound backsoundStart;
     
     private boolean keyDownPressed = false;
@@ -27,10 +27,11 @@ public class gameMenu extends World {
         // Inisialisasi gambar-gambar menu
         menuImages[0] = new GreenfootImage("menu_start.png");
         menuImages[1] = new GreenfootImage("menu_instructions.png");
-        menuImages[2] = new GreenfootImage("menu_credits.png");
-        menuImages[3] = new GreenfootImage("menu_quit.png");
+        menuImages[2] = new GreenfootImage("menu_settings.png");
+        menuImages[3] = new GreenfootImage("menu_credits.png");
+        menuImages[4] = new GreenfootImage("menu_quit.png");
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             menuOptions[i] = new MenuOption(menuImages[i], initialX, initialY + spacing * i);
             addObject(menuOptions[i], initialX, initialY + spacing * i);
         }
@@ -80,7 +81,15 @@ public class gameMenu extends World {
     private void selectOption() {
         if (currentSelection == 0) {
             // Pindah ke lapisan permainan
-            Greenfoot.setWorld(new gameStory()); // Ganti dengan kelas dunia permainan Anda
+            if (UserInfo.isStorageAvailable()) {
+                UserInfo myInfo = UserInfo.getMyInfo();
+                if (myInfo.getInt(0) == 1) {
+                    Greenfoot.setWorld(new Lab());
+                } else {
+                    Greenfoot.setWorld(new gameStory());
+                }
+            }
+            
             backsoundStart = new GreenfootSound("start.mp3");
             backsoundStart.setVolume(70);
             backsoundStart.play();
@@ -88,11 +97,16 @@ public class gameMenu extends World {
             // Pindah ke tampilan cara bermain
             Greenfoot.setWorld(new gameInstruction());
         } else if (currentSelection == 2) {
-            // Pindah ke tampilan credits
+            Greenfoot.setWorld(new gameSettings());
+        } else if (currentSelection == 3) {
             Greenfoot.setWorld(new gameCredits());
         } else {
             // Keluar dari permainan
-            highscore.putScore(Integer.MAX_VALUE);
+            if (UserInfo.isStorageAvailable()) {
+                UserInfo myInfo = UserInfo.getMyInfo();
+                myInfo.setScore(Integer.MAX_VALUE);
+                myInfo.store();
+            }
             Greenfoot.stop();
         }
     }

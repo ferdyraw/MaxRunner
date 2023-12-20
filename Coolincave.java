@@ -29,7 +29,7 @@ public class Coolincave extends Cool
         if(getOneIntersectingObject(PortalD.class) != null){
             World myWorld = getWorld();
             Cave bg = (Cave) myWorld;
-            bg.backsound.stop();
+            if (bg.backsound != null) bg.backsound.stop();
             Greenfoot.setWorld(new Town());
         }
         
