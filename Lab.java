@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 
 public class Lab extends Main
 {
@@ -9,6 +10,9 @@ public class Lab extends Main
     private int diff_down = 0;
     private int lastDialogue;
     private int startPortal = 0;
+    
+    List<Integer> spawnEnergy = Arrays.asList(113, 287);
+    Random rand = new Random();
     
     Cuteinlab cute = new Cuteinlab();
     Coolinlab cool = new Coolinlab();
@@ -45,26 +49,24 @@ public class Lab extends Main
         }
             
         if (energy.energy < 5 ) {
-            if(timer % 300 == 0 ){
+            if(timer > 200 & timer % 200 == 0 ){
                 addObject(new Dot(), 600, 330);
                 addObject(new ObstacleCone(), 600, 340);
-            }
-            
-            if (timer > 300 && timer % 300 == 120) {
                 addObject(new Dot(), 600, 155);
                 addObject(new ObstacleCone(), 600, 167);
             }
             
-            if(timer % 200 == 0){
-                addObject(new Drink(), 600, 337 );   
+            if (timer % 400 == 0) {
+                int randomIdx = rand.nextInt(spawnEnergy.size());
+                int randomPos = spawnEnergy.get(randomIdx);
+                addObject(new Drink(), 600, randomPos);
             }
             
-            if (cool != null && timer > 300 && timer % 300 == 90 && cool.getY() == 327) {
-                cool.jump();
-                soundJump();
+            if(timer == 200){
+                addObject(new Drink(), 600, 337);   
             }
             
-            if (cool != null && timer > 300 && timer % 300 == 210 && cool.getY() == 153) {
+            if (cool != null && timer > 300 && timer % 200 == 90) {
                 cool.jump();
                 soundJump();
             }

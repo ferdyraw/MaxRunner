@@ -13,6 +13,7 @@ public class Town extends Main
     private int diff_up = 0;
     private int diff_down = 0;
     private int count = 0;
+    
     List<Integer> spawnMouse = Arrays.asList(174, 349);
     Random rand = new Random();
     

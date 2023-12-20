@@ -89,9 +89,9 @@ public class Cuteinlab extends Cute
                     myWorld.addObject(portal, 600, 105);
                 } else if (bg.down == true) {
                     myWorld.addObject(portal, 600,279); 
-                } else if (getY() >= 277 && getY() <= 327) {
+                } else if (getY() >= 227 && getY() <= 327) {
                     myWorld.addObject(portal, 600,279); 
-                } else if (getY() >= 103 && getY() <= 153) {
+                } else if (getY() >= 53 && getY() <= 153) {
                     myWorld.addObject(portal, 600, 105);
                 }
                 portal.soundOpen();

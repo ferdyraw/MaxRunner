@@ -1,4 +1,7 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
+import java.util.List;
+import java.util.Arrays;
+import java.util.Random; // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Cave extends Main
 {
@@ -15,6 +18,9 @@ public class Cave extends Main
     DialogueCave1 dialogue = new DialogueCave1();
     DialogueCave2 dialogue2 = new DialogueCave2();
     
+    List <Integer> spawnDrink = Arrays.asList(260);
+    Random rand = new Random();
+    
     public Cave()
     {
         super();
@@ -27,10 +33,8 @@ public class Cave extends Main
     {   
         addObject(new Blockcave(), 300,335);
         addObject(new Blockcave2(), 300, 25);
-        
         addObject(counter, 75, 40);
         addObject(energy, 515, 40);
-        
         addObject(portalb, 1, 184);
     }
     public void act(){
@@ -58,7 +62,6 @@ public class Cave extends Main
             backsound.setVolume(65);
         }
         
-        
         if(timer == 60){
             addObject(cute, 55, 184);
             isCute = true;
@@ -81,20 +84,36 @@ public class Cave extends Main
         }
         
         if (energy.energy < 10) {
-            if (timer % 800 == 0){
+            if (timer % 900 == 0){
                 addObject(new Dot2(), 600, 79);
                 addObject(new ObstacleDrop(), 600, 89);
             }
             
-            if (timer % 350 == 0){
-                addObject(new ObstacleLava(), 600, 302);
+            if (timer % 350 == 0 && energy.energy < 9){
+                addObject(new ObstacleLava(), 630, 302);
             }
             
-            if (timer % 190 == 0) {
-                addObject(new Drink(), 600, 260);
+            if (timer % 170 == 0) {
+                int randomIdx = rand.nextInt(spawnDrink.size());
+                int randomPos = spawnDrink.get(randomIdx);
+                addObject(new Drink(), 620, randomPos);
             }
             
-            if (cool != null && timer > 350 && (timer % 350 == 85 || timer % 800 == 100)) {
+            if (timer % 210 == 0 && energy.energy < 9) {
+                addObject(new Dot2(), 600, 79);
+                addObject(new ObstacleDrop2(), 600, 89);
+            }
+            
+            if (cool != null && timer > 350 && timer % 350 == 85 && cool.getY() == 250) {
+                cool.jump();
+            }
+            
+            if (cool != null && timer > 900 && timer % 900 == 100 && cool.getY() == 250)
+            {
+                cool.jump();
+            }
+            
+            if (cool != null && timer > 100 &&  timer % 210 == 100 && cool.getY() == 250) {
                 cool.jump();
             }
         } else if (energy.energy == 10 && ten == false) {
