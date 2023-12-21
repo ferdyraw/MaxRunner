@@ -59,7 +59,7 @@ public class Main extends World
         }
         
         if (soundSwap > 0) {
-            backSoundSwap = new GreenfootSound("jump1.mp3");
+            backSoundSwap = new GreenfootSound("sound_swap.mp3");
             backSoundSwap.setVolume(30-(10*(3-soundSwap)));
             backSoundSwap.play();
         }
