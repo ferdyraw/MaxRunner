@@ -9,6 +9,7 @@ public class gameMenu extends World {
     private boolean keyDownPressed = false;
     private boolean keyUpPressed = false;
     private int timer = 0;
+    private int sound = 0;
 
     Counter counter = new Counter();    
     Highscore highscore = new Highscore();
@@ -88,11 +89,16 @@ public class gameMenu extends World {
                 } else {
                     Greenfoot.setWorld(new gameStory());
                 }
+                
+                sound = myInfo.getInt(2);
+                if (sound > 0) {
+                    backsoundStart = new GreenfootSound("start.mp3");
+                    backsoundStart.setVolume(70-(20*(3-sound)));
+                    backsoundStart.play();
+                }
             }
             
-            backsoundStart = new GreenfootSound("start.mp3");
-            backsoundStart.setVolume(70);
-            backsoundStart.play();
+            
         } else if (currentSelection == 1) {
             // Pindah ke tampilan cara bermain
             Greenfoot.setWorld(new gameInstruction());

@@ -8,6 +8,8 @@ public class Main extends World
     public int scrollPosition = 0;
     public GreenfootSound backSoundJump;
     public GreenfootSound backSoundSwap;
+    private int soundJump = -1;
+    private int soundSwap = -1;
     
     Counter counter = new Counter();
     Energy energy = new Energy();
@@ -38,15 +40,29 @@ public class Main extends World
     }
     
     public void soundJump() {
-        backSoundJump = new GreenfootSound("jump1.mp3");
-        backSoundJump.setVolume(40);
-        backSoundJump.play();
+        if (soundJump == -1 && UserInfo.isStorageAvailable()) {
+            UserInfo myInfo = UserInfo.getMyInfo();   
+            soundJump = myInfo.getInt(2);
+        }
+        
+        if (soundJump > 0) {
+            backSoundJump = new GreenfootSound("jump1.mp3");
+            backSoundJump.setVolume(40-(10*(3-soundJump)));
+            backSoundJump.play();
+        }
     }
     
     public void soundSwap() {
-        backSoundSwap = new GreenfootSound("sound_swap.mp3");
-        backSoundSwap.setVolume(30);
-        backSoundSwap.play();
+        if (soundSwap == -1 && UserInfo.isStorageAvailable()) {
+            UserInfo myInfo = UserInfo.getMyInfo();   
+            soundSwap = myInfo.getInt(2);
+        }
+        
+        if (soundSwap > 0) {
+            backSoundSwap = new GreenfootSound("jump1.mp3");
+            backSoundSwap.setVolume(30-(10*(3-soundSwap)));
+            backSoundSwap.play();
+        }
     }
     
     public void act(){

@@ -11,6 +11,7 @@ public class gameStory2 extends World
     private GreenfootSound backsoundGate;
     public int timer = 0;
     public int lastDialogue;
+    private int sound = 0;
     
     Cuteinstory cute = new Cuteinstory();
     Coolinstory cool = new Coolinstory();
@@ -41,9 +42,17 @@ public class gameStory2 extends World
         }
         
         if (timer == 110) {
-            backsoundGate = new GreenfootSound("gate_open.mp3");
-            backsoundGate.setVolume(80);
-            backsoundGate.play();
+            if (UserInfo.isStorageAvailable()) {
+                UserInfo myInfo = UserInfo.getMyInfo();
+                sound = myInfo.getInt(2);
+                
+                if (sound > 0) {
+                    backsoundGate = new GreenfootSound("gate_open.mp3");
+                    backsoundGate.setVolume(80-(20*(3-sound)));
+                    backsoundGate.play();
+                }
+                
+            }
         }
         
         if (timer == 115) {

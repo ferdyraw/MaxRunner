@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Dialogue extends Actor
 {
     public GreenfootSound backsoundDialogue;
+    private int sound = -1;
     /**
      * Act - do whatever the Dialogue wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -19,8 +20,16 @@ public class Dialogue extends Actor
     }
     
     public void soundDialogue() {
-        backsoundDialogue = new GreenfootSound("dialogue3.mp3");
-        backsoundDialogue.setVolume(65);
-        backsoundDialogue.play();
+        if (sound == -1 && UserInfo.isStorageAvailable()) {
+            UserInfo myInfo = UserInfo.getMyInfo(); 
+            sound = myInfo.getInt(2);
+        }
+        
+        if (sound > 0) {
+            backsoundDialogue = new GreenfootSound("dialogue3.mp3");
+            backsoundDialogue.setVolume(65-(20*(3-sound)));
+            backsoundDialogue.play();
+        }
+        
     }
 }

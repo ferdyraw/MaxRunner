@@ -10,6 +10,7 @@ public class Cuteincave extends Cute
 {
     private boolean inPortal = false;
     public boolean startPortal = false;
+    private int sound = -1;
     /**
      * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -80,9 +81,17 @@ public class Cuteincave extends Cute
         if (drink != null){    
             myWorld.removeObject(drink);
             
-            backSoundCoin = new GreenfootSound("getPower1.mp3");
-            backSoundCoin.setVolume(40);
-            backSoundCoin.play();
+           if (sound == -1 && UserInfo.isStorageAvailable()) {
+                UserInfo myInfo = UserInfo.getMyInfo();
+                sound = myInfo.getInt(2);
+                
+            }
+            
+            if (sound > 0) {
+                backSoundCoin = new GreenfootSound("getPower1.mp3");
+                backSoundCoin.setVolume(40-(10*(3-sound)));
+                backSoundCoin.play();
+            }
             
             Main bg = (Main)myWorld;
             Energy energy = bg.getEnergy();

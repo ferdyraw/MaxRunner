@@ -16,6 +16,7 @@ public class gameWin extends World
     private boolean isHighscore = false;
     private boolean isDiag = false;
     private int volume = 0;
+    private int soundReward = 0;
     
     Highscore highscore = new Highscore();
     Counter counter = new Counter();
@@ -65,9 +66,17 @@ public class gameWin extends World
         
         if (timer == 450) {
             addObject(highscore, 300, 100);
-            backsoundReward = new GreenfootSound("reward.mp3");
-            backsoundReward.setVolume(70);
-            backsoundReward.play();
+            if (UserInfo.isStorageAvailable()) {
+                UserInfo myInfo = UserInfo.getMyInfo();
+                    
+                soundReward = myInfo.getInt(2);
+                if (soundReward > 0) {
+                    backsoundReward = new GreenfootSound("reward.mp3");
+                    backsoundReward.setVolume(70-(20*(3-soundReward)));
+                    backsoundReward.play();
+
+                }
+            }
             startHighscore = timer;
         }
         

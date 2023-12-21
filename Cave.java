@@ -119,15 +119,18 @@ public class Cave extends Main
             
             if (cool != null && timer > 350 && timer % 350 == 85 && cool.getY() == 250) {
                 cool.jump();
+                soundJump();
             }
             
             if (cool != null && timer > 900 && timer % 900 == 100 && cool.getY() == 250)
             {
                 cool.jump();
+                soundJump();
             }
             
             if (cool != null && timer > 100 &&  timer % 210 == 100 && cool.getY() == 250) {
                 cool.jump();
+                soundJump();
             }
         } else if (energy.energy == 10 && ten == false && dun == false) {
             if (UserInfo.isStorageAvailable()) {

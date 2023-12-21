@@ -136,6 +136,7 @@ public class Town extends Main
             
             if (cool != null && timer > 300 && (timer % 300 == 90)) {
                 cool.jump();
+                soundJump();
             }
         } else if (energy.energy == 15 && fteen == false && dun == false) {
             if (UserInfo.isStorageAvailable()) {

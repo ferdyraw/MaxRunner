@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class gameOver extends World
 {
     public GreenfootSound backgroundSound;
+    private int sound = 0;
     
     Counter counter = new Counter();
     
@@ -23,8 +24,16 @@ public class gameOver extends World
         counter.changeFontSize(20);
         addObject(counter, 300, 280);
         
-        backgroundSound = new GreenfootSound("gameover1.mp3");
-        backgroundSound.play();
+        if (UserInfo.isStorageAvailable()) {
+            UserInfo myInfo = UserInfo.getMyInfo();
+                
+            sound = myInfo.getInt(2);
+            if (sound > 0) {
+                backgroundSound = new GreenfootSound("gameover1.mp3");
+                backgroundSound.setVolume(backgroundSound.getVolume()-(20*(3-sound)));
+                backgroundSound.play();
+            }
+        }
     }
     
     public void act(){

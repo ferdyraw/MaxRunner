@@ -10,6 +10,7 @@ public class Cuteinlab extends Cute
 {
     private boolean inPortal = false;
     public boolean startPortal = false;
+    private int sound = -1;
     
     /**
      * Act - do whatever the Cuteinfactory wants to do. This method is called whenever
@@ -75,9 +76,17 @@ public class Cuteinlab extends Cute
         if (drink != null){    
             myWorld.removeObject(drink);
             
-            backSoundCoin = new GreenfootSound("getPower1.mp3"); 
-            backSoundCoin.setVolume(40);
-            backSoundCoin.play();
+            if (sound == -1 && UserInfo.isStorageAvailable()) {
+                UserInfo myInfo = UserInfo.getMyInfo();
+                sound = myInfo.getInt(2);
+                
+            }
+            
+            if (sound > 0) {
+                backSoundCoin = new GreenfootSound("getPower1.mp3");
+                backSoundCoin.setVolume(40-(10*(3-sound)));
+                backSoundCoin.play();
+            }
             
             Lab bg = (Lab)myWorld;
             Energy energy = bg.getEnergy();

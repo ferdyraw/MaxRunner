@@ -4,6 +4,7 @@ public class MenuOption extends Actor {
     private GreenfootImage optionImage;
     private GreenfootSound backsoundMenu;
     private boolean isSelected;
+    private int sound = -1;
 
     public MenuOption(GreenfootImage image, int x, int y) {
         optionImage = image;
@@ -27,9 +28,17 @@ public class MenuOption extends Actor {
             GreenfootImage updatedImage = new GreenfootImage(optionImage);
             updatedImage.scale((int) (optionImage.getWidth() * 1.2), (int) (optionImage.getHeight() * 1.2));
             setImage(updatedImage);
-            backsoundMenu = new GreenfootSound("menu_sound.mp3");
-            backsoundMenu.setVolume(30);
-            backsoundMenu.play();
+            
+            if (sound == -1 && UserInfo.isStorageAvailable()) {
+                UserInfo myInfo = UserInfo.getMyInfo();
+                sound = myInfo.getInt(2);
+            }
+            
+            if (sound > 0) {
+                backsoundMenu = new GreenfootSound("menu_sound.mp3");
+                backsoundMenu.setVolume(30-(10*(3-sound)));
+                backsoundMenu.play();
+            }
         } else {
             setImage(optionImage);
         }

@@ -13,7 +13,7 @@ public class PortalD extends Actor
     private int countPortal = 0;
     private int num = 1;
     private int countPortal1 = 0;
-    
+    private int sound = 0;
     
     public PortalD(){
         animPortal();
@@ -50,8 +50,15 @@ public class PortalD extends Actor
     }
     
     public void soundOpen() {
-        backSoundPortal = new GreenfootSound("sound_teleport.mp3");
-        backSoundPortal.setVolume(40);
-        backSoundPortal.play();
+        if (UserInfo.isStorageAvailable()) {
+            UserInfo myInfo = UserInfo.getMyInfo();
+                
+            sound = myInfo.getInt(2);
+            if (sound > 0) {
+                backSoundPortal = new GreenfootSound("sound_teleport.mp3");
+                backSoundPortal.setVolume(40-(15*(3-sound)));
+                backSoundPortal.play();
+            }
+        }
     }
 }
